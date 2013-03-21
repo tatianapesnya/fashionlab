@@ -195,13 +195,22 @@ function the_bootstrap_widgets_init() {
 		'after_title'	=>	'</h2>',
 	) );
 	register_sidebar(array(
-                'name'=>'Footer',
-                'description' => 'Please use a max of 3 widgets',
+        'name'=>'Footer',
+        'description' => 'Please use a max of 3 widgets',
 		'before_widget' => '<div class="footer_box">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));
+	register_sidebar( array(
+		'name'			=>	__( 'About us page Sidebar', 'the-bootstrap' ),
+		'description'	=>	__( 'Shown on about us page only.', 'the-bootstrap' ),
+		'id'			=>	'about',
+		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'after_widget'	=>	'</aside>',
+		'before_title'	=>	'<h2 class="widget-title">',
+		'after_title'	=>	'</h2>',
+	) );
 
 	include_once( 'inc/the-bootstrap-image-meta-widget.php' );
 	register_widget( 'The_Bootstrap_Image_Meta_Widget' );

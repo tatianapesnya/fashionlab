@@ -8,7 +8,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @author		Konstantin Obenland
+ * @author		Pesnya Tatiana
  * @package		The Bootstrap
  * @since		1.0.0 - 07.02.2012
  */
@@ -22,15 +22,15 @@ get_header(); ?>
 		
 		the_post();
 		get_template_part( '/partials/content', 'page' );
-		comments_template();
 
 		tha_content_bottom(); ?>
 	</div><!-- #content -->
 	<?php tha_content_after(); ?>
 </div><!-- #primary -->
-
-<?php
-get_sidebar();
+<?php if(is_page(9)){ ?> <!--sidebar pour la page about us-->
+<?php get_sidebar('about'); }else{ /*sidebar pour toutes les autres pages */
+	get_sidebar();
+}
 get_footer();
 
 
