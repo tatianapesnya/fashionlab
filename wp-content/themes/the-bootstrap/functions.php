@@ -30,6 +30,7 @@ function the_bootstrap_setup() {
 
 	add_theme_support( 'post-formats', array(
 		'aside',
+		'fullpage',
 		'chat',
 		'link',
 		'gallery',
@@ -1091,7 +1092,18 @@ function _the_bootstrap_version() {
 	
 	return $theme_version;
 }
+// This theme uses a custom image size for featured images, displayed on "standard" posts.
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
+	add_image_size('widget_thumbnail', 100, 50, true);
+	add_image_size('homepage_thumb', 368, 225, true);
+	add_image_size('fullpage_thumb', 767, 263, true);
 
+//Excerpt length max 2 lines
+	function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 /* End of file functions.php */
 /* Location: ./wp-content/themes/the-bootstrap/functions.php */

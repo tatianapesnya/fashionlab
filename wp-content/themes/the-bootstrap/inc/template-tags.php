@@ -92,7 +92,8 @@ if ( ! function_exists( 'the_bootstrap_posted_on' ) ) :
 * @return	void
 */
 function the_bootstrap_posted_on() {
-	printf( __( '<span class="sep">Posted on </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'the-bootstrap' ),
+	printf( __( '<span class="by-author"> <span class="sep">By </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>
+		<span class="sep"> | </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'the-bootstrap' ),
 			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
 			esc_attr( get_the_date( 'c' ) ),
@@ -100,11 +101,11 @@ function the_bootstrap_posted_on() {
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_attr( sprintf( __( 'View all posts by %s', 'the-bootstrap' ), get_the_author() ) ),
 			get_the_author()
-	);
-	if ( comments_open() AND ! post_password_required() ) { ?>
-		<span class="sep"> | </span>
+	);?>
+	<span></span><?php the_category();?>
+	<?php if ( comments_open() AND ! post_password_required() ) { ?>
 		<span class="comments-link">
-			<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'the-bootstrap' ) . '</span>', __( '<strong>1</strong> Reply', 'the-bootstrap' ), __( '<strong>%</strong> Replies', 'the-bootstrap' ) ); ?>
+			<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'the-bootstrap' ) . '</span>', __( 'Comment <strong>1</strong> ', 'the-bootstrap' ), __( 'Comments : <strong>%</strong>', 'the-bootstrap' ) ); ?>
 		</span>
 		<?php
 	}

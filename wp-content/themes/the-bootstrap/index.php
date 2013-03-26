@@ -13,24 +13,40 @@
  */
 
 get_header(); ?>
-
+<div id="slider" class="container">
+	<?php if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); } ?>
+</div>
 <section id="primary" class="span8">
+	<h1 class="offset3">Latest News</h1>
 	<?php tha_content_before(); ?>
 	<div id="content" role="main">
-		<?php tha_content_top();
+		<?php tha_content_top();?>
 		
-		if ( have_posts() ) {
-			while ( have_posts() ) {
-				the_post();
-				get_template_part( '/partials/content', get_post_format() );
+		<?php
+			$args = array( 'numberposts' => 8, 'order'=> 'DESC');
+			$postslist = get_posts( $args );
+			foreach ($postslist as $post) :  setup_postdata($post); ?>
+			<?php if (has_post_format('aside')){?>
+			<div class="span4 post_aside"> 
+				<?php get_template_part( '/partials/content', get_post_format() );?>
+			</div><!--post_aside-->
+			<?php }elseif (has_post_format('video')) { ?>
+			<div>
+				<?php get_template_part( '/partials/content', get_post_format() ); ?>
+			</div>
+			<?php } elseif(has_post_format('chat')){?>
+				<div class="span7 post_chat"> 
+				<?php get_template_part( '/partials/content', get_post_format() );?>
+			</div><!--post_chat-->
+			<?php }elseif (has_post_format('gallery')){
+				 get_template_part( '/partials/content', get_post_format() );
 			}
-			the_bootstrap_content_nav( 'nav-below' );
-		}
-		else {
-			get_template_part( '/partials/content', 'not-found' );
-		}
+			else{
+				get_template_part( '/partials/content', 'not-found' );
+			} ?>
+			<?php endforeach; ?>
 	
-		tha_content_bottom(); ?>
+		<?php tha_content_bottom(); ?>
 	</div><!-- #content -->
 	<?php tha_content_after(); ?>
 </section><!-- #primary -->

@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document 
+Author:Tejaswini
+Website:http://www.keencodes.com/
+*/
+.smooth_slider_fouc .smooth_slider {display: none;}
+.smooth_slider div,.smooth_slider p,.smooth_slider li,.smooth_slider span,.smooth_slider img,.smooth_slider h2,.smooth_slider ul{list-style:none;background:transparent;vertical-align:baseline;}
+.smooth_slider{padding:0 5px;}
+.smooth_slider .sldr_title{margin:5px 0 10px 0;}
+.smooth_slider span{display:inline;overflow:hidden;margin: 10px auto;line-height:18px;}
+.smooth_slider .smooth_sliderb{position:relative;}
+.smooth_slider .smooth_slideri{position:absolute;}
+.smooth_slider a{text-decoration:none !important;}
+.smooth_slider h2{clear:none;display:block;padding:0px;}
+.smooth_slider p.smooth_more{margin:0;}
+.smooth_slider p.smooth_more a{text-decoration:underline !important;float:right;}
+.smooth_slider p.smooth_more a:hover{text-decoration:none;}
+
+.sldrbr{line-height:1px;}
+.sldrlink{display:block;font-size:8px;font-family:Verdana, Helvetica, sans-serif;}
+.sldrlink a{position:absolute;bottom:0;right:5px;margin:10px auto;color:#333333;}
+.sldr_clearlt{display:block;visibility:hidden;clear:left;height:0;content:".";}
+.sldr_clearrt{display:block;visibility:hidden;clear:right;height:0;content:".";}
+
+/*If you are not using 'default' stylesheet, Replace the below CSS with the 'Generated CSS' tab on the Settings and then you can modify it*/
+.smooth_slider{width:450px;height:250px;background-color:#ffffff;border:1px solid #999999;} 
+.smooth_slider .sldr_title{font-family:Georgia, Arial, Helvetica, sans-serif;font-size:20px;font-weight:bold;font-style:normal;color:#000000;} 
+.smooth_slider .smooth_slideri{width:450px;margin:0px 0px 0px 0px;} 
+.smooth_slider .smooth_slider_thumbnail{float:left;margin:0 10px 0 0px;max-height:120px;border:1px solid #000000;width:165px;} 
+.smooth_slider .smooth_slideri h2{clear:none;line-height:17px;font-family:Trebuchet MS;font-size:14px;font-weight:bold;font-style:normal;color:#000000;margin:0 0 5px 0;} 
+.smooth_slider .smooth_slideri h2 a{color:#000000;font-size:14px;font-weight:bold;font-style:normal;} 
+.smooth_slider .smooth_slideri span{font-family:Verdana;font-size:12px;font-weight:normal;font-style:normal;color:#333333;} 
+.smooth_slider .smooth_slideri p.more{color:#000000;font-family:Verdana;font-size:12px;} 
+.smooth_slider .smooth_next{} 
+.smooth_slider .smooth_prev{}
