@@ -512,7 +512,7 @@ wp_enqueue_style( 'slider-skin2' );
 
  wp_enqueue_script('super-slider', plugins_url('', __FILE__).'/js/quake.slider.js', array('jquery'), '1.0', true);
  
-  wp_enqueue_script('demo-slider', plugins_url('', __FILE__).'/js/demo.js', array('jquery'), '1.0', true);
+  // wp_enqueue_script('demo-slider', plugins_url('', __FILE__).'/js/demo.js', array('jquery'), '1.0', true);
  
 
 }

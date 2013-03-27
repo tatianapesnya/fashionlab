@@ -14,7 +14,7 @@
 
 get_header(); ?>
 <div id="slider" class="container">
-	<?php if ( function_exists( 'get_smooth_slider' ) ) { get_smooth_slider(); } ?>
+	<?php echo do_shortcode( "[SlideDeck2 id=163 ress=1]" ); ?>
 </div>
 <section id="primary" class="span8">
 	<h1 class="offset3">Latest News</h1>

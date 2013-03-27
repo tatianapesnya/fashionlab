@@ -309,7 +309,24 @@ function the_bootstrap_print_ie_scripts() {
 	<?php
 }
 add_action( 'wp_head', 'the_bootstrap_print_ie_scripts', 11 );
-
+// Register our scripts  for Partners Filter
+function register_js()  
+{  
+    if ( !is_admin() )  
+    {  
+        wp_register_script( 'quicksand', get_template_directory_uri() . '/js/jquery.quicksand.js', 'jquery' );  
+  
+        wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', 'jquery' );  
+  
+        wp_register_script( 'custom', get_template_directory_uri() . '/js/jquery.custom.js', 'jquery', '1.0', true );  
+  
+        wp_enqueue_script( 'jquery' );  
+        wp_enqueue_script( 'quicksand' );  
+        wp_enqueue_script( 'easing' );  
+        wp_enqueue_script( 'custom' );  
+    }  
+}  
+add_action('init', 'register_js'); 
 
 /**
  * Properly enqueue comment-reply script
@@ -1098,12 +1115,13 @@ function _the_bootstrap_version() {
 	add_image_size('widget_thumbnail', 100, 50, true);
 	add_image_size('homepage_thumb', 368, 225, true);
 	add_image_size('fullpage_thumb', 767, 263, true);
-
 //Excerpt length max 2 lines
 	function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+/*Add Partners Filter and Post Types*/
+include("partners/partners-post-types.php");
 /* End of file functions.php */
 /* Location: ./wp-content/themes/the-bootstrap/functions.php */
