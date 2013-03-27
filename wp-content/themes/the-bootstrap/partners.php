@@ -15,7 +15,7 @@
 
 get_header(); ?>
     <!-- #content  BEGIN  -->  
-<div id="primary" class="span8">
+<div id="primary" class="span12">
 	<div id="content" role="main">
       <ul class="filter clearfix"> 
       <li><strong>Filter:</strong></li>
@@ -64,9 +64,9 @@ get_header(); ?>
   
    				 <?php if ($wpbp->have_posts()) :  while ($wpbp->have_posts()) : $wpbp->the_post(); ?>  
    				 <?php $terms = get_the_terms( get_the_ID(), 'filter' ); ?>  
-  				<li data-id="id-<?php echo  $count; ?>" data-type="<?php foreach ($terms as $term) { echo  strtolower(preg_replace('/\s+/', '-', $term->name)). ' '; } ?>"> 
+  				<li data-id="id-<?php echo  $count; ?>" data-type="<?php foreach ($terms as $term) { echo  strtolower(preg_replace('/\s+/', '-', $term->name)). ' '; } ?>" class="span3"> 
       			<?php the_content();?>
-        	</li>  
+        		</li>  
   
     				<?php $count++; // Increase the count by 1 ?>		
 					<?php endwhile; endif; // END the Wordpress Loop ?>
