@@ -127,8 +127,10 @@ class MostLikedPosts
 				$post_title = stripslashes($post->post_title);
 				$permalink = get_permalink($post->post_id);
 				$like_count = $post->like_count;
-
-				$widget_data .= '<li><a href="' . $permalink . '" title="' . $post_title.'" rel="nofollow">'.$post_title. '</a>';
+				$excerpt = get_the_excerpt('excerpt_length2');
+				$post_thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->post_id), array(109,89), true); //ajout thumbnail
+				$post_thumbnail = $post_thumbnail[0];
+				$widget_data .= '<li><a href="' . $permalink . '" title="' . $post_title.'" rel="nofollow"><img src="'.$post_thumbnail.'">'.$post_title.'</a><p>'.substr($excerpt, 0,35). '<a href="'. $permalink .'"> [...]</a></p>';//ajout span peut être
 				$widget_data .= $show_count == '1' ? ' ('.$like_count.')' : '';
 				$widget_data .= '</li>';
 			}

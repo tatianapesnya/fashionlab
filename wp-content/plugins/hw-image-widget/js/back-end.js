@@ -5,14 +5,14 @@ jQuery(document).ready(function() {
 
 	jQuery(document).on('click', 'div.hwim', function(evt) {
 		/* Display WordPress image selection tool. */
-		if (jQuery(evt.srcElement).hasClass('select-image')) {
+		if (jQuery(evt.originalEvent.target).hasClass('select-image')) {
 			evt.preventDefault();
 			currentWidget = evt.currentTarget;
 			var tbHeight = Math.floor(jQuery(window).height() * 0.8);
 			tb_show('HW Image Widget', 'media-upload.php?post_id=0&type=image&context=hwim&post_mime_type=image&tab=library&TB_iframe=true&width=640&height=' + tbHeight);
 		}
 		/* Remove image from widget. */
-		if (jQuery(evt.srcElement).hasClass('remove-image')) {
+		if (jQuery(evt.originalEvent.target).hasClass('remove-image')) {
 			evt.preventDefault();
 			currentWidget = evt.currentTarget;
 			jQuery('.remove-image-link', currentWidget).hide();
@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
 			jQuery('.original-height', currentWidget).attr('value', '');
 		}
 		/* Display text editor */
-		if (jQuery(evt.srcElement).hasClass('edit-text') || editText == true) {
+		if (jQuery(evt.originalEvent.target).hasClass('edit-text') || editText == true) {
 			evt.preventDefault();
 			currentWidget = evt.currentTarget;
 			tinyMCE.get('hwim-tinymce').setContent(jQuery('.text', currentWidget).attr('value'));
@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
 
 	jQuery(document).on('click', '#hwim-lb', function(evt) {
 		/* Save text to widget */
-		if ( jQuery(evt.srcElement).hasClass('btn-primary')) {
+		if ( jQuery(evt.originalEvent.target).hasClass('btn-primary')) {
 			jQuery('.text', currentWidget).attr('value', tinyMCE.get('hwim-tinymce').getContent());
 			jQuery('.text-preview', currentWidget).html(tinyMCE.get('hwim-tinymce').getContent());
 		}
@@ -50,7 +50,7 @@ jQuery(document).ready(function() {
 
 	jQuery(document).on('change', 'div.hwim', function(evt) {
 		/* Handle display size changes */
-		if ( jQuery(evt.srcElement).hasClass('display-size')) {
+		if ( jQuery(evt.originalEvent.target).hasClass('display-size')) {
 			if (jQuery('.display-size', evt.currentTarget).attr('value') == 'fixed') {
 				jQuery('div.fixed-size', evt.currentTarget).show();
 			} else {
@@ -58,7 +58,7 @@ jQuery(document).ready(function() {
 			}
 		}
 		/* Handle target changes */
-		if ( jQuery(evt.srcElement).hasClass('target-option')) {
+		if ( jQuery(evt.originalEvent.target).hasClass('target-option')) {
 			var targetOption = jQuery('.target-option option:selected', evt.currentTarget);
 			var targetName = jQuery('.target-name', evt.currentTarget);
 			if (jQuery(targetOption).attr('value') == 'other') {
@@ -71,14 +71,14 @@ jQuery(document).ready(function() {
 
 		}
 		/* Handle keep aspect ratio changes */
-		if (jQuery(evt.srcElement).hasClass('keep-aspect-ratio') && jQuery(evt.srcElement).prop('checked')) {
+		if (jQuery(evt.originalEvent.target).hasClass('keep-aspect-ratio') && jQuery(evt.originalEvent.target).prop('checked')) {
 			calcAspectRatio(evt.currentTarget, jQuery('.display-width', evt.currentTarget));
 		}
 	});
 
 	jQuery(document).on('keyup', 'div.hwim', function(evt) {
 		/* Handle manual width changes */
-		calcAspectRatio(evt.currentTarget, evt.srcElement);
+		calcAspectRatio(evt.currentTarget, evt.originalEvent.target);
 	});
 
 	/* Set selected image to placeholder */

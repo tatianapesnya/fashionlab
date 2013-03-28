@@ -1115,11 +1115,18 @@ function _the_bootstrap_version() {
 	add_image_size('widget_thumbnail', 100, 50, true);
 	add_image_size('homepage_thumb', 368, 225, true);
 	add_image_size('fullpage_thumb', 767, 263, true);
+	add_image_size('like_thumb', 109, 89, true);
 //Excerpt length max 2 lines
 	function custom_excerpt_length( $length ) {
 	return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+	function custom_excerpt_length2( $length ) {
+	return 5;
+}
+add_filter( 'excerpt_length2', 'custom_excerpt_length2', 999 );
+
+/*Lastest-comments*/
 
 /*Add Partners Filter and Post Types*/
 include("partners/partners-post-types.php");
