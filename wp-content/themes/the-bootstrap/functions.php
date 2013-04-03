@@ -218,6 +218,9 @@ function the_bootstrap_widgets_init() {
 	
 	include_once( 'inc/the-bootstrap-gallery-widget.php' );
 	register_widget( 'The_Bootstrap_Gallery_Widget' );
+
+	include_once('inc/lastest-comments.php');
+	register_widget('Lastest_Comments');
 }
 add_action( 'widgets_init', 'the_bootstrap_widgets_init' );
 
@@ -1124,9 +1127,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 	function custom_excerpt_length2( $length ) {
 	return 5;
 }
-add_filter( 'excerpt_length2', 'custom_excerpt_length2', 999 );
-
-/*Lastest-comments*/
+add_filter( 'excerpt_length2', 'custom_excerpt_length2', 999 ); 
 
 /*Add Partners Filter and Post Types*/
 include("partners/partners-post-types.php");
