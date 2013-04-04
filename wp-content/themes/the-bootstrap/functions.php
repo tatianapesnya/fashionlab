@@ -70,7 +70,7 @@ function the_bootstrap_setup() {
 	require_if_theme_supports( 'tha_hooks', get_template_directory() . '/inc/tha-theme-hooks.php' );
 	
 	/**
-	 * Including three menu (header-menu, primary and footer-menu).
+	 * Including for menu (header-menu, languages, primary and footer-menu).
 	 * Primary is wrapping in a navbar containing div (wich support responsive variation)
 	 * Header-menu and Footer-menu are inside pills dropdown menu
 	 * 
@@ -80,7 +80,8 @@ function the_bootstrap_setup() {
 	register_nav_menus( array(
 		'primary'		=>	__( 'Main Navigation', 'the-bootstrap' ),
 		'header-menu'  	=>	__( 'Header Menu', 'the-bootstrap' ),
-		'footer-menu' 	=>	__( 'Footer Menu', 'the-bootstrap' )
+		'footer-menu' 	=>	__( 'Footer Menu', 'the-bootstrap' ),
+		'languages'		=> __('Languages Menu', 'the-bootstrap')
 	) );
 	
 } // the_bootstrap_setup
@@ -168,7 +169,6 @@ add_action( 'after_setup_theme', 'the_bootstrap_custom_background_setup' );
 
 
 /**
- * Register the sidebars.
  *
  * @author	Konstantin Obenland
  * @since	1.0.0 - 05.02.2012
@@ -257,20 +257,27 @@ function the_bootstrap_register_scripts_styles() {
 			$theme_version,
 			true
 		);
+		wp_register_script(
+			'images-hover',
+			get_template_directory_uri() . "/js/images-hover.js",
+			array('jquery'),
+			$theme_version, 
+			true
+		);
 				
 		/**
 		 * Styles
 		 */
 		wp_register_style(
 			'tw-bootstrap',
-			get_template_directory_uri() . "/css/bootstrap{$suffix}.css",
+			get_template_directory_uri() . "/css/bootstrap.css",
 			array(),
 			'2.0.3'
 		);
 		
 		wp_register_style(
 			'the-bootstrap',
-			get_template_directory_uri() . "/style{$suffix}.css",
+			get_template_directory_uri() . "/style.css",
 			array('tw-bootstrap'),
 			$theme_version
 		);
@@ -289,6 +296,7 @@ add_action( 'init', 'the_bootstrap_register_scripts_styles' );
  */
 function the_bootstrap_print_scripts() {
 	wp_enqueue_script( 'the-bootstrap' );
+	wp_enqueue_script('images-hover'); 
 }
 add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_scripts' );
 
@@ -321,15 +329,29 @@ function register_js()
   
         wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', 'jquery' );  
   
-        wp_register_script( 'custom', get_template_directory_uri() . '/js/jquery.custom.js', 'jquery', '1.0', true );  
+        wp_register_script( 'custom', get_template_directory_uri() . '/js/jquery.custom.js', 'jquery', '1.0', true ); 
   
         wp_enqueue_script( 'jquery' );  
         wp_enqueue_script( 'quicksand' );  
         wp_enqueue_script( 'easing' );  
-        wp_enqueue_script( 'custom' );  
+        wp_enqueue_script( 'custom' ); 
     }  
 }  
 add_action('init', 'register_js'); 
+
+/*register ajax loop    ajax normann*/ 
+function register_ajaxLoop_script() {  
+    wp_register_script(  
+      'ajaxLoop',  
+       get_stylesheet_directory_uri() . '/js/ajaxLoop.js',  
+       array('jquery')  
+    );  
+    wp_enqueue_script('ajaxLoop');  
+}  
+add_action('wp_enqueue_scripts', 'register_ajaxLoop_script');  
+ 
+
+
 
 /**
  * Properly enqueue comment-reply script
@@ -1116,8 +1138,8 @@ function _the_bootstrap_version() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
 	add_image_size('widget_thumbnail', 100, 50, true);
-	add_image_size('homepage_thumb', 368, 225, true);
-	add_image_size('fullpage_thumb', 767, 263, true);
+	add_image_size('homepage_thumb', 300, 205, true);
+	add_image_size('fullpage_thumb', 620, 225, true);
 	add_image_size('like_thumb', 109, 89, true);
 //Excerpt length max 2 lines
 	function custom_excerpt_length( $length ) {
@@ -1131,5 +1153,8 @@ add_filter( 'excerpt_length2', 'custom_excerpt_length2', 999 );
 
 /*Add Partners Filter and Post Types*/
 include("partners/partners-post-types.php");
+
+/*Ajout mes styles css */
+
 /* End of file functions.php */
 /* Location: ./wp-content/themes/the-bootstrap/functions.php */

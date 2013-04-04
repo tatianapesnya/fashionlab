@@ -12,6 +12,7 @@
 
 
 tha_entry_before(); ?>
+<div class="span8 post_chat"> 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php tha_entry_top(); ?>
 	<div class="entry-content clearfix">
@@ -31,6 +32,7 @@ tha_entry_before(); ?>
 	</footer><!-- .entry-footer -->
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
+</div>
 <?php tha_entry_after();
 
 

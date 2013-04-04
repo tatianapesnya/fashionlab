@@ -12,6 +12,7 @@
 
 
 tha_entry_before(); ?>
+<div class="span4 post_aside"> 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php tha_entry_top(); ?>
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
@@ -27,7 +28,7 @@ tha_entry_before(); ?>
 		</hgroup>
 		</header><!-- .entry-header -->
 		<?php
-		the_excerpt( __( 'Continue reading <span class="meta-nav">...</span>', 'the-bootstrap' ) );
+		the_excerpt( __( '<span class="meta-nav">...</span>', 'the-bootstrap' ) );
 		the_bootstrap_link_pages(); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
@@ -37,6 +38,7 @@ tha_entry_before(); ?>
 	</footer><!-- .entry-footer -->
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
+</div>
 <?php tha_entry_after();
 
 

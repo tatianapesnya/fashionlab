@@ -1577,10 +1577,6 @@ along with SlideDeck.  If not, see <http://www.gnu.org/licenses/>.
 .default-nav-styles.sd2-large a.deck-navigation.vertical {
     width: 60px;
     height: 60px;
-    margin-top: -30px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
 }
 .default-nav-styles.sd2-large a.deck-navigation.vertical {
     margin-top: 0;
@@ -1589,26 +1585,23 @@ along with SlideDeck.  If not, see <http://www.gnu.org/licenses/>.
 .default-nav-styles a.deck-navigation.horizontal {
     width: 40px;
     height: 40px;
-    margin-top: -20px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    background-color: #e6e6e6;
 }
 .default-nav-styles a.deck-navigation.vertical {
     margin-top: 0;
 }
 .default-nav-styles a.deck-navigation.vertical span,
 .default-nav-styles a.deck-navigation.horizontal span { padding-top: 40px; }
-.default-nav-styles a.deck-navigation.horizontal.prev { left: 10px; }
-.default-nav-styles a.deck-navigation.horizontal.next { right: 10px; }
+.default-nav-styles a.deck-navigation.horizontal.prev { }
+.default-nav-styles a.deck-navigation.horizontal.next { }
 .default-nav-styles a.deck-navigation.horizontal.next span { background-position: -40px 0; }
 .default-nav-styles a.deck-navigation.vertical.next span { background-position: 0 -40px; }
 
 
 .default-nav-styles.sd2-large a.deck-navigation.vertical span,
 .default-nav-styles.sd2-large a.deck-navigation.horizontal span { padding-top: 60px; }
-.default-nav-styles.sd2-large a.deck-navigation.horizontal.prev { left: 10px; }
-.default-nav-styles.sd2-large a.deck-navigation.horizontal.next { right: 10px; }
+.default-nav-styles.sd2-large a.deck-navigation.horizontal.prev {  }
+.default-nav-styles.sd2-large a.deck-navigation.horizontal.next { }
 .default-nav-styles.sd2-large a.deck-navigation.horizontal.next span { background-position: -60px 0; }
 .default-nav-styles.sd2-large a.deck-navigation.vertical.next span { background-position: 0 -60px; }
 
@@ -1653,14 +1646,10 @@ along with SlideDeck.  If not, see <http://www.gnu.org/licenses/>.
 
 .default-nav-styles a.deck-navigation.vertical,
 .default-nav-styles a.deck-navigation.horizontal {
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, .5), inset 0px 2px 1px 1px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, .5), inset 0px 2px 1px 1px rgba(0, 0, 0, .5);
-    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, .5), inset 0px 2px 1px 1px rgba(0, 0, 0, .5);
+    
 }
 .default-nav-styles a.deck-navigation.vertical:hover,
-.default-nav-styles a.deck-navigation.horizontal:hover { background-color: rgba(0, 0, 0, .8); }
+.default-nav-styles a.deck-navigation.horizontal:hover { background-color: rgba(0, 0, 0, 1); }
 .default-nav-styles a.deck-navigation.vertical:active,
 .default-nav-styles a.deck-navigation.horizontal:active {
     background-color: rgb(0, 0, 0);

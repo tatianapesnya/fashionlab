@@ -13,48 +13,30 @@
  */
 
 get_header(); ?>
-<div id="slider" class="container">
+<div id="slider">
 	<?php echo do_shortcode( "[SlideDeck2 id=163 ress=1]" ); ?>
 </div>
+<div class="container">
+<div id="page" class="container">
 <section id="primary" class="span8">
-	<h1 class="offset3">Latest News</h1>
+	<h1 class="top-news">Latest News</h1>
 	<?php tha_content_before(); ?>
-	<div id="content" role="main">
+	<div id="content" class="ajax" role="main">
 		<?php tha_content_top();?>
 		
-		<?php
-			$args = array( 'numberposts' => 8, 'order'=> 'DESC');
-			$postslist = get_posts( $args );
-			foreach ($postslist as $post) :  setup_postdata($post); ?>
-			<?php if (has_post_format('aside')){?>
-			<div class="span4 post_aside"> 
-				<?php get_template_part( '/partials/content', get_post_format() );?>
-			</div><!--post_aside-->
-			<?php }elseif (has_post_format('video')) { ?>
-			<div>
-				<?php get_template_part( '/partials/content', get_post_format() ); ?>
-			</div>
-			<?php } elseif(has_post_format('chat')){?>
-				<div class="span7 post_chat"> 
-				<?php get_template_part( '/partials/content', get_post_format() );?>
-			</div><!--post_chat-->
-			<?php }elseif (has_post_format('gallery')){
-				 get_template_part( '/partials/content', get_post_format() );
-			}
-			else{
-				get_template_part( '/partials/content', 'not-found' );
-			} ?>
-			<?php endforeach; ?>
+		
 	
 		<?php tha_content_bottom(); ?>
-	</div><!-- #content -->
+		
+	</div><a href="#" id="loadmore">loadmore</a><!-- #content -->
 	<?php tha_content_after(); ?>
 </section><!-- #primary -->
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_sidebar(); ?>
+</div><!-- #page -->
+</div><!-- .container -->
+<?php get_footer(); ?>
 
 
-/* End of file index.php */
-/* Location: ./wp-content/themes/the-bootstrap/index.php */
+<!-- End of file index.php */
+/* Location: ./wp-content/themes/the-bootstrap/index.php */ -->

@@ -6,9 +6,11 @@
 #lang_sel li:before{content:'' !important;}
 #lang_sel ul ul {width:149px;}
 /* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
-#lang_sel li {width:149px;position:relative;}
+#lang_sel ul li ul li {width:237px;position:relative;}
+#lang_sel ul li{width: 99px;
+}
 /* style the links for the top level */
-#lang_sel a, #lang_sel a:visited {display:block;font-size:11px;text-decoration:none !important; color:#444444; border:1px solid #cdcdcd; background:#fff; padding-left:10px; line-height:24px;}
+#lang_sel a, #lang_sel a:visited {display:block;font-size:11px;text-decoration:none !important; color:#444444;background:#fff; padding-left:10px; line-height:18px;}
 /* a hack so that IE5.5 faulty box model is corrected */
 * html #lang_sel a, * html #lang_sel a:visited {width:149px; w\idth:138px;}
 
@@ -21,7 +23,7 @@
 #lang_sel table {position:absolute; top:0; left:0; border-collapse:collapse;;}
 
 /* style the second level links */
-#lang_sel ul ul a, #lang_sel ul ul a:visited {background:#ffffff; color:#444444; height:auto; line-height:1em; padding:5px 10px;border-width:0 1px 1px 1px;}
+#lang_sel ul ul a, #lang_sel ul ul a:visited {border-bottom: 1px solid #fff;background:#ffffff; color:#444444; height:auto; line-height:1em; padding:5px 10px;border-width:0 1px 1px 1px;}
 /* yet another hack for IE5.5 */
 * html #lang_sel ul ul a, * html #lang_sel ul ul a:visited {width:150px;w\idth:128px;}
 
@@ -30,7 +32,6 @@
 #lang_sel :hover > a, #lang_sel ul ul :hover > a {color:#000; background:#eee;}
 
 #lang_sel a.lang_sel_sel{
-    background:url(../img/nav-arrow-down.png) #fff right no-repeat;
     color:#444;
 }
 #lang_sel a.lang_sel_sel:hover{

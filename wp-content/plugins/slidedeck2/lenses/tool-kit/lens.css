@@ -554,6 +554,7 @@ Tags: images, posts, feeds, pages, slidedeck
     left: 0;
     right: 0;
     padding: 10px 30px 10px;
+    width: 500px;
 }
 .lens-tool-kit .sd-node-title-box .slide-text {
     display: none;
@@ -601,8 +602,6 @@ Tags: images, posts, feeds, pages, slidedeck
 .lens-tool-kit.sd2-show-readmore .sd-node-title-box .readmore { display: inline; }
 .lens-tool-kit.sd2-small .sd-node-title-box .slide-text { display: none; }
 .lens-tool-kit.sd2-title-light .sd-node-title-box {
-    background: #fff;
-    background: rgba(255,255,255,.8);
     color: #000;
 }
 .lens-tool-kit.sd2-medium .slide-source-twitter .sd-node-title-box {
@@ -620,8 +619,9 @@ Tags: images, posts, feeds, pages, slidedeck
 }
 .lens-tool-kit.sd2-title-pos-top .sd-none-title-box { top: 0; }
 .lens-tool-kit.sd2-title-pos-bottom .sd-node-title-box {
-    top: auto;
+    top: 32px;
     bottom: 0;
+    left: 69px;
 }
 .lens-tool-kit.sd2-title-pos-left .sd-node-title-box {
     right: 50%;
@@ -1375,13 +1375,7 @@ Tags: images, posts, feeds, pages, slidedeck
 }
 .lens-tool-kit.sd2-arrowstyle-3 a.deck-navigation.horizontal,
 .lens-tool-kit.sd2-arrowstyle-3 a.deck-navigation.vertical {
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px; 
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    -o-box-shadow: none;
-    box-shadow: none;
+    
 }
 
 /**
