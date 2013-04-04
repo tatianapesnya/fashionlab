@@ -215,6 +215,7 @@ body {
   background-color: #ffffff;
 }
 a {
+  font-size: 11px;
   color: #6f6f6f;
   text-decoration: none;
 }
@@ -4763,10 +4764,10 @@ a.thumbnail:focus {
   margin-top: 1px;
 }
 .dropdown-menu > li > a {
+  font-family: Arial, sans-serif;
   display: block;
-  padding: 8px 20px;
+  padding: 8px 15px;
   clear: both;
-  font-weight: bold;
   line-height: 20px;
   color: #fff;
   white-space: nowrap;
@@ -4776,10 +4777,7 @@ a.thumbnail:focus {
   color: #292929;
   background-color: #fff;
 }
-.dropdown-menu > li:first-child > a{
-  color: #292929;
-  background-color: #fff;
-}
+
 #menu-main .dropdown-menu  li:last-child  a:hover{
   background-image: none;
 }

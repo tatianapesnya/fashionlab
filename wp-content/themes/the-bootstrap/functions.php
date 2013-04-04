@@ -81,6 +81,7 @@ function the_bootstrap_setup() {
 		'primary'		=>	__( 'Main Navigation', 'the-bootstrap' ),
 		'header-menu'  	=>	__( 'Header Menu', 'the-bootstrap' ),
 		'footer-menu' 	=>	__( 'Footer Menu', 'the-bootstrap' ),
+		'footer-menu2'	=> 	__('Footer Menu 2', 'the-bootstrap'),
 		'languages'		=> __('Languages Menu', 'the-bootstrap')
 	) );
 	
@@ -461,7 +462,7 @@ add_filter( 'wp_title', 'the_bootstrap_wp_title', 1, 2 );
  * @return	string
  */
 function the_bootstrap_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'the-bootstrap' ) . '</a>';
+	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( '<span class="meta-nav">...</span>', 'the-bootstrap' ) . '</a>';
 }
 
 

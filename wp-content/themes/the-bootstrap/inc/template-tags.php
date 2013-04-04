@@ -92,7 +92,7 @@ if ( ! function_exists( 'the_bootstrap_posted_on' ) ) :
 * @return	void
 */
 function the_bootstrap_posted_on() {
-	printf( __( '<span class="by-author"> <span class="sep">By </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>
+	printf( __( '<div class="about-author"><span class="by-author"> <span class="sep">By </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>
 		<span class="sep"> | </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'the-bootstrap' ),
 			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
@@ -102,14 +102,17 @@ function the_bootstrap_posted_on() {
 			esc_attr( sprintf( __( 'View all posts by %s', 'the-bootstrap' ), get_the_author() ) ),
 			get_the_author()
 	);?>
-	<span></span><?php the_category();?>
+	<span></span>
+	</div><!--about-author-->
+	<div class="comments-display">
+	<?php the_category();?>
 	<?php if ( comments_open() AND ! post_password_required() ) { ?>
 		<span class="comments-link">
 			<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'the-bootstrap' ) . '</span>', __( 'Comment <strong>1</strong> ', 'the-bootstrap' ), __( 'Comments : <strong>%</strong>', 'the-bootstrap' ) ); ?>
 		</span>
+		</div><!--comments-display-->
 		<?php
 	}
-	edit_post_link( __( 'Edit', 'the-bootstrap' ), '<span class="sep">&nbsp;</span><span class="edit-link label">', '</span>' );
 }
 endif;
 

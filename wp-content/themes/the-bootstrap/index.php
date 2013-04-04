@@ -28,10 +28,14 @@ get_header(); ?>
 	
 		<?php tha_content_bottom(); ?>
 		
-	</div><a href="#" id="loadmore">loadmore</a><!-- #content -->
-	<?php tha_content_after(); ?>
-</section><!-- #primary -->
+	</div>
+	<div class="load_more">
+		<a href="#" id="loadmore"></a>
+	</div>
 
+	<?php tha_content_after(); ?>
+	</section><!-- #primary -->
+</section><!-- #primary -->
 <?php get_sidebar(); ?>
 </div><!-- #page -->
 </div><!-- .container -->

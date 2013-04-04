@@ -14,21 +14,27 @@ query_posts(array(
 if (have_posts()) {  
        while (have_posts()){  
               the_post();  
-             		 if (has_post_format('aside')){?>
+             if (has_post_format('aside')){?>
 			<div class="span4 post_aside"> 
 				<?php get_template_part( '/partials/content', get_post_format() );?>
 			</div><!--post_aside-->
 			<?php }elseif (has_post_format('video')) { ?>
-			<div>
+			<div class="span8 post_chat">
 				<?php get_template_part( '/partials/content', get_post_format() ); ?>
 			</div>
 			<?php } elseif(has_post_format('chat')){?>
-				<div class="span7 post_chat"> 
-				<?php get_template_part( '/partials/content', get_post_format() );?>
-			</div><!--post_chat-->
-			<?php }elseif (has_post_format('gallery')){
-				 get_template_part( '/partials/content', get_post_format() );
-			}
+				<div class="span8 post_chat"> 
+					<?php get_template_part( '/partials/content', get_post_format() );?>
+				</div><!--post_chat-->
+			<?php }elseif (has_post_format('gallery')){ ?>
+				<div class="span8 post_chat">
+				<?php  get_template_part( '/partials/content', get_post_format() ); ?>
+			</div>
+			<?php }elseif (has_post_format('standard')){ ?>
+				<div class="span4 post_aside">
+				<?php  get_template_part( '/partials/content', get_post_format() ); ?>
+				</div>
+			<?php }
 			else{
 				get_template_part( '/partials/content', 'not-found' );
 			}
