@@ -109,7 +109,7 @@ function the_bootstrap_posted_on() {
 	<?php if ( comments_open() AND ! post_password_required() ) { ?>
 		<span class="comments-link">
 			<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'the-bootstrap' ) . '</span>', __( 'Comment <strong>1</strong> ', 'the-bootstrap' ), __( 'Comments : <strong>%</strong>', 'the-bootstrap' ) ); ?>
-		</span>
+		<span class="comment-icon"></span></span>
 		</div><!--comments-display-->
 		<?php
 	}

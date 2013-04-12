@@ -7,9 +7,9 @@ jQuery(function($){
     var load_posts = function(){  
             $.ajax({  
                 type       : "GET",  
-                data       : {numPosts : 3, pageNumber: page},  
+                data       : {numPosts : 8, pageNumber: page},  
                 dataType   : "html",  
-                url        : "http://localhost/fashionlab/wp-content/themes/the-bootstrap/loopHandler.php",  
+                url        : templateDir+"/loopHandler.php?lang="+currLang,  
                 beforeSend : function(){  
                 },  
                 success    : function(data){  

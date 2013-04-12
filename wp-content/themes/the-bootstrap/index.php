@@ -13,13 +13,14 @@
  */
 
 get_header(); ?>
-<div id="slider">
-	<?php echo do_shortcode( "[SlideDeck2 id=163 ress=1]" ); ?>
+<div id="slider_container">
+<?php echo slider_pro(1, array("[sp_link]")); ?>
 </div>
 <div class="container">
 <div id="page" class="container">
 <section id="primary" class="span8">
-	<h1 class="top-news">Latest News</h1>
+	<script>var templateDir = "<?php bloginfo('template_directory') ?>";var currLang="<?php echo ICL_LANGUAGE_CODE; ?>"; console.log(currLang);</script>
+	<h1 class="top-news"><?php _e('Latest News','theme-text-domain'); ?></h1>
 	<?php tha_content_before(); ?>
 	<div id="content" class="ajax" role="main">
 		<?php tha_content_top();?>
@@ -35,7 +36,6 @@ get_header(); ?>
 
 	<?php tha_content_after(); ?>
 	</section><!-- #primary -->
-</section><!-- #primary -->
 <?php get_sidebar(); ?>
 </div><!-- #page -->
 </div><!-- .container -->
@@ -43,4 +43,4 @@ get_header(); ?>
 
 
 <!-- End of file index.php */
-/* Location: ./wp-content/themes/the-bootstrap/index.php */ -->
+/* Location: ./wp-content/themes/the-bootstrap/index.php -->

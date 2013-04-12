@@ -14,17 +14,36 @@
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 								<span><img src="<?php bloginfo('template_directory'); ?>/img/logo-footer.png" alt="<?php bloginfo('name'); ?>" /></span>
 							</a>
-						</h1>
+							</h1>
+							<?php wp_nav_menu( array(
+							'container'			=>	'nav',
+							'container_class'	=>	'subnav',
+							'theme_location'	=>	'footer-contact',
+							'menu_class'		=>	'credits nav nav-pills pull-left',
+							'depth'				=>	3,
+							'fallback_cb'		=>	'the_bootstrap_credits',
+							'walker'			=>	new The_Bootstrap_Nav_Walker,
+						) );
+						?>
 					</div><!--span3-->
 					<div class="span2">
 						<div class="footer_box">
-						<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer') ) : ?>       
-            
-       					 <?php endif; ?> 
+							<h2><?php _e('Fashionlab Categories','theme-text-domain'); ?></h2>
+						<?php wp_nav_menu( array(
+							'container'			=>	'nav',
+							'container_class'	=>	'subnav',
+							'theme_location'	=>	'footer-menu',
+							'menu_class'		=>	'credits nav nav-pills pull-left',
+							'depth'				=>	3,
+							'fallback_cb'		=>	'the_bootstrap_credits',
+							'walker'			=>	new The_Bootstrap_Nav_Walker,
+						) );
+						?>
        					 </div>                
 					</div><!--span3-->
 					<div class="span2">
 					<div class="footer_box">
+						<h2><?php _e('Other Categories','theme-text-domain'); ?></h2>
 						<?php wp_nav_menu( array(
 							'container'			=>	'nav',
 							'container_class'	=>	'subnav',
@@ -39,10 +58,11 @@
 					</div>
 					<div class="span2">
 					<div class="footer_box">
+						<h2><?php _e('Stylists','theme-text-domain'); ?></h2>
 						<?php wp_nav_menu( array(
 							'container'			=>	'nav',
 							'container_class'	=>	'subnav',
-							'theme_location'	=>	'footer-menu',
+							'theme_location'	=>	'footer-menu3',
 							'menu_class'		=>	'credits nav nav-pills pull-left',
 							'depth'				=>	3,
 							'fallback_cb'		=>	'the_bootstrap_credits',
@@ -53,10 +73,11 @@
 					</div>
 					<div class="span2">
 					<div class="footer_box">
+						<h2><?php _e('Partners','theme-text-domain'); ?></h2>
 						<?php wp_nav_menu( array(
 							'container'			=>	'nav',
 							'container_class'	=>	'subnav',
-							'theme_location'	=>	'footer-menu',
+							'theme_location'	=>	'footer-menu4',
 							'menu_class'		=>	'credits nav nav-pills pull-left',
 							'depth'				=>	3,
 							'fallback_cb'		=>	'the_bootstrap_credits',
@@ -68,7 +89,7 @@
 					</div><!-- #page-footer .well .clearfix -->
 					<div class="clear"></div>
 					<div class="span12">	
-						<p>Copyright 2013 Dassault Systemes.</p>	
+						<p><?php _e('Copyright 2013 Dassault Systemes.','theme-text-domain'); ?></p>	
 					</div>
 					<?php tha_footer_bottom(); ?>
 					</div><!--container-->

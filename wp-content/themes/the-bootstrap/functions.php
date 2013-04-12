@@ -32,11 +32,6 @@ function the_bootstrap_setup() {
 		'aside',
 		'fullpage',
 		'chat',
-		'link',
-		'gallery',
-		'status',
-		'quote',
-		'image',
 		'video'
 	) );
 	
@@ -80,8 +75,11 @@ function the_bootstrap_setup() {
 	register_nav_menus( array(
 		'primary'		=>	__( 'Main Navigation', 'the-bootstrap' ),
 		'header-menu'  	=>	__( 'Header Menu', 'the-bootstrap' ),
+		'footer-contact' 	=>	__( 'Footer Menu Contact', 'the-bootstrap' ),
 		'footer-menu' 	=>	__( 'Footer Menu', 'the-bootstrap' ),
 		'footer-menu2'	=> 	__('Footer Menu 2', 'the-bootstrap'),
+		'footer-menu3'	=> 	__('Footer Menu 3', 'the-bootstrap'),
+		'footer-menu4'	=> 	__('Footer Menu 4', 'the-bootstrap'),
 		'languages'		=> __('Languages Menu', 'the-bootstrap')
 	) );
 	
@@ -208,6 +206,52 @@ function the_bootstrap_widgets_init() {
 		'name'			=>	__( 'About us page Sidebar', 'the-bootstrap' ),
 		'description'	=>	__( 'Shown on about us page only.', 'the-bootstrap' ),
 		'id'			=>	'about',
+		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'after_widget'	=>	'</aside>',
+		'before_title'	=>	'<h2 class="widget-title">',
+		'after_title'	=>	'</h2>',
+	) );
+		register_sidebar( array(
+		'name'			=>	__( 'François Quentin page Sidebar', 'the-bootstrap' ),
+		'description'	=>	__( 'Shown on stylists page only.', 'the-bootstrap' ),
+		'id'			=>	'stylists',
+		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'after_widget'	=>	'</aside>',
+		'before_title'	=>	'<h2 class="widget-title">',
+		'after_title'	=>	'</h2>',
+	) );
+		register_sidebar( array(
+		'name'			=>	__( 'Jonathan Riss page Sidebar', 'the-bootstrap' ),
+		'description'	=>	__( 'Shown on stylist Riss page only.', 'the-bootstrap' ),
+		'id'			=>	'riss',
+		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'after_widget'	=>	'</aside>',
+		'before_title'	=>	'<h2 class="widget-title">',
+		'after_title'	=>	'</h2>',
+	) );
+				register_sidebar( array(
+		'name'			=>	__( 'Julien Fournie page Sidebar', 'the-bootstrap' ),
+		'description'	=>	__( 'Shown on stylist Julien Fournie page only.', 'the-bootstrap' ),
+		'id'			=>	'fournie',
+		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'after_widget'	=>	'</aside>',
+		'before_title'	=>	'<h2 class="widget-title">',
+		'after_title'	=>	'</h2>',
+	) ); 
+
+		/*register_sidebar( array(
+		'name'			=>	__( 'Stylists page Sidebar', 'the-bootstrap' ),
+		'description'	=>	__( 'Shown on stylists pages only.', 'the-bootstrap' ),
+		'id'			=>	'stylists',
+		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'after_widget'	=>	'</aside>',
+		'before_title'	=>	'<h2 class="widget-title">',
+		'after_title'	=>	'</h2>',
+	) );*/
+			register_sidebar( array(
+		'name'			=>	__( 'Posts page Sidebar', 'the-bootstrap' ),
+		'description'	=>	__( 'Shown on posts page only.', 'the-bootstrap' ),
+		'id'			=>	'posts',
 		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
 		'after_widget'	=>	'</aside>',
 		'before_title'	=>	'<h2 class="widget-title">',
@@ -340,19 +384,71 @@ function register_js()
 }  
 add_action('init', 'register_js'); 
 
-/*register ajax loop    ajax normann*/ 
+/*register ajax loop ajax*/ 
 function register_ajaxLoop_script() {  
+	if(is_home()){
     wp_register_script(  
       'ajaxLoop',  
        get_stylesheet_directory_uri() . '/js/ajaxLoop.js',  
        array('jquery')  
     );  
-    wp_enqueue_script('ajaxLoop');  
+    wp_enqueue_script('ajaxLoop');  }
 }  
 add_action('wp_enqueue_scripts', 'register_ajaxLoop_script');  
  
+/************Supprimer les post formats**************/
+function rename_aside( $safe_text ) {
+    if ( $safe_text == 'Aside' )
+        return 'Small';
 
+    return $safe_text;
+}
+add_filter( 'esc_html', 'rename_aside' );
 
+//rename Aside in posts list table
+function live_rename_aside() { 
+    global $current_screen;
+
+    if ( $current_screen->id == 'edit-post' ) { ?>
+        <script type="text/javascript">
+        jQuery('document').ready(function() {
+
+            jQuery("span.post-state-format").each(function() { 
+                if ( jQuery(this).text() == "Aside" )
+                    jQuery(this).text("Small");             
+            });
+
+        });      
+        </script>
+<?php }
+}
+add_action('admin_head', 'live_rename_aside');
+add_theme_support( 'post-thumbnails' );
+function rename_chat( $safe_text ) {
+    if ( $safe_text == 'Chat' )
+        return 'Long';
+
+    return $safe_text;
+}
+add_filter( 'esc_html', 'rename_chat' );
+
+function live_rename_chat() { 
+    global $current_screen;
+
+    if ( $current_screen->id == 'edit-post' ) { ?>
+        <script type="text/javascript">
+        jQuery('document').ready(function() {
+
+            jQuery("span.post-state-format").each(function() { 
+                if ( jQuery(this).text() == "Chat" )
+                    jQuery(this).text("Long");             
+            });
+
+        });      
+        </script>
+<?php }
+}
+add_action('admin_head', 'live_rename_chat');
 
 /**
  * Properly enqueue comment-reply script
@@ -1135,6 +1231,16 @@ function _the_bootstrap_version() {
 	
 	return $theme_version;
 }
+/*Multiple Featured Images*/
+  if (class_exists('MultiPostThumbnails')) {
+        new MultiPostThumbnails(
+            array(
+                'label' => 'Secondary Image',
+                'id' => 'secondary-image',
+                'post_type' => 'post'
+            )
+        );
+    }
 // This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
@@ -1154,6 +1260,9 @@ add_filter( 'excerpt_length2', 'custom_excerpt_length2', 999 );
 
 /*Add Partners Filter and Post Types*/
 include("partners/partners-post-types.php");
+
+/*Add Store Filter and Post Types*/
+include("store/store-post-types.php");
 
 /*Ajout mes styles css */
 

@@ -12,12 +12,8 @@
 tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php tha_entry_top(); ?>
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary clearfix">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
 	<div class="entry-content clearfix">
+		
 		<a href="<?php the_permalink();?>"><?php the_post_thumbnail('homepage_thumb');?><span class="overlay hidden"><span class="lien">Know More</span></span></a>
 		<header class="page-header">
 		<hgroup>
@@ -28,11 +24,11 @@ tha_entry_before(); ?>
 		the_excerpt( __( '<span class="meta-nav">...</span>', 'the-bootstrap' ) );
 		the_bootstrap_link_pages(); ?>
 	</div><!-- .entry-content -->
-	<?php endif; ?>
 
 	<footer class="entry-footer">
+		<div class="about-author">
 		<?php the_bootstrap_posted_on(); ?>
-		</div><!--comments-display-->
+		</div><!--about-author-->
 	</footer><!-- .entry-footer -->
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->

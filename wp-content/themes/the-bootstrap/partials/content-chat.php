@@ -15,6 +15,7 @@ tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php tha_entry_top(); ?>
 	<div class="entry-content clearfix">
+		
 		<a href="<?php the_permalink();?>"><?php the_post_thumbnail('fullpage_thumb');?><span class="overlay hidden"><span class="lien">Know More</span></span></a>
 		<header class="page-header">
 		<hgroup>

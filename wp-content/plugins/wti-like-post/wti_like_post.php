@@ -3,7 +3,7 @@
 Plugin Name: WTI Like Post
 Plugin URI: http://www.webtechideas.com/wti-like-post-plugin/
 Description: WTI Like Post is a plugin for adding like (thumbs up) and unlike (thumbs down) functionality for wordpress posts/pages. On admin end alongwith handful of configuration settings, it will show a list of most liked posts/pages. If you have already liked a post/page and now you dislike it, then the old voting will be cancelled and vice-versa. It also has the option to reset the settings to default if needed. You can reset the like counts for all/selected posts/pages. It comes with two widgets, one to display the most liked posts/pages for a given time range and another to show recently liked posts.
-Version: 1.4
+Version: 999.9
 Author: webtechideas
 Author URI: http://www.webtechideas.com/
 License: GPLv2 or later

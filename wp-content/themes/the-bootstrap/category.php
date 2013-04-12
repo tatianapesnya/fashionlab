@@ -10,15 +10,13 @@
 
 get_header(); ?>
 
+<div class="container">
+<div id="page" class="container">
 <section id="primary" class="span8">
 
-	<?php tha_content_before(); ?>
+	
 	<div id="content" role="main">
-		<?php tha_content_top();
-
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
+		<header class="page-header">
 				<h1 class="page-title"><?php
 					printf( __( 'Category Archives: %s', 'the-bootstrap' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 				?></h1>
@@ -27,25 +25,43 @@ get_header(); ?>
 					echo apply_filters( 'category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
 				} ?>
 			</header><!-- .page-header -->
-	
-			<?php
-			while ( have_posts() ) {
+	<?php tha_content_before(); ?>
+		<?php tha_content_top();
+if (have_posts()) {  
+       while ( have_posts() ) {
 				the_post();
-				get_template_part( '/partials/content', get_post_format() );
-			}
-			the_bootstrap_content_nav();
-		else :
-			get_template_part( '/partials/content', 'not-found' );
-		endif;
-		
+				if (has_post_format('aside')){?>
+			<div class="span4 post_aside"> 
+				<?php get_template_part( '/partials/content',  get_post_format() );?>
+			</div><!--post_aside-->
+			<?php }elseif(has_post_format('video')) { ?>
+			<div class="span8 post_chat">
+				<?php get_template_part( '/partials/content',  get_post_format() ); ?>
+			</div>
+			<?php } elseif(has_post_format('chat')){?>
+				<div class="span8 post_chat"> 
+					<?php get_template_part( '/partials/content', get_post_format() );?>
+				</div><!--post_chat-->
+			<?php }
+			else{ ?>
+			<div class="span8 post_chat"> 
+				<?php get_template_part( '/partials/content', 'not-found' ); ?>
+			</div>
+			<?php } 
+	}
+}
 		tha_content_bottom(); ?>
-	</div><!-- #content -->
+
 	<?php tha_content_after(); ?>
 </section><!-- #primary -->
 
-<?php
-get_sidebar();
-get_footer();
+<?php 
+	get_sidebar();
+?>
+</div>
+</div><!-- #page -->
+</div><!-- .container -->
+<?php get_footer();
 
 
 /* End of file index.php */

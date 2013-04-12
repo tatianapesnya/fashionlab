@@ -1,25 +1,21 @@
-<?php
-/** page.php
+<?php 
+/** _partners.php
  *
- * The template for displaying all pages.
+ * Template Name: Partners
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @author		Pesnya Tatiana
- * @package		The Bootstrap
- * @since		1.0.0 - 07.02.2012
+ * @author 	Pesnya Tatiana
+ * @package The Bootstrap
+ * @since	1.3.0	- 29.04.2012
  */
 
 get_header(); ?>
     <!-- #content  BEGIN  -->  
-<div id="primary" class="span12">
-	<div id="content" role="main">
+<div class="container">
+<div id="page" class="container">
+<section id="primary" class="span8">
       <ul class="filter clearfix"> 
-      <li><strong>Filter:</strong></li>
-		<li class="active"><a href="javascript:void(0)" class="all">All</a></li> 
+      <li><strong><?php _e('Filter','theme-text-domain'); ?>:</strong></li>
+		<li class="active"><a href="javascript:void(0)" class="all"><?php _e('All','theme-text-domain'); ?></a></li> 
 		<?php
 						// Get the taxonomy
 						$terms = get_terms('filter', $args);
@@ -73,6 +69,7 @@ get_header(); ?>
 					<?php wp_reset_query(); // Reset the Query Loop?>
 			
 				</ul>
+			</section>
 	</div><!-- #content -->
 </div><!-- #primary -->
 

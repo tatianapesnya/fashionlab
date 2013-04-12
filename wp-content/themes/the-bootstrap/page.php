@@ -15,23 +15,29 @@
 
 get_header(); ?>
 
-<div id="primary" class="span8">
+<div class="container">
+<div id="page" class="container">
+<section id="primary" class="span8">
 	<?php tha_content_before(); ?>
-	<div id="content" role="main">
 		<?php tha_content_top();
 		
 		the_post();
 		get_template_part( '/partials/content', 'page' );
 
 		tha_content_bottom(); ?>
-	</div><!-- #content -->
+
 	<?php tha_content_after(); ?>
-</div><!-- #primary -->
-<?php if(is_page(9)){ ?> <!--sidebar pour la page about us-->
-<?php get_sidebar('about'); }else{ /*sidebar pour toutes les autres pages */
+</section><!-- #primary -->
+<?php if(is_page(9)){  //sidebar pour la page about us
+	get_sidebar('about');}
+		elseif (is_page(10) || is_page(59)){
+			(!dynamic_sidebar());}
+			else{ /*sidebar pour toutes les autres pages */
 	get_sidebar();
-}
-get_footer();
+}?>
+</div><!-- #page -->
+</div><!-- .container -->
+<?php get_footer();
 
 
 /* End of file page.php */

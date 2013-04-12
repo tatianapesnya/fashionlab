@@ -1,0 +1,70 @@
+/*Social Media Icons Widget Plugin Styles
+Agent SMC WIdget Styles
+/*Front End*/
+DIV.widget.smc
+{
+	/*[disabled]width:300px;*/
+}
+DIV.widget.smc .widget-wrap
+{
+	position: relative;
+}
+#socialmedia-container
+{
+	display: inline-block;
+	/*[disabled]width:290px;*/
+	margin: 0 auto;
+	float: none;
+	padding: 5px;
+	position: relative;
+}
+#socialmedia-container DIV.smc_icon_container
+{
+	/*width: 33px;*/
+	margin: 0 8px 10px !important;
+	float: left;
+	position: relative;
+	padding: 0px !important;
+	display: block;
+}
+#socialmedia-container DIV.smc_icon_container:last-child
+{
+	margin: 0 0 10px 8px !important;
+}
+DIV#socialmedia-container .smc_icon_container A
+{
+	display: block !important;
+	width: auto !important;
+	height: auto !important;
+}
+DIV#socialmedia-container IMG
+{
+	border: none;
+    width: auto;
+    height: auto;
+}
+/*GooglePlus*/
+.googleplus
+{
+	position: relative;
+/*- use this to position your share icon on your page -*/
+	cursor: pointer;
+    width: 33px;
+}
+.googlehider
+{
+	opacity: 0;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: 0;
+	left: 8px;
+	z-index: 3;
+}
+.mygoogle
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}

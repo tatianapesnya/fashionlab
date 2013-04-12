@@ -96,8 +96,11 @@
 					</div>
 						<?php endif; ?>
 					</nav><!-- #access -->
-					<?php 
-					tha_header_bottom(); ?>
+					<div class="clear"></div>
+					<div class="breadcrumbs">
+    					<?php do_action('icl_navigation_breadcrumb', ' -> '); ?>
+					</div>
+					<?php tha_header_bottom(); ?>
 				</hgroup>
 			</header>
 		</div><!--page-->

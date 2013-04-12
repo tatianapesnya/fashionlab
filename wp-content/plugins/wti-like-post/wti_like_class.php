@@ -90,6 +90,7 @@ class MostLikedPosts
      function widget($args, $instance = array() ){
 		global $wpdb;
 		extract($args);
+		$comments = get_comments( apply_filters( 'widget_comments_args',array( 'number' => '3','status' => 'approve','post_status' => 'publish' ) ) );
 	    
 		$title = $instance['title'];
 		$show_count = $instance['show_count'];
@@ -101,8 +102,11 @@ class MostLikedPosts
 			$limit = "LIMIT " . (int)$instance['number'];
 		}
 		
-		$widget_data  = $before_widget;
-		$widget_data .= $before_title . $title . $after_title;
+		$widget_data .= '<div class="tabbedPanels"> <ul class="tabs"> <li><a href="#mostlikedpostswidget-2" class="active">';
+		$widget_data .= 'Popular';
+		$widget_data .= '</a></li> <li> <a href="#recent-comments-2">Latest Comments</a></li></ul>';
+		$widget_data .=	'<div class="panelContainer">';
+		$widget_data .= '<aside id="mostlikedpostswidget-2" class="panel" class="widget well widget_mostlikedpostswidget">';
 		$widget_data .= '<ul class="wti-most-liked-posts">';
 	
 		$show_excluded_posts = get_option('wti_like_post_show_on_widget');
@@ -141,7 +145,38 @@ class MostLikedPosts
 		}
    
 		$widget_data .= '</ul>';
+		$widget_data .= '</aside><aside id="recent-comments-2" class="panel" class="widget well widget_recent_comments"><ul class="wti-most-liked-posts">';
+		
+		if ( $comments ) {
+			// Prime cache for associated posts. (Prime post term cache if we need it for permalinks.)
+			$post_ids = array_unique( wp_list_pluck( $comments, 'comment_post_ID' ) );
+			_prime_post_caches( $post_ids, strpos( get_option( 'permalink_structure' ), '%category%' ), false );
+
+			foreach ( (array) $comments as $comment) {
+				
+				$post_title = stripslashes($comment->post_title);
+				$permalink = get_permalink($comment->comment_post_ID);
+				$post_thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($comment->comment_post_ID), array(109,89), true);
+				$post_thumbnail = $post_thumbnail[0];
+				$excerpt = get_the_excerpt($comment->comment_post_ID);
+				
+
+				$widget_data .= '<li class="recentcomments"><a href="' . $permalink . '" title="" rel="nofollow"><img src="'.$post_thumbnail.'">'.$post_title.'</a><p>'.substr($excerpt, 0,35). '<a href="'. $permalink .'"> [...]</a></p>';//ajout span peut être
+				
+				$widget_data .= '</li>';
+
+			}
+
+		$widget_data .= '</ul></aside> ';
+		$widget_data .= '</div></div>';
+
+ 		}
+
+
+		
 		$widget_data .= $after_widget;
+
+		
    
 		echo $widget_data;
      }

@@ -14,11 +14,10 @@
  */
 
 get_header(); ?>
-
+<div class="container">
+<div id="page" class="container">
 <section id="primary" class="span8">
-
 	<?php tha_content_before(); ?>
-	<div id="content" role="main">
 		<?php tha_content_top();
 		
 		if ( have_posts() ) : ?>
@@ -49,13 +48,12 @@ get_header(); ?>
 		endif;
 		
 		tha_content_bottom(); ?>
-	</div><!-- #content -->
 	<?php tha_content_after(); ?>
-</section><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+	</section><!-- #primary -->
+	<?php get_sidebar();?>
+</div><!-- #page -->
+</div><!-- .container -->
+<?php get_footer();
 
 
 /* End of file archive.php */
