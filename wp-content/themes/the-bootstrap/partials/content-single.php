@@ -23,7 +23,7 @@ tha_entry_before(); ?>
 		the_content();
 		the_bootstrap_link_pages(); ?>
 	</div><!-- .entry-content -->
-
+	<?php if (is_singular('stylist')){return;}else{ ?>
 	<div class="entry-meta"><?php 
 	if (get_the_author_meta(ID) == 2){
 		$author_link = get_bloginfo('url').'/stylist/francois-quentin/';
@@ -47,6 +47,7 @@ tha_entry_before(); ?>
 		</div><!--comments-display-->
 		<?php
 	}; ?></div><!-- .entry-meta -->
+	<?php }?>
 	<footer class="entry-footer">
 		<?php
 		$categories_list = get_the_category_list( _x( ', ', 'used between list items, there is a space after the comma', 'the-bootstrap' ) );

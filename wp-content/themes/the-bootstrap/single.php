@@ -44,9 +44,10 @@ get_header(); ?>
 		<div class="entry-content clearfix">
 		<?php if ( has_post_thumbnail() ) : ?>
 		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-			<?php the_post_thumbnail( 'homepage_thumb' ); ?><span class="overlay hidden"><span class="lien"><?php _e('Know More','theme-text-domain'); ?></span></span>
+			<?php the_post_thumbnail( 'homepage_thumb' ); ?>
 		</a>
 		<?php endif;?>
+		<div class="extrat-content">
 		<header class="page-header">
 			<hgroup>
 				<h3 class="entry-title">
@@ -55,8 +56,9 @@ get_header(); ?>
 			</hgroup>
 		</header>	
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-				<?php the_excerpt();?>
+				<?php echo substr(get_the_excerpt(), 0,100); ?>
 			</a>
+		</div><!--extrat-content-->
 		</div><!-- .entry-content -->
 		</div><!--post-aside-->
  		<?php endforeach; ?>
