@@ -755,25 +755,32 @@ aside#widgets-reloaded-categories-5 ul li{
 	text-align: center;
 }
 aside#widgets-reloaded-categories-3 ul li a, aside#widgets-reloaded-categories-2 ul li a,
-aside#widgets-reloaded-categories-4 ul li a,aside#widgets-reloaded-categories-5 ul li a{
+aside#widgets-reloaded-categories-4 ul li a,aside#widgets-reloaded-categories-5 ul li a, 
+aside#widgets-reloaded-categories-9 ul li a, aside#widgets-reloaded-categories-8 ul li a{
 	color: #fff;
 	font-weight: bold;
 	line-height: 29px;
 	font-family: '3ds Bold', Arial, sans-serif;
 	text-transform: uppercase;
 }
-aside#widgets-reloaded-categories-3 ul li a:hover, aside#widgets-reloaded-categories-2 ul li a:hover{
+aside#widgets-reloaded-categories-3 ul li a:hover,
+aside#widgets-reloaded-categories-8 ul li a:hover, 
+aside#widgets-reloaded-categories-9 ul li a:hover,
+aside#widgets-reloaded-categories-2 ul li a:hover{
 	text-decoration: none;
 }
-aside#widgets-reloaded-categories-3 ul li:hover, aside#widgets-reloaded-categories-2 ul li:hover{
+aside#widgets-reloaded-categories-3 ul li:hover, aside#widgets-reloaded-categories-2 ul li:hover,
+aside#widgets-reloaded-categories-8 ul li:hover,aside#widgets-reloaded-categories-9 ul li:hover{
 	background-color: #000000;
 }
 aside#widgets-reloaded-categories-3 ul.xoxo.categories li{ 
 	background-color: #5d3c4d;
 }
 aside#widgets-reloaded-categories-2 ul.xoxo.categories li{
-background-color:#af6181;}
-aside#widgets-reloaded-categories-3 ul.xoxo.categories li:hover, aside#widgets-reloaded-categories-2 ul.xoxo.categories li:hover{
+	background-color:#af6181;
+}
+aside#widgets-reloaded-categories-3 ul.xoxo.categories li:hover, 
+aside#widgets-reloaded-categories-2 ul.xoxo.categories li:hover{
 	background-color: #000;
 }
 aside#sc-widget-2{
@@ -782,6 +789,28 @@ aside#sc-widget-2{
 }
 aside#sc-widget-2 h2{
 	border-bottom: 1px dotted #000;
+}
+aside#pbawp_wrapper-5 h2{
+	font-size: 0.9em;
+	font-family: '3dsRegular', Arial, sans-serif;
+}
+aside#pbawp_wrapper-5{
+	border:6px solid #e5e5e5;
+	margin-top: 220px;
+	padding-top: 0;
+}
+aside#pbawp_wrapper-5 #action_like{
+	display: none;
+}
+aside#pbawp_wrapper-5 p{
+	text-align: center;
+}
+ul.posts-by-author-widget-list{
+	padding:0 18px;
+}
+ul.posts-by-author-widget-list li{
+	border-bottom: 1px dotted #000;
+	padding: 15px 0 0 0;
 }
 aside#sc-widget-2
 {
@@ -1008,7 +1037,7 @@ h2{
 	font-weight: normal;
 	color: #727272;
 }
-#widgets-reloaded-categories-6, #widgets-reloaded-categories-7, #hwim-5, 
+
 ul.posts-by-author-widget-list li:nth-child(2),ul.posts-by-author-widget-list li:last-child {
 	display: none;
 }

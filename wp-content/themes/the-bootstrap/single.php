@@ -117,11 +117,11 @@ get_header(); ?>
 	</div><!-- #content -->
 	<?php tha_content_after(); ?>
 </section><!-- #primary -->
-<?php if(is_single('255')){ 
+<?php if(is_single('francois-quentin')){ 
 	get_sidebar('stylists');
-}elseif(is_single('282')){
+}elseif(is_single('jonathan-riss')){
 	get_sidebar('riss');
-}elseif(is_single('305')){
+}elseif(is_single('julien-fournie')){
 	get_sidebar('fournie');
 }else{
 get_sidebar('posts'); }?>
