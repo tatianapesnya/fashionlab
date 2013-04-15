@@ -15,6 +15,7 @@
 get_header(); ?>
 <div id="slider_container">
 <?php echo slider_pro(1, array("[sp_link]")); ?>
+<span class="scroll-down"><a href="#"><img src="<?php bloginfo('template_directory') ?>/img/down.png" /></a></span>
 </div>
 <div class="container">
 <div id="page" class="container">
