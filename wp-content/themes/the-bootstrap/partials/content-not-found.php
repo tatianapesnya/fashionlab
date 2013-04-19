@@ -7,9 +7,11 @@
  * @package		The Bootstrap
  * @since		1.0.0 - 07.02.2012
  */
-
-
-tha_entry_before(); ?>
+?>
+<div class="container">
+<div id="page" class="container">
+<section id="primary" class="span8">
+<?php tha_entry_before(); ?>
 <article id="post-0" class="post no-results not-found">
 	<?php tha_entry_top(); ?>
 	
@@ -28,8 +30,10 @@ tha_entry_before(); ?>
 	
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-0 -->
-<?php tha_entry_after();
-
+<?php tha_entry_after();?>
+</section>
+</div>
+</div>
 
 /* End of file content-not-found.php */
 /* Location: ./wp-content/themes/the-bootstrap/partials/content-not-found.php */

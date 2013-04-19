@@ -9,7 +9,8 @@
  */
 
 get_header(); ?>
-
+<div class="container">
+<div id="page" class="container">
 <section id="primary" class="span8">
 	<?php tha_content_before(); ?>
 	<div id="content" role="main">
@@ -37,8 +38,10 @@ get_header(); ?>
 </section><!-- #primary -->
 
 <?php
-get_sidebar();
-get_footer();
+get_sidebar();?>
+</div>
+</div>
+<?php get_footer();
 
 
 /* End of file search.php */

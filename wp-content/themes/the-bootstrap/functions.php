@@ -1247,6 +1247,7 @@ function _the_bootstrap_version() {
 	add_image_size('widget_thumbnail', 100, 50, true);
 	add_image_size('homepage_thumb', 300, 205, true);
 	add_image_size('fullpage_thumb', 620, 225, true);
+	add_image_size('articles_thumb', 194, 148, true);
 	add_image_size('like_thumb', 109, 89, true);
 //Excerpt length max 2 lines
 	function custom_excerpt_length( $length ) {

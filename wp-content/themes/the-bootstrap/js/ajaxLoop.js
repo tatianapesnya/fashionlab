@@ -18,7 +18,6 @@ jQuery(function($){
                     $content.append($data);  
                     $data.fadeIn(500,function(){
                     	loading = false;
-                    	console.log('fini');
                     });  
                 },  
                 error     : function(jqXHR, textStatus, errorThrown) {  
@@ -29,7 +28,6 @@ jQuery(function($){
         $('#loadmore').click(function() {
          event.preventDefault(); 
         var content_offset = $content.offset();  
-        console.log(content_offset.top);  
         if(!loading) {
                 loading = true;  
                 page++;  

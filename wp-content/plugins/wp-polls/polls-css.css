@@ -61,9 +61,10 @@
 .wp-polls-image {
 	border: 0px;
 }
-.wp-polls .Buttons {
-	border:1px solid #c8c8c8;
-	background-color: #f3f6f8;
+.wp-polls .Buttons{
+	border: 1px solid #212021;
+	background-color: #212021;
+	color: #fff;
 }
 /* Polls Archive Paging */
 .wp-polls-paging a, .wp-polls-paging a:link {
