@@ -1668,6 +1668,14 @@ li.partners_span div a{
 		margin: 5px;
 		line-height: 18px;
 	}
+	span.overlay {
+		width: 100%;
+		height: 66%;
+	}
+	span.lien {
+		top: 45%;
+		left: 10%;
+	}
 	#other-articles .entry-content.clearfix a img{
 	margin-top: 41px;
 }
@@ -1824,7 +1832,28 @@ li.partners_span div a{
     display: none !important;
   }
 }
-
+@media (min-width: 490px) and (max-width: 767px){
+		/***********mes styles*********/
+	#content{
+		padding: 0 25%;
+	}
+	section#secondary{
+		margin: 0 auto;
+		width: 40%;
+	}
+	#page-footer{
+		margin:0 auto;
+		width: 90%;
+	}
+	.span3{
+		float: left;
+		width: 30%;
+	}
+	.span2{
+		float: left;
+		width: 25%;
+	}
+}
 /************TABLETTE**************/
 @media (max-width: 767px) {
 	.hidden-desktop {

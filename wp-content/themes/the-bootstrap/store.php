@@ -11,10 +11,11 @@
     <!-- #content  BEGIN  -->  
 <div class="container">
 <div id="page" class="container">
-<section id="primary" class="span8">
-      <ul class="filter clearfix"> 
-      <li><strong><?php _e('Filter','theme-text-domain'); ?>:</strong></li>
-		<li class="active"><a href="javascript:void(0)" class="all"><?php _e('All','theme-text-domain'); ?></a></li> 
+<section id="primary" class="partners">
+		<ul class="filter clearfix"> 
+      		<li><strong><a href="#"><?php _e('Filter','theme-text-domain'); ?>:</a></strong>
+      			<ul class="dropdown_partners">
+					<li class="active"><a href="javascript:void(0)" class="all"><?php _e('All','theme-text-domain'); ?></a></li> 
 		<?php
 						// Get the taxonomy
 						$terms = get_terms('filter_store', $args);
@@ -53,6 +54,8 @@
 						}
 					?>
 				</ul>
+			</li>
+		</ul>
 				<ul class="filterable-grid clearfix">
   
     			<?php $wpbp = new WP_Query(array(  'post_type' => 'stores', 'posts_per_page' =>'-1' ) ); ?>  

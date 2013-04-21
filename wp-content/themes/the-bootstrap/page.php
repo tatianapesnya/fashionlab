@@ -17,7 +17,8 @@ get_header(); ?>
 
 <div class="container">
 <div id="page" class="container">
-<section id="primary" class="span8 single">	<?php tha_content_before(); ?>
+<section id="primary" class="span8 single">	
+	<?php tha_content_before(); ?>
 		<?php tha_content_top();
 		
 		the_post();

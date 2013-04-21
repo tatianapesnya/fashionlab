@@ -12,10 +12,7 @@ get_header(); ?>
 
 <div class="container">
 <div id="page" class="container">
-<section id="primary" class="span8">
-
-	
-	<div id="content" role="main">
+<section id="primary" class="span8 single">
 		<header class="page-header">
 				<h1 class="page-title"><?php
 					printf( __( 'Category Archives: %s', 'the-bootstrap' ), '<span>' . single_cat_title( '', false ) . '</span>' );
@@ -58,7 +55,6 @@ if (have_posts()) {
 <?php 
 	get_sidebar();
 ?>
-</div>
 </div><!-- #page -->
 </div><!-- .container -->
 <?php get_footer();
