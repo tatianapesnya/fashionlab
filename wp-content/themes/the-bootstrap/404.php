@@ -12,7 +12,7 @@ get_header(); ?>
 
 <div class="container">
 <div id="page" class="container">
-<section id="primary" class="span8">
+<section id="primary" class="partners">
 
 	<?php tha_content_before(); ?>
 	<div id="content" role="main">
@@ -56,9 +56,6 @@ get_header(); ?>
 	</div><!-- #content -->
 	<?php tha_content_after(); ?>
 </section><!-- #primary -->
-
-<?php
-get_sidebar();?>
 </div>
 </div>
 <?php get_footer();

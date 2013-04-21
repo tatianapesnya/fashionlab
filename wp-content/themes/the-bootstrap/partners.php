@@ -12,11 +12,17 @@ get_header(); ?>
     <!-- #content  BEGIN  -->  
 <div class="container">
 <div id="page" class="container">
-<section id="primary" class="span8">
+<section id="primary" class="partners">
+	<nav class="partners">
+		<ul class="partners">
+			<li><a href="<?php bloginfo('name'); ?>/become-a-partner"><span> -> </span><?php _e('Become a partner','theme-text-domain'); ?></a></li>
+		</ul>
+	</nav>
       <ul class="filter clearfix"> 
-      <li><strong><?php _e('Filter','theme-text-domain'); ?>:</strong></li>
-		<li class="active"><a href="javascript:void(0)" class="all"><?php _e('All','theme-text-domain'); ?></a></li> 
-		<?php
+      	<li><strong><a href="#"><?php _e('Filter by','theme-text-domain'); ?> : All</a></strong>
+      	<ul class="dropdown_partners">
+			<li class="active"><a href="javascript:void(0)" class="all"><?php _e('All','theme-text-domain'); ?></a></li> 
+			<?php
 						// Get the taxonomy
 						$terms = get_terms('filter', $args);
 						
@@ -54,13 +60,15 @@ get_header(); ?>
 						}
 					?>
 				</ul>
-				<ul class="filterable-grid clearfix">
+				</li>
+			</ul>
+			<ul class="filterable-grid clearfix">
   
     			<?php $wpbp = new WP_Query(array(  'post_type' => 'partners', 'posts_per_page' =>'-1' ) ); ?>  
   
    				 <?php if ($wpbp->have_posts()) :  while ($wpbp->have_posts()) : $wpbp->the_post(); ?>  
    				 <?php $terms = get_the_terms( get_the_ID(), 'filter' ); ?>  
-  				<li data-id="id-<?php echo  $count; ?>" data-type="<?php foreach ($terms as $term) { echo  strtolower(preg_replace('/\s+/', '-', $term->name)). ' '; } ?>" class="span3"> 
+  				<li data-id="id-<?php echo  $count; ?>" data-type="<?php foreach ($terms as $term) { echo  strtolower(preg_replace('/\s+/', '-', $term->name)). ' '; } ?>" class="partners_span"> 
       			<?php the_content();?>
         		</li>  
   

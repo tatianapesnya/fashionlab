@@ -10,7 +10,7 @@
 ?>
 <div class="container">
 <div id="page" class="container">
-<section id="primary" class="span8">
+<section id="primary" class="span8 single">
 <?php tha_entry_before(); ?>
 <article id="post-0" class="post no-results not-found">
 	<?php tha_entry_top(); ?>
@@ -34,6 +34,6 @@
 </section>
 </div>
 </div>
-
+<?php
 /* End of file content-not-found.php */
 /* Location: ./wp-content/themes/the-bootstrap/partials/content-not-found.php */

@@ -11,7 +11,7 @@
 get_header(); ?>
 <div class="container">
 <div id="page" class="container">
-<section id="primary" class="span8">
+<section id="primary" class="span8 single">
 	
 	<?php tha_content_before(); ?>
 	<div id="content" role="main">
@@ -44,7 +44,7 @@ get_header(); ?>
 		<div class="entry-content clearfix">
 		<?php if ( has_post_thumbnail() ) : ?>
 		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-			<?php the_post_thumbnail( 'homepage_thumb' ); ?>
+			<?php the_post_thumbnail( 'homepage_thumb' ); ?><span class="overlay hidden"><span class="lien">Know More</span></span>
 		</a>
 		<?php endif;?>
 		<div class="extrat-content">
