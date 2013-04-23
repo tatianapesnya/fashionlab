@@ -104,7 +104,7 @@ class MostLikedPosts
 		
 		$widget_data .= '<div class="tabbedPanels"> <ul class="tabs"> <li><a href="#mostlikedpostswidget-2" class="active">';
 		$widget_data .= 'Popular';
-		$widget_data .= '</a></li> <li> <a href="#recent-comments-2">Latest Comments</a></li></ul>';
+		$widget_data .= '</a></li> <li> <a href="#recent-comments-2">Latest Commented</a></li></ul>';
 		$widget_data .=	'<div class="panelContainer">';
 		$widget_data .= '<aside id="mostlikedpostswidget-2" class="panel" class="widget well widget_mostlikedpostswidget">';
 		$widget_data .= '<ul class="wti-most-liked-posts">';

@@ -179,7 +179,7 @@ function the_bootstrap_widgets_init() {
 	register_sidebar( array(
 		'name'			=>	__( 'Main Sidebar', 'the-bootstrap' ),
 		'id'			=>	'main',
-		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'before_widget'	=>	'<aside id="%1$s" class="widget %2$s">',
 		'after_widget'	=>	'</aside>',
 		'before_title'	=>	'<h2 class="widget-title">',
 		'after_title'	=>	'</h2>',
@@ -189,7 +189,7 @@ function the_bootstrap_widgets_init() {
 		'name'			=>	__( 'Image Sidebar', 'the-bootstrap' ),
 		'description'	=>	__( 'Shown on image attachment pages.', 'the-bootstrap' ),
 		'id'			=>	'image',
-		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'before_widget'	=>	'<aside id="%1$s" class="widget %2$s">',
 		'after_widget'	=>	'</aside>',
 		'before_title'	=>	'<h2 class="widget-title">',
 		'after_title'	=>	'</h2>',
@@ -206,7 +206,7 @@ function the_bootstrap_widgets_init() {
 		'name'			=>	__( 'About us page Sidebar', 'the-bootstrap' ),
 		'description'	=>	__( 'Shown on about us page only.', 'the-bootstrap' ),
 		'id'			=>	'about',
-		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'before_widget'	=>	'<aside id="%1$s" class="widget %2$s">',
 		'after_widget'	=>	'</aside>',
 		'before_title'	=>	'<h2 class="widget-title">',
 		'after_title'	=>	'</h2>',
@@ -215,7 +215,7 @@ function the_bootstrap_widgets_init() {
 		'name'			=>	__( 'François Quentin page Sidebar', 'the-bootstrap' ),
 		'description'	=>	__( 'Shown on stylists page only.', 'the-bootstrap' ),
 		'id'			=>	'stylists',
-		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'before_widget'	=>	'<aside id="%1$s" class="widget %2$s">',
 		'after_widget'	=>	'</aside>',
 		'before_title'	=>	'<h2 class="widget-title">',
 		'after_title'	=>	'</h2>',
@@ -224,7 +224,7 @@ function the_bootstrap_widgets_init() {
 		'name'			=>	__( 'Jonathan Riss page Sidebar', 'the-bootstrap' ),
 		'description'	=>	__( 'Shown on stylist Riss page only.', 'the-bootstrap' ),
 		'id'			=>	'riss',
-		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'before_widget'	=>	'<aside id="%1$s" class="widget %2$s">',
 		'after_widget'	=>	'</aside>',
 		'before_title'	=>	'<h2 class="widget-title">',
 		'after_title'	=>	'</h2>',
@@ -233,7 +233,7 @@ function the_bootstrap_widgets_init() {
 		'name'			=>	__( 'Julien Fournie page Sidebar', 'the-bootstrap' ),
 		'description'	=>	__( 'Shown on stylist Julien Fournie page only.', 'the-bootstrap' ),
 		'id'			=>	'fournie',
-		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
+		'before_widget'	=>	'<aside id="%1$s" class="widget %2$s">',
 		'after_widget'	=>	'</aside>',
 		'before_title'	=>	'<h2 class="widget-title">',
 		'after_title'	=>	'</h2>',
@@ -558,7 +558,7 @@ add_filter( 'wp_title', 'the_bootstrap_wp_title', 1, 2 );
  * @return	string
  */
 function the_bootstrap_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( '<span class="meta-nav">...</span>', 'the-bootstrap' ) . '</a>';
+	return ' <a href="'. esc_url( get_permalink() ) . '"></a>';
 }
 
 

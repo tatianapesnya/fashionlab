@@ -17,11 +17,17 @@ tha_entry_before(); ?>
 		<a href="<?php the_permalink();?>"><?php the_post_thumbnail('homepage_thumb');?><span class="overlay hidden"><span class="lien">Know More</span></span></a>
 		<header class="page-header">
 		<hgroup>
-			<?php the_title('<h2 class="entry-title"><a href="' . get_permalink() .'" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h2>' ); ?>
+			<h2 class="entry-title">
+				<a href="<?php the_permalink(); ?>">
+			<?php if (strlen($post->post_title) > 50) {
+				echo substr(the_title($before = '', $after = '', FALSE), 0, 50) . '...';} else {
+				the_title('<h2 class="entry-title"><a href="' . get_permalink() .'" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h2>' );
+			} ?>
+		</a></h2>
 		</hgroup>
 		</header><!-- .entry-header -->
 		<?php
-		the_excerpt( __( '<span class="meta-nav">...</span>', 'the-bootstrap' ) );
+		the_excerpt( __('the-bootstrap' ) );
 		the_bootstrap_link_pages(); ?>
 	</div><!-- .entry-content -->
 

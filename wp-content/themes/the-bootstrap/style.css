@@ -717,6 +717,11 @@ footer#colophon{
 }
 #menu-footer-contact li{
 	float: left;
+	border-right: 1px solid #fff;
+	height: 15px;
+}
+#menu-footer-contact li:last-child{
+	border-right: none;
 }
 ul.menu-footer-one li{
 	float: left;
@@ -951,6 +956,11 @@ ul.posts-by-author-widget-list li a img{
 strong p{
 	text-align: center;
 }
+section#secondary .SMCWidget h2.widget-title,
+section#secondary .widget_hwim h2.widget-title{
+	font-size: 1.8em;
+	line-height: 48px;
+}
 aside#sc-widget-2
 {
 	padding-top: 20px;
@@ -1085,7 +1095,7 @@ span.plus{
 	border-bottom: 1px dotted #b5b5b5;
 	margin-bottom: 20px;
 }
-.SMCWidget #socialmedia-container
+#socialmedia-container
 {
 		display: table;
 	}
@@ -1136,6 +1146,7 @@ margin: 0 9px;
 ul#menu-footer-contact li a{
 	font-weight: bold;
 	color: #fff;
+	padding: 0 10px;
 }
 /******************STYLISTS***********/
 .breadcrumbs{
@@ -1605,7 +1616,7 @@ li.partners_span div a{
 	}
 
 	/*Sidebar**************************************************/
-	.SMCWidget #socialmedia-container{
+	#socialmedia-container{
 		display: table;
 	}
 	aside#widgets-reloaded-categories-2, 
@@ -1821,9 +1832,9 @@ li.partners_span div a{
 	.wp-caption {
 		display: table;
 	}
-	aside#smcwidget-2 #socialmedia-container,
-	aside#smcwidget-3 #socialmedia-container{
+	aside #socialmedia-container{
 		display: table;
+		margin-top: 15px;
 	}
 	section#secondary.span4{
 	width: 300px;

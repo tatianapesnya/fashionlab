@@ -93,7 +93,7 @@ if ( ! function_exists( 'the_bootstrap_posted_on' ) ) :
 */
 function the_bootstrap_posted_on() {
 	printf( __( '<div class="about-author"><span class="by-author"> <span class="sep">By </span> <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>
-		<span class="sep"> | </span><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'the-bootstrap' ),
+		<span class="sep"> | </span><time class="entry-date" datetime="%3$s" pubdate>%4$s</time>', 'the-bootstrap' ),
 			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
 			esc_attr( get_the_date( 'c' ) ),
@@ -105,7 +105,10 @@ function the_bootstrap_posted_on() {
 	<span></span>
 	</div><!--about-author-->
 	<div class="comments-display">
-	<?php the_category();?>
+	<?php $category = get_the_category();
+		if ($category) {
+  		echo '<ul class="post-categories"><li><a href="' . get_category_link( $category[0]->term_id ) . '" title="' . sprintf($category[0]->name ) . '" ' . '>' . $category[0]->name.'</a></li></ul> ';
+	} ?>
 	<?php if ( comments_open() AND ! post_password_required() ) { ?>
 		<span class="comments-link">
 			<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'the-bootstrap' ) . '</span>', __( 'Comment <strong>1</strong> ', 'the-bootstrap' ), __( 'Comments : <strong>%</strong>', 'the-bootstrap' ) ); ?>

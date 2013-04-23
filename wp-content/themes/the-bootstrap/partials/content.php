@@ -45,7 +45,7 @@ tha_entry_before(); ?>
 		<?php the_post_thumbnail( 'thumbnail' ); ?><span class="overlay hidden"><span class="lien">Know More</span></span>
 		</a>
 		<?php endif;
-		the_content( __( '<span class="meta-nav">...</span>', 'the-bootstrap' ) );
+		the_content( __('the-bootstrap' ) );
 		the_bootstrap_link_pages(); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>

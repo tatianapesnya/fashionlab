@@ -23,7 +23,7 @@ tha_entry_before(); ?>
 		</hgroup>
 		</header><!-- .entry-header -->
 		<?php
-		the_excerpt( __( '<span class="meta-nav">...</span>', 'the-bootstrap' ) );
+		the_excerpt( __('the-bootstrap' ) );
 		the_bootstrap_link_pages(); ?>
 	</div><!-- .entry-content -->
 
