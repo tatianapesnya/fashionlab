@@ -67,7 +67,7 @@
 								<span><img src="<?php bloginfo('template_directory'); ?>/img/fashionlab.png" alt="<?php bloginfo('name'); ?>" /></span>
 							</a>
 						</h1>
-					<nav id="access" role="navigation" class="span9">
+					<nav id="access" role="navigation">
 						<h3 class="assistive-text"><?php _e( 'Main menu', 'the-bootstrap' ); ?></h3>
 						<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to primary content', 'the-bootstrap' ); ?></a></div>
 						<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'the-bootstrap' ); ?>"><?php _e( 'Skip to secondary content', 'the-bootstrap' ); ?></a></div>

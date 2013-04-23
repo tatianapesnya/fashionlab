@@ -268,7 +268,7 @@ a:focus {
   width: 980px;
 }
 .span12 {
-  width: 940px;
+  width: 980px;
 }
 .span11 {
   width: 860px;
@@ -3394,8 +3394,6 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-inner {
   min-height: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
   *zoom: 1;
 }
 .navbar-inner:before,
@@ -3570,6 +3568,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav {
   position: relative;
   left: 0;
+  top: 8px;
   display: block;
   float: left;
 }
@@ -3579,10 +3578,15 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav > li {
   float: left;
+  margin-right: 10px;
+  margin-left: 10px;  
+}
+.navbar .nav > li:first-child > a{
+  padding:10px 5px 6px 10px;
 }
 .navbar .nav > li > a {
   float: none;
-  padding: 10px 10px 6px 13px;
+  padding: 10px 5px 6px 18px;
   color: #000000;
   text-decoration: none;
 }
@@ -4677,8 +4681,8 @@ input[type="submit"].btn.btn-mini {
 }
 .dropdown-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 84%;
+  left: -28px;
   z-index: 1000;
   display: none;
   float: left;
