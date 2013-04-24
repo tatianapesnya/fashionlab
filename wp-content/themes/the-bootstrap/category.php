@@ -15,6 +15,7 @@ get_header(); ?>
 <section id="primary" class="span8 category">
 		<header class="page-header">
 				<h1 class="page-title">
+					<div class="category-shadow">
 					<?php if (is_category('innovation')){
 						printf('<div class="innovation"><span>' . single_cat_title( '', false ) . '</span></div>' );
 					}elseif (is_category('digital')){
@@ -44,6 +45,7 @@ get_header(); ?>
 					}else{
 					printf('<span>' . single_cat_title( '', false ) . '</span>' );
 					}?>
+				</div><!--category-shadow-->
 				</h1>
 	
 				<?php if ( $category_description = category_description() ) {
