@@ -184,24 +184,6 @@ function the_bootstrap_widgets_init() {
 		'before_title'	=>	'<h2 class="widget-title">',
 		'after_title'	=>	'</h2>',
 	) );
-	
-	register_sidebar( array(
-		'name'			=>	__( 'Image Sidebar', 'the-bootstrap' ),
-		'description'	=>	__( 'Shown on image attachment pages.', 'the-bootstrap' ),
-		'id'			=>	'image',
-		'before_widget'	=>	'<aside id="%1$s" class="widget %2$s">',
-		'after_widget'	=>	'</aside>',
-		'before_title'	=>	'<h2 class="widget-title">',
-		'after_title'	=>	'</h2>',
-	) );
-	register_sidebar(array(
-        'name'=>'Footer',
-        'description' => 'Please use a max of 3 widgets',
-		'before_widget' => '<div class="footer_box">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
-	));
 	register_sidebar( array(
 		'name'			=>	__( 'About us page Sidebar', 'the-bootstrap' ),
 		'description'	=>	__( 'Shown on about us page only.', 'the-bootstrap' ),
@@ -239,15 +221,7 @@ function the_bootstrap_widgets_init() {
 		'after_title'	=>	'</h2>',
 	) ); 
 
-		/*register_sidebar( array(
-		'name'			=>	__( 'Stylists page Sidebar', 'the-bootstrap' ),
-		'description'	=>	__( 'Shown on stylists pages only.', 'the-bootstrap' ),
-		'id'			=>	'stylists',
-		'before_widget'	=>	'<aside id="%1$s" class="widget well %2$s">',
-		'after_widget'	=>	'</aside>',
-		'before_title'	=>	'<h2 class="widget-title">',
-		'after_title'	=>	'</h2>',
-	) );*/
+
 			register_sidebar( array(
 		'name'			=>	__( 'Posts page Sidebar', 'the-bootstrap' ),
 		'description'	=>	__( 'Shown on posts page only.', 'the-bootstrap' ),
@@ -257,12 +231,6 @@ function the_bootstrap_widgets_init() {
 		'before_title'	=>	'<h2 class="widget-title">',
 		'after_title'	=>	'</h2>',
 	) );
-
-	include_once( 'inc/the-bootstrap-image-meta-widget.php' );
-	register_widget( 'The_Bootstrap_Image_Meta_Widget' );
-	
-	include_once( 'inc/the-bootstrap-gallery-widget.php' );
-	register_widget( 'The_Bootstrap_Gallery_Widget' );
 
 	include_once('inc/lastest-comments.php');
 	register_widget('Lastest_Comments');
@@ -399,7 +367,7 @@ add_action('wp_enqueue_scripts', 'register_ajaxLoop_script');
 /************Supprimer les post formats**************/
 function rename_aside( $safe_text ) {
     if ( $safe_text == 'Aside' )
-        return 'Small';
+        return 'One column';
 
     return $safe_text;
 }
@@ -415,7 +383,7 @@ function live_rename_aside() {
 
             jQuery("span.post-state-format").each(function() { 
                 if ( jQuery(this).text() == "Aside" )
-                    jQuery(this).text("Small");             
+                    jQuery(this).text("One column");             
             });
 
         });      
@@ -426,7 +394,7 @@ add_action('admin_head', 'live_rename_aside');
 add_theme_support( 'post-thumbnails' );
 function rename_chat( $safe_text ) {
     if ( $safe_text == 'Chat' )
-        return 'Long';
+        return 'Two columns';
 
     return $safe_text;
 }
@@ -441,7 +409,7 @@ function live_rename_chat() {
 
             jQuery("span.post-state-format").each(function() { 
                 if ( jQuery(this).text() == "Chat" )
-                    jQuery(this).text("Long");             
+                    jQuery(this).text("Two columns");             
             });
 
         });      
@@ -450,6 +418,38 @@ function live_rename_chat() {
 }
 add_action('admin_head', 'live_rename_chat');
 
+// Hide post formats from WordPress generated RSS feeds:
+function exclude_post_formats_from_feeds( &$wp_query ) {
+	
+	// Only do this for feed queries:
+	if ( $wp_query->is_feed() ) {
+		
+		// Array of post formats to exclude, by slug,
+		// e.g. "post-format-{format}"
+		$post_formats_to_exclude = array(
+			'post-format-standard'
+		);
+		
+		// Extra query to hack onto the $wp_query object:
+		$extra_tax_query = array(
+			'taxonomy' => 'post_format',
+			'field' => 'slug',
+			'terms' => $post_formats_to_exclude,
+			'operator' => 'NOT IN'
+		);
+		
+		$tax_query = $wp_query->get( 'tax_query' );
+		if ( is_array( $tax_query ) ) {
+			$tax_query = $tax_query + $extra_tax_query;
+		} else {
+			$tax_query = array( $extra_tax_query );
+		}
+		$wp_query->set( 'tax_query', $tax_query );
+	}
+}
+
+// Call the above hook function before every WordPress query:
+add_action( 'pre_get_posts', 'exclude_post_formats_from_feeds' );
 /**
  * Properly enqueue comment-reply script
  *

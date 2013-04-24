@@ -13,52 +13,30 @@ tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php tha_entry_top(); ?>
 	 
-	<header class="page-header">
-	
-	<?php if ( is_sticky() AND is_home() ) : ?>
+		<div class="entry-content clearfix">
+		
+		<a href="<?php the_permalink();?>"><?php the_post_thumbnail('homepage_thumb');?><span class="overlay hidden"><span class="lien">Know More</span></span></a>
+		<header class="page-header">
 		<hgroup>
-			<?php the_title( '<h1 class="entry-title"><a href="' . get_permalink() . '" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' ); ?>
-			<h3 class="entry-format"><?php _e( 'Featured', 'the-bootstrap' ); ?></h3>
+			<h2 class="entry-title">
+				<a href="<?php the_permalink(); ?>">
+			<?php if (strlen($post->post_title) > 50) {
+				echo substr(the_title($before = '', $after = '', FALSE), 0, 50) . '...';} else {
+				the_title('<h2 class="entry-title"><a href="' . get_permalink() .'" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h2>' );
+			} ?>
+		</a></h2>
 		</hgroup>
-	<?php
-		else :
-			the_title( '<h1 class="entry-title"><a href="' . get_permalink() .'" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h1>' );
-		endif;
-		
-		if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php the_bootstrap_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary clearfix">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
-	<div class="entry-content clearfix">
-		
-		<?php if ( has_post_thumbnail() ) : ?>
-
-		<a class="thumbnail post-thumbnail span2" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-		<?php the_post_thumbnail( 'thumbnail' ); ?><span class="overlay hidden"><span class="lien">Know More</span></span>
-		</a>
-		<?php endif;
-		the_content( __('the-bootstrap' ) );
+		</header><!-- .entry-header -->
+		<?php
+		the_excerpt( __('the-bootstrap' ) );
 		the_bootstrap_link_pages(); ?>
 	</div><!-- .entry-content -->
-	<?php endif; ?>
 
-	<footer class="entry-meta">
-		<?php
-		$categories_list = get_the_category_list( _x( ', ', 'used between list items, there is a space after the comma', 'the-bootstrap' ) );
-
-		if ( 'post' == get_post_type() AND $categories_list ) // Hide category text for pages on Search
-			printf( '<span class="cat-links block">' . __( 'Posted in %1$s.', 'the-bootstrap' ) . '</span>', $categories_list );
-		?>
-	</footer><!-- #entry-meta -->
-	
+	<footer class="entry-footer">
+		<div class="about-author">
+		<?php the_bootstrap_posted_on(); ?>
+		</div><!--about-author-->
+	</footer><!-- .entry-footer -->
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
 <?php tha_entry_after();

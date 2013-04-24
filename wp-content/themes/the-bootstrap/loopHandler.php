@@ -27,18 +27,15 @@ if (have_posts()) {
 				<div class="span8 post_chat"> 
 					<?php get_template_part( '/partials/content', get_post_format() );?>
 				</div><!--post_chat-->
-			<?php }elseif (has_post_format('gallery')){ ?>
-				<div class="span8 post_chat">
+			<?php }elseif (has_post_format('standard')){ ?>
+				<div class="row-fluid span4 post_aside">
 				<?php  get_template_part( '/partials/content', get_post_format() ); ?>
 			</div>
-			<?php }elseif (has_post_format('standard')){ ?>
-				<div class="span4 post_aside">
-				<?php  get_template_part( '/partials/content', get_post_format() ); ?>
+			<?php }else{ ?>
+			<div class="row-fluid span4 post_aside">
+				<?php get_template_part( '/partials/content', get_post_format() ); ?>
 				</div>
 			<?php }
-			else{
-				get_template_part( '/partials/content', 'not-found' );
-			}
        }  
 }  
 wp_reset_query();  ?>
