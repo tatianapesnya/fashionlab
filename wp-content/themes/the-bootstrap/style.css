@@ -510,9 +510,7 @@ h1.entry-title, h1.page-title{
 	font-family: '3dsRegular', Arial, sans-serif;
 	font-size: 1.7em;
 }
-h1.page-title span{
-	color: #292929;
-}
+
 h1.top-news{
 	font-family: '3ds ExtraLight', arial, sans-serif;
 	text-align: center;
@@ -587,6 +585,9 @@ span.comment-image:hover{
 }
 #slider_container{
 	position: relative;
+}
+.advanced-slider .slider-main{
+	border-top: 7px solid #292929;
 }
 span.scroll-down{
 	position: absolute;
@@ -702,9 +703,106 @@ section#primary.single{
 	width: 620px;
 	margin: 0 20px;
 }
+section#primary.span8.category{
+	margin-left: 20px;
+}
 time.entry-date{
 	font-size: 0.7em;
 }
+/********Categories**********/
+.innovation{
+	background-image: url('img/Innovation2.jpg');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+.digital{
+	background-image: url('img/Digital.jpg');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+.luxury{
+	background-image: url('img/luxury.jpg');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+.haute-couture{
+	background-image: url('img/haute_couture.jpg');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+.store-corner{
+	background-image: url('img/watches.png');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+.fast-fashion{
+	background-image: url('img/FAST FASHION.jpg');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+.footwear{
+	background-image: url('img/FOOTWEAR 621 x 186.jpg');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+.watches{
+	background-image: url('img/watches.png');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+.ready-to-wear{
+	background-image: url('img/ready to wear.jpg');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+.apparel{
+	background-image: url('img/ready to wear.jpg');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+.bags{
+	background-image: url('img/bags.jpg');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+.trends{
+	background-image: url('img/TRENDS.jpg');
+	background-repeat: no-repeat;
+	width: 97%;
+	height: 186px;
+	position: relative;
+}
+
+h1.page-title span{
+	color: #fff;
+	top: 50px;
+	position: absolute;
+	top: 70%;
+	left: 5%;
+}
+
 /****FOOTER*************/
 footer#colophon{
 	background-color: #292929;
