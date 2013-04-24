@@ -49,8 +49,8 @@ if (have_posts()) {
 				</div><!--post_chat-->
 			<?php }
 			else{ ?>
-			<div class="span8 post_chat"> 
-				<?php get_template_part( '/partials/content', 'not-found' ); ?>
+			<div class="row-fluid span4 post_aside"> 
+				<?php get_template_part( '/partials/content', get_post_format() ); ?>
 			</div>
 			<?php } 
 	}
