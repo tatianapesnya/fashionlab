@@ -2099,7 +2099,9 @@ li.partners_span div a{
 	}
 	.span4.post_chat .entry-content, 
 	.span4.post_aside .entry-content{
-		min-height: 351px;
+		/*min-height: 351px;*/
+		height: 351px;
+		overflow: hidden;
 	}
 	#lang_sel a.lang_sel_sel span,
 	ul#menu-languages li a{
