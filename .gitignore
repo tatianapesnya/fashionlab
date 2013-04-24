@@ -26,4 +26,5 @@ wp-content/backups/
 sitemap.xml.gz
 wp-content/plugins/wpallimport/libraries/cache/*
 wp-content/plugins/silder-pro/
+wp-content/plugins/silder-pro/xml/
 *.txt
