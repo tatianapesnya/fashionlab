@@ -24,13 +24,6 @@ sitemap.xml
 wp-content/cache/
 wp-content/backups/
 sitemap.xml.gz
-<<<<<<< HEAD
-wp-content/plugins/slider-pro/
-=======
+wp-content/plugins/wpallimport/libraries/cache/*
 wp-content/plugins/silder-pro/
 *.txt
-
-*.txt
-
-wp-content/plugins/slider-pro/includes/timthumb/cache/timthumb_int_5e02d04475adfe3426512bd91196ae61.timthumb.txt
->>>>>>> DE
