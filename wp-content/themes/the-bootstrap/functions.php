@@ -418,38 +418,6 @@ function live_rename_chat() {
 }
 add_action('admin_head', 'live_rename_chat');
 
-// Hide post formats from WordPress generated RSS feeds:
-function exclude_post_formats_from_feeds( &$wp_query ) {
-	
-	// Only do this for feed queries:
-	if ( $wp_query->is_feed() ) {
-		
-		// Array of post formats to exclude, by slug,
-		// e.g. "post-format-{format}"
-		$post_formats_to_exclude = array(
-			'post-format-standard'
-		);
-		
-		// Extra query to hack onto the $wp_query object:
-		$extra_tax_query = array(
-			'taxonomy' => 'post_format',
-			'field' => 'slug',
-			'terms' => $post_formats_to_exclude,
-			'operator' => 'NOT IN'
-		);
-		
-		$tax_query = $wp_query->get( 'tax_query' );
-		if ( is_array( $tax_query ) ) {
-			$tax_query = $tax_query + $extra_tax_query;
-		} else {
-			$tax_query = array( $extra_tax_query );
-		}
-		$wp_query->set( 'tax_query', $tax_query );
-	}
-}
-
-// Call the above hook function before every WordPress query:
-add_action( 'pre_get_posts', 'exclude_post_formats_from_feeds' );
 /**
  * Properly enqueue comment-reply script
  *
