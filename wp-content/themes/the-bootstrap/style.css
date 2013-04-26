@@ -2114,9 +2114,7 @@ li.partners_span div a{
 		background-image: none;
 		line-height: 14px;
 }
-	/*section#primary{
-		width: 66.7%;
-	}*/
+
 	.span4.post_chat{
 		margin-right: 20px;
 		width: 300px;
@@ -2158,6 +2156,14 @@ li.partners_span div a{
 	}
 	ul.partners li a{
 		font-weight: bold;
+	}
+	/*******Video-gallery*********/
+	.vimeography-bugsauce .vimeography-bugsauce-viewport{
+		overflow: visible; !important;
+	}
+	.vimeography-bugsauce .flexslider .slides{
+		width: 102% !important;
+		margin-left: 0px;
 	}
 }
 
