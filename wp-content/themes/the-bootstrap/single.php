@@ -12,9 +12,6 @@ get_header(); ?>
 <div class="container">
 <div id="page" class="container">
 <section id="primary" class="span8 single">
-	<?php if(!is_singular()){ 
-		the_post_thumbnail(); } ?>
-	
 	<?php tha_content_before(); ?>
 	<div id="content" role="main">
 		<?php tha_content_top();
@@ -78,12 +75,17 @@ get_header(); ?>
 		<header class="page-header">
 			<hgroup>
 				<h3 class="entry-title">
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					<a href="<?php the_permalink(); ?>">
+						<?php if (strlen($post->post_title) > 50) {
+							echo substr(the_title($before = '', $after = '', FALSE), 0, 50) . '...';} else {
+							the_title('<a href="' . get_permalink() .'" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a>' );
+						} ?>
+					</a>
 				</h3>
 			</hgroup>
 		</header>	
 		<a  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-			<?php the_excerpt();?>
+			<?php echo substr(get_the_excerpt(), 0,30); ?>
 		</a>
 		</div><!-- .entry-content -->
 		<footer class="entry-footer">

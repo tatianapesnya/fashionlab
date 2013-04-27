@@ -23,7 +23,8 @@ tha_entry_before(); ?>
 				echo substr(the_title($before = '', $after = '', FALSE), 0, 50) . '...';} else {
 				the_title('<h2 class="entry-title"><a href="' . get_permalink() .'" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a></h2>' );
 			} ?>
-		</a></h2>
+		</a>
+		</h2>
 		</hgroup>
 		</header><!-- .entry-header -->
 		<?php

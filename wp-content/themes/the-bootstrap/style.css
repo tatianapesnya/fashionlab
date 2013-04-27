@@ -825,6 +825,10 @@ section#secondary h2{
 	text-align: center;
 	margin: 0;
 }
+.widget.well{
+	padding: 0;
+	margin-bottom: 0px;
+}
 aside#widgets-reloaded-categories-2 ul li, 
 aside#widgets-reloaded-categories-6 ul li,
 aside#widgets-reloaded-categories-8 ul li,
