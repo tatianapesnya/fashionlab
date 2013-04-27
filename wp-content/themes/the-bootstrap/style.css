@@ -508,6 +508,9 @@ h2.entry-title a{
 	font-size: 0.8em;
 	text-transform: none;	
 }
+.entry-content.clearfix h3{
+	display: inline-block;
+}
 p.icl_post_in_other_langs{
 	display: none;
 }

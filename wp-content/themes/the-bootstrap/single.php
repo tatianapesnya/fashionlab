@@ -25,12 +25,6 @@ get_header(); ?>
 			comments_template();
 		} ?>
 		
-		<nav id="nav-single" class="pager">
-			<h3 class="assistive-text"><?php _e( 'Post navigation', 'theme-text-domain','the-bootstrap' ); ?></h3>
-			<span class="next"><?php next_post_link( '%link', sprintf( '%1$s <span class="meta-nav">&rarr;</span>', __( 'Next Post','theme-text-domain', 'the-bootstrap' ) ) ); ?></span>
-			<span class="previous"><?php previous_post_link( '%link', sprintf( '<span class="meta-nav">&larr;</span> %1$s', __( 'Previous Post','theme-text-domain', 'the-bootstrap' ) ) ); ?></span>
-		</nav><!-- #nav-single -->
-		
 		<?php tha_content_bottom(); ?>
 		<?php if(get_post_type() == 'stylist'){ ?>
 			<div id="other-articles">
