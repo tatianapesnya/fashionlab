@@ -12,7 +12,8 @@ get_header(); ?>
 <div class="container">
 <div id="page" class="container">
 <section id="primary" class="span8 single">
-	<?php the_post_thumbnail(); ?>
+	<?php if(!is_singular()){ 
+		the_post_thumbnail(); } ?>
 	
 	<?php tha_content_before(); ?>
 	<div id="content" role="main">

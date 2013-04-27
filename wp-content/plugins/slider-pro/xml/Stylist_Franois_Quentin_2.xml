@@ -5,7 +5,7 @@
     <slide_width>500</slide_width>
     <slide_height>300</slide_height>
     <width>620</width>
-    <height>337</height>
+    <height>500</height>
     <responsive>1</responsive>
     <aspect_ratio>-1</aspect_ratio>
     <skin>minimal-dark</skin>
@@ -20,8 +20,17 @@
     <preload_nearby_images>0</preload_nearby_images>
     <shuffle>0</shuffle>
     <slide_start>0</slide_start>
+    <slide_buttons>0</slide_buttons>
+    <thumbnail_type>scroller</thumbnail_type>
     <thumbnail_width>146</thumbnail_width>
     <thumbnail_height>104</thumbnail_height>
+    <thumbnail_orientation>horizontal</thumbnail_orientation>
+    <maximum_visible_thumbnails>4</maximum_visible_thumbnails>
+    <thumbnail_arrows>0</thumbnail_arrows>
+    <slide_resizing_crop>1</slide_resizing_crop>
+    <thumbnail_resizing_resize>1</thumbnail_resizing_resize>
+    <thumbnail_resizing_align>c</thumbnail_resizing_align>
+    <thumbnail_resizing_crop>1</thumbnail_resizing_crop>
     <custom_class></custom_class>
     <enable_custom_css>0</enable_custom_css>
     <enable_custom_js>0</enable_custom_js>
@@ -38,13 +47,13 @@
     <thumbnails>opened</thumbnails>
     <captions>closed</captions>
     <video>closed</video>
-    <timthumb_resizing>closed</timthumb_resizing>
+    <timthumb_resizing>opened</timthumb_resizing>
     <slides_order>closed</slides_order>
     <custom_js_css>closed</custom_js_css>
   </panels_state>
   <slides>
     <slide>
-      <id>130</id>
+      <id>238</id>
       <slider_id>2</slider_id>
       <name><![CDATA[Slide 1]]></name>
       <content>
@@ -73,11 +82,11 @@
       </settings>
       <position>1</position>
       <panel_state>opened</panel_state>
-      <selected_tab>1</selected_tab>
+      <selected_tab>2</selected_tab>
       <visibility>enabled</visibility>
     </slide>
     <slide>
-      <id>131</id>
+      <id>239</id>
       <slider_id>2</slider_id>
       <name><![CDATA[Slide 2]]></name>
       <content>
@@ -106,11 +115,11 @@
       </settings>
       <position>2</position>
       <panel_state>opened</panel_state>
-      <selected_tab>1</selected_tab>
+      <selected_tab>2</selected_tab>
       <visibility>enabled</visibility>
     </slide>
     <slide>
-      <id>132</id>
+      <id>240</id>
       <slider_id>2</slider_id>
       <name><![CDATA[Slide 3]]></name>
       <content>
@@ -139,7 +148,7 @@
       </settings>
       <position>3</position>
       <panel_state>opened</panel_state>
-      <selected_tab>1</selected_tab>
+      <selected_tab>2</selected_tab>
       <visibility>enabled</visibility>
     </slide>
   </slides>
