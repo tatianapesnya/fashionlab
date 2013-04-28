@@ -29,7 +29,7 @@ tha_entry_before(); ?>
 			}
 
 			echo '<div class="about-author"><span class="by-author"> <span class="sep">By</span> <span class="author vcard"><a class="url fn n" href="'.$author_link.'" title="" rel="author">'.get_the_author().'</a></span></span>
-				<span class="sep"> | </span><a href="'.get_permalink().'" title="'.get_the_time().'" rel="bookmark"><time class="entry-date" datetime="'.get_the_date( 'c' ).'" pubdate>'.get_the_date().'</time></a>';
+				<span class="sep"> | </span><time class="entry-date" datetime="'.get_the_date( 'c' ).'" pubdate>'.get_the_date().'</time>';
 			?>
 			</div><!--about-author-->
 		</div><!-- .entry-meta -->

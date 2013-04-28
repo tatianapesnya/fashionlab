@@ -76,8 +76,8 @@ get_header(); ?>
 			<hgroup>
 				<h3 class="entry-title">
 					<a href="<?php the_permalink(); ?>">
-						<?php if (strlen($post->post_title) > 50) {
-							echo substr(the_title($before = '', $after = '', FALSE), 0, 50) . '...';} else {
+						<?php if (strlen($post->post_title) > 22) {
+							echo substr(the_title($before = '', $after = '', FALSE), 0, 22) . '...';} else {
 							the_title('<a href="' . get_permalink() .'" title="' . sprintf( esc_attr__( 'Permalink to %s', 'the-bootstrap' ), the_title_attribute( 'echo=0' ) ) . '" rel="bookmark">', '</a>' );
 						} ?>
 					</a>
@@ -85,7 +85,7 @@ get_header(); ?>
 			</hgroup>
 		</header>	
 		<a  href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-			<?php echo substr(get_the_excerpt(), 0,30); ?>
+			<?php echo substr(get_the_excerpt(), 0,70); ?>
 		</a>
 		</div><!-- .entry-content -->
 		<footer class="entry-footer">

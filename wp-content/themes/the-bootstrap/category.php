@@ -16,13 +16,19 @@ get_header(); ?>
 		<header class="page-header">
 				<h1 class="page-title">
 					<div class="category-shadow">
-						<?php 
-						$i = 0;
-							foreach((get_the_category()) as $category) { 
-								if(++$i>1 ) break;
-							    echo '<div class="category-image"><img src="'. get_bloginfo('template_url') . '/img/' . single_cat_title( '', false ) . '.jpg" alt="' . single_cat_title( '', false ) . '" /></div>';
-							    printf('<span>' . single_cat_title( '', false ) . '</span>' ); 
-					}?>
+					<?php /*Taxonomy Images*/
+						print apply_filters( 'taxonomy-images-queried-term-image', '', array(
+					    'after' => '</div>',
+					    'attr' => array(
+					        'alt'   => 'Custom alternative text',
+					        'class' => '',
+					        'title' => '',
+					        ),
+					    'before' => '<div id="my-custom-div">',
+					    'image_size' => '621,184',
+					    ) ); 
+					    printf('<span>' . single_cat_title( '', false ) . '</span>' );
+					    ?>
 				</div><!--category-shadow-->
 				</h1>
 	

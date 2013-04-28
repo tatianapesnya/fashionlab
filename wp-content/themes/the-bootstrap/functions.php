@@ -632,10 +632,11 @@ function the_bootstrap_comments_list() {
 	
 	if ( have_comments() ) : ?>
 		<div id="comments">
-			<h2 id="comments-title">
-				<?php printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'the-bootstrap' ),
-						number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
-			</h2>
+			<h3 id="reply-title">
+				<legend>
+					<?php printf(__( 'Comments', 'the-bootstrap' )) ?>
+				</legend>
+			</h3>
 		
 			<?php the_bootstrap_comment_nav(); ?>
 		
@@ -685,7 +686,7 @@ function the_bootstrap_comment_form_defaults( $defaults ) {
 		'comment_notes_before'	=>	'',
 		'comment_notes_after'	=>	'<div class="form-allowed-tags control-group"><label class="control-label">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'the-bootstrap' ), '</label><div class="controls"><pre>' . allowed_tags() . '</pre></div>' ) . '</div>
 									 <div class="form-actions">',
-		'title_reply'			=>	'<legend>' . __( 'Leave a reply', 'the-bootstrap' ) . '</legend>',
+		'title_reply'			=>	'<legend>' . __( 'Comments', 'the-bootstrap' ) . '</legend>',
 		'title_reply_to'		=>	'<legend>' . __( 'Leave a reply to %s', 'the-bootstrap' ). '</legend>',
 		'must_log_in'			=>	'<div class="must-log-in control-group controls">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'the-bootstrap' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',
 		'logged_in_as'			=>	'<div class="logged-in-as control-group controls">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'the-bootstrap' ), admin_url( 'profile.php' ), wp_get_current_user()->display_name, wp_logout_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',
@@ -728,31 +729,26 @@ function the_bootstrap_comment( $comment, $args, $depth ) {
 		
 		<li  id="li-comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 			<article id="comment-<?php comment_ID(); ?>" class="comment row">
-				<div class="comment-author-avatar span1<?php if ($offset) echo " offset{$offset}"; ?>">
-					<?php echo get_avatar( $comment, 70 ); ?>
-				</div>
 				<footer class="comment-meta span<?php echo $span; ?>">
-					<p class="comment-author vcard">
+					<div class="comment-author vcard">
 						<?php
 							/* translators: 1: comment author, 2: date and time */
-							printf( __( '%1$s <span class="says">said</span> on %2$s:', 'the-bootstrap' ),
+							printf( __( '%1$s  %2$s:', 'the-bootstrap' ),
 								sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
 								sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 									esc_url( get_comment_link( $comment->comment_ID ) ),
 									get_comment_time( 'c' ),
 									/* translators: 1: date, 2: time */
-									sprintf( __( '%1$s at %2$s', 'the-bootstrap' ), get_comment_date(), get_comment_time() )
+									sprintf( __( '%2$s  %1$s  ', 'the-bootstrap' ), get_comment_date(), get_comment_time() )
 								)
 							);
 							edit_comment_link( __( 'Edit', 'the-bootstrap' ), '<span class="sep">&nbsp;</span><span class="edit-link label">', '</span>' ); ?>
-					</p><!-- .comment-author .vcard -->
+					</div><!-- .comment-author .vcard -->
 	
-					<?php if ( ! $comment->comment_approved ) : ?>
-					<div class="comment-awaiting-moderation alert alert-info"><em><?php _e( 'Your comment is awaiting moderation.', 'the-bootstrap' ); ?></em></div>
-					<?php endif; ?>
+					
 	
 				</footer><!-- .comment-meta -->
-	
+
 				<div class="comment-content span<?php echo $span; ?>">
 					<?php
 					comment_text();
@@ -762,6 +758,11 @@ function the_bootstrap_comment( $comment, $args, $depth ) {
 						'max_depth'		=>	$args['max_depth']
 					) ) ); ?>
 				</div><!-- .comment-content -->
+				<div class="clear"></div>
+				<?php if ( ! $comment->comment_approved ) : ?>
+					<div class="comment-awaiting-moderation alert alert-info"><em><?php _e( 'Your comment is awaiting moderation.', 'the-bootstrap' ); ?></em></div>
+				<?php endif; ?>
+	
 			</article><!-- #comment-<?php comment_ID(); ?> .comment -->
 			
 	<?php endif; // comment_type
@@ -819,10 +820,9 @@ function the_bootstrap_comment_form_field_author( $html ) {
 	$aria_req	=	( $req ? " aria-required='true'" : '' );
 	
 	return	'<div class="comment-form-author control-group">
-				<label for="author" class="control-label">' . __( 'Name', 'the-bootstrap' ) . '</label>
+				<label for="author" class="control-label">' . __( 'Name *', 'the-bootstrap' ) . '</label>
 				<div class="controls">
 					<input id="author" name="author" type="text" value="' . esc_attr(  $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />
-					' . ( $req ? '<p class="help-inline"><span class="required">' . __('required', 'the-bootstrap') . '</span></p>' : '' ) . '
 				</div>
 			</div>';
 }
@@ -845,10 +845,9 @@ function the_bootstrap_comment_form_field_email( $html ) {
 	$aria_req	=	( $req ? " aria-required='true'" : '' );
 	
 	return	'<div class="comment-form-email control-group">
-				<label for="email" class="control-label">' . __( 'Email', 'the-bootstrap' ) . '</label>
+				<label for="email" class="control-label">' . __( 'Email *', 'the-bootstrap' ) . '</label>
 				<div class="controls">
 					<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />
-					<p class="help-inline">' . ( $req ? '<span class="required">' . __('required', 'the-bootstrap') . '</span>, ' : '' ) . __( 'will not be published', 'the-bootstrap' ) . '</p>
 				</div>
 			</div>';
 }
@@ -868,12 +867,6 @@ add_filter( 'comment_form_field_email', 'the_bootstrap_comment_form_field_email'
 function the_bootstrap_comment_form_field_url( $html ) {
 	$commenter	=	wp_get_current_commenter();
 	
-	return	'<div class="comment-form-url control-group">
-				<label for="url" class="control-label">' . __( 'Website', 'the-bootstrap' ) . '</label>
-				<div class="controls">
-					<input id="url" name="url" type="url" value="' . esc_attr(  $commenter['comment_author_url'] ) . '" size="30" />
-				</div>
-			</div>';
 }
 add_filter( 'comment_form_field_url', 'the_bootstrap_comment_form_field_url');
 

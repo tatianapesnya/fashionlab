@@ -1190,15 +1190,18 @@ fieldset {
   border: 0;
 }
 legend {
+  font-family: '3ds ExtraLight';
+  font-weight: lighter;
   display: block;
   width: 100%;
-  padding: 0;
+  padding-top: 20px;
   margin-bottom: 20px;
-  font-size: 21px;
+  font-size: 1em;
+  text-transform: uppercase;
   line-height: 40px;
-  color: #333333;
+  color: #464646;
   border: 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px dotted #525252;
 }
 legend small {
   font-size: 15px;
@@ -1247,9 +1250,6 @@ input[type="color"],
   font-size: 14px;
   line-height: 20px;
   color: #555555;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   vertical-align: middle;
 }
 input,

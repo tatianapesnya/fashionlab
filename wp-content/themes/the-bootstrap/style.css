@@ -487,6 +487,7 @@ ul#menu-languages li a, ul#menu-languages-french li a{
 h1.entry-title, h1.page-title{
 	font-family: '3dsRegular', Arial, sans-serif;
 	font-size: 1.7em;
+	font-weight: normal;
 }
 
 h1.top-news{
@@ -703,7 +704,28 @@ h1.page-title span{
 	top: 55%;
 	left: 5%;
 }
-
+/*******Comments************/
+.comment-meta{
+	width: 13%;
+}
+.comment-content p{
+	background-color: #fafafa;
+	border: 1px solid #e5e5e5;
+	padding: 20px 28px 25px 22px;
+}
+.comment-form-author,
+.comment-form-email{
+	display: inline-block;
+	width: 50%;
+	float: left;
+}
+span.fn{
+	color: #262626;
+	font-weight: bold;
+}
+a.comment-reply-link{
+	float: right;
+}
 /****FOOTER*************/
 footer#colophon{
 	background-color: #292929;
