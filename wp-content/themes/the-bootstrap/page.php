@@ -17,7 +17,11 @@ get_header(); ?>
 
 <div class="container">
 <div id="page" class="container">
-<section id="primary" class="span8 single">	
+	<?php if(is_page('10')){ ?>
+	<div id="page_communaute">
+<?php }else{ ?>
+	<section id="primary" class="span8 single">	
+<?php } ?>
 	<?php tha_content_before(); ?>
 		<?php tha_content_top();
 		
@@ -27,7 +31,11 @@ get_header(); ?>
 		tha_content_bottom(); ?>
 
 	<?php tha_content_after(); ?>
+<?php if(is_page('10')){ ?>
+	</div><!--page-communaute-->
+<?php }else{ ?>
 </section><!-- #primary -->
+<?php } ?>
 <?php if(is_page(9)){  //sidebar pour la page about us
 	get_sidebar('about');}
 		elseif (is_page(10) || is_page(59)){

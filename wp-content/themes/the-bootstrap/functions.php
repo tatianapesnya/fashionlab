@@ -362,7 +362,7 @@ function register_ajaxLoop_script() {
     );  
     wp_enqueue_script('ajaxLoop');  }
 }  
-add_action('wp_enqueue_scripts', 'register_ajaxLoop_script');  
+add_action('wp_enqueue_scripts', 'register_ajaxLoop_script');
  
 /************Supprimer les post formats**************/
 function rename_aside( $safe_text ) {
@@ -686,7 +686,7 @@ function the_bootstrap_comment_form_defaults( $defaults ) {
 		'comment_notes_before'	=>	'',
 		'comment_notes_after'	=>	'<div class="form-allowed-tags control-group"><label class="control-label">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'the-bootstrap' ), '</label><div class="controls"><pre>' . allowed_tags() . '</pre></div>' ) . '</div>
 									 <div class="form-actions">',
-		'title_reply'			=>	'<legend>' . __( 'Comments', 'the-bootstrap' ) . '</legend>',
+		'title_reply'			=>	'<legend>' . __( 'Leave a comment', 'the-bootstrap' ) . '</legend>',
 		'title_reply_to'		=>	'<legend>' . __( 'Leave a reply to %s', 'the-bootstrap' ). '</legend>',
 		'must_log_in'			=>	'<div class="must-log-in control-group controls">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.', 'the-bootstrap' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',
 		'logged_in_as'			=>	'<div class="logged-in-as control-group controls">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>', 'the-bootstrap' ), admin_url( 'profile.php' ), wp_get_current_user()->display_name, wp_logout_url( apply_filters( 'the_permalink', get_permalink( get_the_ID() ) ) ) ) . '</div>',

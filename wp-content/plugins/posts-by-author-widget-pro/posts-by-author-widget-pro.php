@@ -96,7 +96,7 @@ class pbawp_wrapper extends WP_Widget {
 								<?php $post = $tmp_post; ?>
 								
 							</ul>
-							<p><span class="plus"></span> See all the posts from <?php the_author_posts_link(); ?></p>
+							<p><span class="plus"></span> See all posts from <?php the_author_posts_link(); ?></p>
               <?php echo $after_widget; ?>
         <?php
     }

@@ -17,7 +17,7 @@ jQuery(function($){
                     $data.hide();  
                     $content.append($data);  
                     $data.fadeIn(500,function(){
-                    	loading = false;
+                        loading = false;
                     });  
                 },  
                 error     : function(jqXHR, textStatus, errorThrown) {  
@@ -25,14 +25,14 @@ jQuery(function($){
                 }  
         });  
     }  
-        $('#loadmore').click(function() {
-         event.preventDefault(); 
+        $('#loadmore').click(function() { 
         var content_offset = $content.offset();  
         if(!loading) {
                 loading = true;  
                 page++;  
                 load_posts();  
         }  
+        return false;
     });  
     load_posts(); 
 }); 

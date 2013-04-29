@@ -40,29 +40,3 @@ if (have_posts()) {
 }  
 wp_reset_query();  ?>
 			
-
-
-
-
-			<?php /*$args = array( 'numberposts' => $numPosts, 'order'=> 'DESC');
-			$postslist = get_posts( $args );
-			foreach ($postslist as $post) :  setup_postdata($post); ?>
-			<?php if (has_post_format('aside')){?>
-			<div class="span4 post_aside"> 
-				<?php get_template_part( '/partials/content', get_post_format() );?>
-			</div><!--post_aside-->
-			<?php }elseif (has_post_format('video')) { ?>
-			<div>
-				<?php get_template_part( '/partials/content', get_post_format() ); ?>
-			</div>
-			<?php } elseif(has_post_format('chat')){?>
-				<div class="span7 post_chat"> 
-				<?php get_template_part( '/partials/content', get_post_format() );?>
-			</div><!--post_chat-->
-			<?php }elseif (has_post_format('gallery')){
-				 get_template_part( '/partials/content', get_post_format() );
-			}
-			else{
-				get_template_part( '/partials/content', 'not-found' );
-			}*/ ?>
-<?php //endforeach; ?>

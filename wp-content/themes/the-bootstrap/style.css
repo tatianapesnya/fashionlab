@@ -710,28 +710,32 @@ h1.page-title span{
 	width: 13%;
 	padding-right: 2%;
 }
+article.comment.row{
+	margin-left: 15px;
+}
 .comment-content{
 	background-color: #fafafa;
 	position: relative;
 	border: 1px solid #e5e5e5;
+	width: 512px;
 }
 .comment-content:after,.comment-content:before{
 	border: solid transparent;
 	content: ' ';
 	height: 0;
-	left: -5%;
+	left: -5.5%;
 	position: absolute;
 	width: 0;
 }
 .comment-content:after{
-	border-width: 15px;
+	border-width: 14px;
 	border-right-color: #fafafa;
-	top: 10px;
+	top: 9px;
 }
 .comment-content:before{
-	border-width: 13px;
+	border-width: 1px;
 	border-right-color: #e5e5e5;
-	top: 12px;
+	top: 10px;
 }
 .comment-content p{
 	padding: 2% 2% 2% 2%;
@@ -864,9 +868,16 @@ span.lien{
 	text-transform: uppercase;
 	font-size: 1em;
 }
+#page_communaute{
+	margin: 0 20px;
+}
+.entry-content.clearfix img.thumbnail{
+	margin-right: 10px;
+}
 /***********SIDEBAR****************/
 
-section#secondary h2{
+section#secondary h2,
+h2.widget-title{
 	font-family: '3ds ExtraLight', Arial, sans-serif;
 	font-size: 1.4em;
 	color: #1f1f1f;
@@ -970,7 +981,7 @@ aside#pbawp_wrapper-4 h2{
 aside#pbawp_wrapper-5,
 aside#pbawp_wrapper-4{
 	border:6px solid #e5e5e5;
-	margin-top: 100px;
+	margin-bottom: 30px;
 	padding-top: 0;
 }
 aside#pbawp_wrapper-2{
@@ -1008,10 +1019,12 @@ ul.posts-by-author-widget-list li a img{
 strong p{
 	text-align: center;
 }
-section#secondary .SMCWidget h2.widget-title,
-section#secondary .widget_hwim h2.widget-title{
-	font-size: 1.8em;
-	line-height: 48px;
+aside.widget_pbawp_wrapper p{
+	text-align: center;
+}
+aside.widget.tags{
+	border-bottom: 3px solid #292929;
+	padding-bottom: 20px;
 }
 aside#sc-widget-2
 {
@@ -1157,6 +1170,7 @@ span.plus{
 .widget_hwim{
 	padding-bottom: 0;
 	margin-bottom: 0;
+	padding-top: 20px;
 }
 #polls-widget-2{
 	padding-bottom: 0;
