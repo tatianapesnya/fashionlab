@@ -16,6 +16,19 @@ tha_entry_before(); ?>
 		<?php if(!is_singular()){ 
 		the_post_thumbnail(); } ?>
 		<?php if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image'); endif; ?>
+		<!--category-->
+		<?php
+			$categories = get_the_category();
+			$separator = ' ';
+			$output = '';
+			if($categories){
+				foreach($categories as $category) {
+					$output .= '<ul class="category-list"><li>
+						<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a></li></ul>'.$separator;
+				}
+			echo trim($output, $separator);
+			}
+			?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php if (is_singular('stylist')){}else{ ?>
 			<div class="entry-meta">

@@ -1202,7 +1202,7 @@ ul#menu-footer-contact li a{
 /******************STYLISTS***********/
 .breadcrumbs{
 	font-size: 0.7em;
-	padding-bottom: 15px;
+	padding-bottom: 30px;
 }
 .barre{
 	border-top: 7px solid #292929;
@@ -1302,6 +1302,26 @@ footer#colophon h2{
 	font-size: 16px;
 	text-transform: none;
 	color: #000;
+}
+/*****article*****/
+ul.category-list{
+	list-style: none;
+	display: inline-block;
+	margin-top: -25px;
+}
+ul.category-list li{
+	background-color: #5d3c4d;
+	float: left;
+}
+ul.category-list li a{
+	color: #fff;
+	font-family: '3dsRegular';
+	font-size: 0.8em;
+	padding: 5px 10px;
+	text-transform: uppercase;
+}
+ul.category-list li a:hover{
+	text-decoration: none;
 }
 
 /*************Partners**************/
