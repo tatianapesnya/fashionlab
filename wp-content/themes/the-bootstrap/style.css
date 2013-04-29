@@ -707,11 +707,33 @@ h1.page-title span{
 /*******Comments************/
 .comment-meta{
 	width: 13%;
+	padding-right: 2%;
+}
+.comment-content{
+	background-color: #fafafa;
+	position: relative;
+	border: 1px solid #e5e5e5;
+}
+.comment-content:after,.comment-content:before{
+	border: solid transparent;
+	content: ' ';
+	height: 0;
+	left: -5%;
+	position: absolute;
+	width: 0;
+}
+.comment-content:after{
+	border-width: 15px;
+	border-right-color: #fafafa;
+	top: 10px;
+}
+.comment-content:before{
+	border-width: 13px;
+	border-right-color: #e5e5e5;
+	top: 12px;
 }
 .comment-content p{
-	background-color: #fafafa;
-	border: 1px solid #e5e5e5;
-	padding: 20px 28px 25px 22px;
+	padding: 2% 2% 2% 2%;
 }
 .comment-form-author,
 .comment-form-email{
@@ -724,7 +746,12 @@ span.fn{
 	font-weight: bold;
 }
 a.comment-reply-link{
-	float: right;
+	position: absolute;
+	right: 0;
+	margin-top: 1%;
+}
+.comment-awaiting-moderation.alert.alert-info{
+	margin-top: 3%;
 }
 /****FOOTER*************/
 footer#colophon{
@@ -1358,7 +1385,7 @@ li.partners_span div a{
 /* =Responsiveness
 --------------------------------------------------------------------------------- */
 
-@media screen and(max-width: 480px) {
+@media screen and (max-width: 480px) {
 	
 
 	/*Mes styles*********************************/
