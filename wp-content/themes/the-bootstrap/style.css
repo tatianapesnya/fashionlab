@@ -573,7 +573,7 @@ span.comment-image:hover{
 }
 span.scroll-down{
 	position: absolute;
-	top: 95%;
+	top: 97%;
 	z-index: 10;
 	left: 45%;
 }
@@ -797,7 +797,7 @@ ul.menu-footer-one li:last-child a{
 #page-footer .span2{
 	margin-right: 40px;
 	border-right: 1px solid #494949;
-	height: 217px;
+	min-height: 217px;
 }
 .footer_box h3{
 	color: #9c947f;
@@ -1202,7 +1202,7 @@ ul#menu-footer-contact li a{
 /******************STYLISTS***********/
 .breadcrumbs{
 	font-size: 0.7em;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 }
 .barre{
 	border-top: 7px solid #292929;
@@ -1410,6 +1410,9 @@ li.partners_span div a{
 
 	/*Mes styles*********************************/
 	#slider_container{
+		display: none;
+	}
+	span.scroll-down{
 		display: none;
 	}
 	section#primary{
@@ -1972,6 +1975,9 @@ li.partners_span div a{
     padding-right: 0 !important;
     padding-left: 0 !important;
   }
+  	span.scroll-down{
+		display: none;
+	}
   
 }
 .visible-print {
@@ -1989,6 +1995,9 @@ li.partners_span div a{
 		/***********mes styles*********/
 	body{
 		font-size: 85%;
+	}
+	span.scroll-down{
+		display: none;
 	}
 	aside{
 		font-size: 70%;
