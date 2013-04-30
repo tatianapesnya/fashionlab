@@ -577,6 +577,7 @@ span.scroll-down{
 	top: 97%;
 	z-index: 10;
 	left: 45%;
+	display: none;
 }
 
 .load_more{
@@ -2275,6 +2276,10 @@ li.partners_span div a{
 		width: 102% !important;
 		margin-left: 0px;
 	}
+}
+
+@media  screen and (max-width: 1024px) and (min-height: 585px) {
+	#slider_container .scroll-down {display: block;}
 }
 
 /* End of file style.css */
