@@ -13,9 +13,9 @@ jQuery(function($){
                 beforeSend : function(){  
                 },  
                 success    : function(data){  
-                    $data = $(data);  
-                    $data.css('display', 'none');
-                    //$data.hide();  
+                    console.log('data :'+data );
+                    $data = $(data);                      
+                    $data.hide();  
                     $content.append($data);  
                     $data.fadeIn(500,function(){
                         loading = false;
