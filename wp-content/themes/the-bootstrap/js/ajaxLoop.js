@@ -21,9 +21,7 @@ jQuery(function($){
                         loading = false;
                     });  */
                     $content.append(data);  
-                    data.fadeIn(500,function(){
-                        loading = false;
-                    });  
+                    
                 },  
                 error     : function(jqXHR, textStatus, errorThrown) {  
                     alert(jqXHR + " :: " + textStatus + " :: " + errorThrown);  
