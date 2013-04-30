@@ -13,8 +13,8 @@ jQuery(function($){
                 beforeSend : function(){  
                 },  
                 success    : function(data){  
-                    console.log('data :'+data );
-                    $data = $(data);                      
+                    //console.log('data :'+data );
+                    var $data = $(data);                      
                     $data.hide();  
                     $content.append($data);  
                     $data.fadeIn(500,function(){
@@ -26,7 +26,7 @@ jQuery(function($){
                 }  
         });  
     }  
-        $('#loadmore').click(function() { 
+    $('#loadmore').click(function() { 
         var content_offset = $content.offset();  
         if(!loading) {
                 loading = true;  
