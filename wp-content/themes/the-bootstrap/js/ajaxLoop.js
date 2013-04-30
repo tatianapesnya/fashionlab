@@ -14,10 +14,14 @@ jQuery(function($){
                 },  
                 success    : function(data){  
                     //console.log('data :'+data );
-                    var $data = $(data);                      
-                    $data.hide();  
+                    /*var $data = $(data);                      
+                    $data.hide(); 
                     $content.append($data);  
                     $data.fadeIn(500,function(){
+                        loading = false;
+                    });  */
+                    $content.append(data);  
+                    data.fadeIn(500,function(){
                         loading = false;
                     });  
                 },  
