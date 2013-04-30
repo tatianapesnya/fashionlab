@@ -28,7 +28,18 @@ jQuery(function($){
                 }  
         });  
     }  
-    $('#loadmore').click(function() { 
+
+    $("#loadmore").on("click", function(event){
+        event.preventDefault();
+        var content_offset = $content.offset();  
+        if(!loading) {
+                loading = true;  
+                page++;  
+                load_posts();  
+        }  
+    });
+
+    /*$('#loadmore').click(function() { 
         var content_offset = $content.offset();  
         if(!loading) {
                 loading = true;  
@@ -37,5 +48,6 @@ jQuery(function($){
         }  
         return false;
     });  
+    */
     load_posts(); 
 }); 
