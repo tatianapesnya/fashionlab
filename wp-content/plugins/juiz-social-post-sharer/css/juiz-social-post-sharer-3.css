@@ -1,0 +1,82 @@
+/*
+Plugin Name: Juiz Social Post Sharer
+Plugin URI: http://creativejuiz.fr
+Author: Geoffrey Crofte
+Version: Styles v3
+*/
+.juiz_sps_links {word-wrap:normal!important; clear: both; margin: 1em 0;}
+.juiz_sps_maybe_hidden_text { position:absolute; left:-9999px; text-indent:-9999px; }
+.juiz_sps_links ul,
+.juiz_sps_links .juiz_sps_item  { 
+	padding:0!important;
+	margin:0!important;
+	list-style: none!important;
+}
+.juiz_sps_links .juiz_sps_item { 
+	display: inline;
+}
+.juiz_sps_links .juiz_sps_item a, .juiz_sps_links .juiz_sps_item a .juiz_sps_icon { 
+	display: inline-block;
+}
+.juiz_sps_links .juiz_sps_item a { 
+	padding: 6px 15px 6px 10px;
+	margin: 2px 5px 2px 0;
+	background-color: #04b7e3;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: "Segeo WP", "Segeo UI", Helvetica, Arial, sans-serif;
+	
+	-webkit-transition: color .2s, background-color .2s;
+	-moz-transition: color .2s, background-color .2s;
+	-ms-transition: color .2s, background-color .2s;
+	-o-transition: color .2s, background-color .2s;
+	transition: color .2s, background-color .2s;
+}
+.juiz_sps_links .juiz_sps_item:last-child a { margin-right:0;}
+.juiz_sps_links .juiz_sps_icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	vertical-align:-4px;
+	background:url("../img/sps_sprites_metro.png") 0 0 no-repeat;
+}
+
+.juiz_sps_links .juiz_sps_link_google .juiz_sps_icon { background-position: -16px 0; }
+.juiz_sps_links .juiz_sps_link_facebook .juiz_sps_icon { background-position: -32px 0; }
+.juiz_sps_links .juiz_sps_link_pinterest .juiz_sps_icon { background-position: -64px 0; }
+.juiz_sps_links .juiz_sps_link_viadeo .juiz_sps_icon { background-position: -80px 0; }
+.juiz_sps_links .juiz_sps_link_linkedin .juiz_sps_icon { background-position: -96px 0; }
+.juiz_sps_links .juiz_sps_link_digg .juiz_sps_icon { background-position: -112px 0; }
+.juiz_sps_links .juiz_sps_link_stumbleupon .juiz_sps_icon { background-position: -128px 0; }
+.juiz_sps_links .juiz_sps_link_weibo .juiz_sps_icon { background-position: -144px 0; }
+.juiz_sps_links .juiz_sps_link_mail .juiz_sps_icon { background-position: -48px 0; }
+
+
+
+.juiz_sps_links a:hover,
+.juiz_sps_links a:focus { background-color: #24459A; }
+
+/* special if names are hidden */
+.juiz_sps_hide_name .juiz_sps_item a {
+	padding: 2px 10px;
+}
+.juiz_sps_hide_name a .juiz_sps_icon,
+.juiz_sps_hide_name a .juis_sps_network_name {
+	display:inline-block;
+	vertical-align:middle;
+	-webkit-transition: max-width .3s, margin .3s;
+	-moz-transition: max-width .3s, margin .3s;
+	-ms-transition: max-width .3s, margin .3s;
+	-o-transition: max-width .3s, margin .3s;
+	transition: max-width .3s, margin .3s;
+}
+.juiz_sps_hide_name a .juis_sps_network_name {
+	max-width:0;
+	white-space: nowrap!important;
+	overflow: hidden;
+}
+.juiz_sps_hide_name a .juiz_sps_icon { margin-right:0; }
+
+.juiz_sps_hide_name a:hover .juis_sps_network_name, .juiz_sps_hide_name a:focus .juis_sps_network_name { max-width:80px; }
+.juiz_sps_hide_name a:hover .juiz_sps_icon, .juiz_sps_hide_name a:focus .juiz_sps_icon { margin-right:5px; }

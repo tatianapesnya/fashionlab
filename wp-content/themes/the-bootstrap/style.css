@@ -669,7 +669,7 @@ span.scroll-down{
 }
 #slider_container{
 		margin:0 auto;
-		margin-top: -37px;
+		margin-top: -42px;
 		margin-bottom: 30px;
 	}
 #slider_container .slide-wrapper{
@@ -758,6 +758,11 @@ a.comment-reply-link{
 .comment-awaiting-moderation.alert.alert-info{
 	margin-top: 3%;
 }
+#action_like img.lbg-style1{
+	width: 14px !important;
+	height: 16px !important;
+	display: inline-block;
+}
 /****FOOTER*************/
 footer#colophon{
 	background-color: #292929;
@@ -774,6 +779,9 @@ footer#colophon{
 	height: 15px;
 }
 #menu-footer-contact li:last-child{
+	border-right: none;
+}
+#menu-footer-contact li#menu-item-334{
 	border-right: none;
 }
 ul.menu-footer-one li{
@@ -1309,6 +1317,7 @@ footer#colophon h2{
 	width: 190px;
 	margin-right: 15px;
 	margin-bottom: 22px;
+	max-height: 350px;
 }
 .other-articles:last-child{
 	margin-right: 0px;

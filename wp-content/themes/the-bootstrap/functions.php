@@ -277,6 +277,13 @@ function the_bootstrap_register_scripts_styles() {
 			$theme_version, 
 			true
 		);
+		wp_register_script(
+			'modernizr',
+			get_template_directory_uri() . "/js/modernizr.custom.86044.js",
+			array('jquery'),
+			$theme_version, 
+			false
+		);
 				
 		/**
 		 * Styles
@@ -310,6 +317,7 @@ add_action( 'init', 'the_bootstrap_register_scripts_styles' );
 function the_bootstrap_print_scripts() {
 	wp_enqueue_script( 'the-bootstrap' );
 	wp_enqueue_script('images-hover'); 
+	wp_enqueue_script('modernizr');
 }
 add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_scripts' );
 
