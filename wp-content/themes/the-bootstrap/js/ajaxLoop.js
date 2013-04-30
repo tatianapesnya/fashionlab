@@ -21,7 +21,7 @@ jQuery(function($){
                         loading = false;
                     });  */
                     $content.append(data);  
-                    
+                    loading = false;
                 },  
                 error     : function(jqXHR, textStatus, errorThrown) {  
                     alert(jqXHR + " :: " + textStatus + " :: " + errorThrown);  
