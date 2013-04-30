@@ -43,4 +43,4 @@ tha_entry_before(); ?>
 
 
 /* End of file content-aside.php */
-/* Location: ./wp-content/themes/the-bootstrap/partials/content-aside.php */
+/* Location: ./wp-content/themes/the-bootstrap/partials/content-aside.php */?>
