@@ -1351,8 +1351,7 @@ ul.category-list li a:hover{
 /*************Partners**************/
 ul.dropdown_partners {
 	display: none;
-	top: 99%;
-	left: 5%;
+	left: 3%;
 	text-align: center;
 }
 
@@ -1361,7 +1360,6 @@ ul.dropdown_partners {
 	}
 ul.filter.clearfix {
 	margin-top: 30px;
-	padding: 0 20px; 
 	list-style: none;
 	position: relative;
 	border-top: 1px solid #000;
@@ -1373,7 +1371,7 @@ ul.filter.clearfix {
 	}
 	ul.filter.clearfix li{
 		list-style: none;
-		background-color: #fff;
+		background-color: transparent;
 	}
 
 		ul.filter.clearfix li:hover a {
@@ -1383,14 +1381,14 @@ ul.filter.clearfix {
 	
 	ul.filter.clearfix  li a {
 		display: block; 
-		padding: 5px 40px;
+		padding: 5px 5px;
 		color: #757575; 
 		text-decoration: none;
 	}
 	ul.dropdown_partners { 
 	padding: 0;
 	position: absolute; 
-	top: 100%;
+	top: 94%;
 }
 	ul.dropdown_partners li {
 		float: none; 

@@ -37,7 +37,7 @@
 		echo ' - page '. $paged;
 		} ?>
 		</title>
-		
+		<script type='text/javascript' src='http://localhost/fashionlab/wp-content/themes/the-bootstrap/js/modernizr.custom.24046.js?ver=3.5.1'></script>
 		<?php tha_head_bottom(); ?>
 		<?php wp_head(); ?>
 	</head>

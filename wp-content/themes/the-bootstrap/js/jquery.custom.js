@@ -32,7 +32,6 @@ jQuery(document).ready(function($) {
 		// for each for the filter li link elements
 		$filterLink.click(function(e) 
 		{
-			console.log('lol');
 			// Remove the active class
 			$('.filter li').removeClass('active');
 			
