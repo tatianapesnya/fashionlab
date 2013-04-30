@@ -14,8 +14,8 @@ jQuery(function($){
                 },  
                 success    : function(data){  
                     $data = $(data);  
-console.log($data);
-                    $data.hide();  
+                    $data.css('display', 'none');
+                    //$data.hide();  
                     $content.append($data);  
                     $data.fadeIn(500,function(){
                         loading = false;
