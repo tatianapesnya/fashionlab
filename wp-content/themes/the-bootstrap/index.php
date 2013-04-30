@@ -20,7 +20,7 @@ get_header(); ?>
 <div class="container">
 <div id="page" class="container">
 <section id="primary" class="span8">
-	<script>var templateDir = "<?php bloginfo('template_directory') ?>";var currLang="<?php echo ICL_LANGUAGE_CODE; ?>"; console.log(currLang);</script>
+	<script>var templateDir = "<?php bloginfo('template_directory') ?>";var currLang="<?php echo ICL_LANGUAGE_CODE; ?>";</script>
 	<h1 class="top-news"><?php _e('Latest News','theme-text-domain'); ?></h1>
 	<?php tha_content_before(); ?>
 	<div id="content" class="ajax" role="main">
