@@ -235,14 +235,17 @@ article.page {
 	right: 0;
 	top: 7px;
 }
-span.comment-icon{
+span.comment-icon-fashionlab{
 	background-image: url('img/comment.png');
 	display: inline-block;
 	width: 15px;
 	height: 14px;
 }
-.comments-link:hover .comment-icon{
+span.comment-icon{
 	background-image: url('img/comment-hover.png');
+	display: inline-block;
+	width: 15px;
+	height: 14px;
 }
 
 
@@ -1021,36 +1024,34 @@ p.icl_post_in_other_langs{
 .about-author{
 	padding-bottom: 10px;
 }
-ul.post-categories li{
+ul.post-categories-fashionlab li{
 	list-style-image: url('img/categorie.png');
 	margin-left: 21px;
 }
-ul.post-categories li:hover{
+ul.post-categories li{
 	list-style-image: url('img/categorie-hover.png');
+	margin-left: 21px;
 }
-ul.post-categories li a{
+ul.post-categories li a,
+ul.post-categories-fashionlab li a{
 	font-size: 12px;
 	font-family:'3ds Condensed Regular', Arial, sans-serif;
 	color:#af6181;
 	text-transform: uppercase;
 }
-ul.post-categories li a:hover{
-	color: #5d3c4d;
-	text-decoration: none;
-}
 .comments-display{
 	border-top: 1px solid #000;
 }
-span.comments-link{
+span.comments-link,
+span.comments-link-fashionlab{
 	float: right;
 	margin-top: -37px;
 }
 span.comments-link a{
-	color: #af6181;
-}
-span.comments-link a:hover{
 	color: #5d3c4d;
-	text-decoration: none;
+}
+span.comments-link-fashionlab a{
+	color: #af6181;
 }
 span.comment-image{
 	background-image: url('img/comment.png');
