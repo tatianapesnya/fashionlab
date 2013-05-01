@@ -4705,7 +4705,7 @@ input[type="submit"].btn.btn-mini {
   border-bottom: 1px solid #ffffff;
 }
 .dropdown-menu > li{
-  margin-top: 1px;
+  border-bottom: 1px solid #fff;
 }
 .dropdown-menu > li > a {
   font-family: Arial, sans-serif;
