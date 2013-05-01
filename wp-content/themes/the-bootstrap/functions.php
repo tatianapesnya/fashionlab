@@ -487,7 +487,7 @@ function the_bootstrap_print_styles() {
 			echo "<style type='text/css'>\n{$css}\n</style>\n";
 	}
 }
-add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_styles' );
+add_action( 'wp_enqueue_style', 'the_bootstrap_print_styles' );
 
 
 if ( ! function_exists( 'the_bootstrap_credits' ) ) :
