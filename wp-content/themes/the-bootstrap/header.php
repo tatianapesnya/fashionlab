@@ -76,7 +76,7 @@
 						<form id="search_3ds" method="get" name="search_3ds" action="http://www.3ds.com/search/" class="hidemenu">
 							<div>
 								<input class="search-input" id="search3ds" onblur="if(this.value=='') this.value='Search 3DS website';" onfocus="if(this.value=='Search 3DS website')this.value='';" value="Search 3DS website" name="q" type="text" />
-								<input value="OK" class="search-submit" src="<?php bloginfo('template_directory'); ?>/img/px.png" type="image" />
+								<input value="OK" class="search-submit" src="<?php bloginfo('template_directory'); ?>/img/header-ext/px.png" type="image" />
 							</div>
 						</form>
 					</li>					
