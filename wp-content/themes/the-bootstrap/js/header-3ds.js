@@ -8,6 +8,7 @@ jQuery(document).ready(function($) {
 				
 		var self = $(this).parent();
 		var global3ds = $('#header_3ds');
+		var dsheader = $('#dsheader');
 		var height = parseInt(global3ds.height());
 		if(height == '21'){
 		
@@ -15,14 +16,19 @@ jQuery(document).ready(function($) {
 			/*if(Application.Common.ipad){
 				global3ds.css({'height':'165px'});				
 			}else{*/
-				global3ds.animate({'height':'170px','opacity':1}, 500, function(){});
+			global3ds.animate({'height':'170px'}, 500, function(){
+				dsheader.show();
+			});
 			//}
 		}else{
 			/*if(Application.Common.ipad){
 				global3ds.css({'height':'1px'});
 				self.removeClass('active');				
 			}else{*/
-				global3ds.animate({'height':'21px','opacity':0}, 500, function(){self.removeClass('active');});
+				global3ds.animate({'height':'21px','opacity':0}, 500, function(){
+					self.removeClass('active');
+					dsheader.hide();
+				});
 				
 			//}
 		}
