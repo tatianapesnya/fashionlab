@@ -47,10 +47,10 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
-		<div class="top"></div>
-		<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" class="logo">
+		<!--<div class="top"></div>
+		<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" class="logo">-->
 
-<!--<div id="header_3ds">    	    
+<div id="header_3ds">    	    
 	<div id="dsheader"> 
 		<a class="logo" href="http://www.3ds.com/" title="Dassault Systèmes" target="_blank" onclick="">&nbsp;</a>
 		<div id="navigation">
@@ -90,14 +90,14 @@
 
 
 <div class="header_drag_container">
-	<span id="header_drag" class="noajax active">
+	<span id="header_drag" class="active">
 		<div class="header_drag_toggle"></div>		
 	</span>
 	<span id="header_drag2">
 		<a class="header_drag_toggle" href="http://www.3ds.com" target="_blank"></a>		
 	</span>	
 
-</div>-->
+</div>
 
 
 
