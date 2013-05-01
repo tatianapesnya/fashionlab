@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 				global3ds.css({'height':'1px'});
 				self.removeClass('active');				
 			}else{*/
-				global3ds.animate({'height':'21px','opacity':0}, 500, function(){
+				global3ds.animate({'height':'21px'}, 500, function(){
 					self.removeClass('active');
 					dsheader.hide();
 				});
