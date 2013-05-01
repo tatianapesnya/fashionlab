@@ -306,7 +306,7 @@ function the_bootstrap_register_scripts_styles() {
 		wp_register_style(
 			'header-ext',
 			get_template_directory_uri() . "/header-ext.css",
-			array(),
+			array()
 			
 		);
 
