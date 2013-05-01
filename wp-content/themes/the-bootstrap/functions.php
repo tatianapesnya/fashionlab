@@ -336,6 +336,7 @@ function the_bootstrap_print_ie_scripts() {
 	<?php
 }
 add_action( 'wp_head', 'the_bootstrap_print_ie_scripts', 11 );
+
 // Register our scripts  for Partners Filter
 function register_js()  
 {  
@@ -508,10 +509,10 @@ endif;
 function the_bootstrap_wp_title( $title, $sep ) {
 	
 	if ( ! is_feed() ) {
-		$title .= get_bloginfo( 'name' );
+	//	$title .= get_bloginfo( 'name' );
 		
 		if ( is_front_page() ) {
-			$title .= " {$sep} " . get_bloginfo( 'description' );
+			$title .=  get_bloginfo( 'description ' );
 		}
 	}
 

@@ -782,9 +782,7 @@ footer#colophon{
 #menu-footer-contact li:last-child{
 	border-right: none;
 }
-#menu-footer-contact li#menu-item-334{
-	border-right: none;
-}
+
 ul.menu-footer-one li{
 	float: left;
 	font-family: Arial;
@@ -1265,7 +1263,7 @@ img.stylist{
 }
 h2{
 	font-size: 1.1em;
-	font-family: '3ds Bold',Arial, sans-serif;
+	font-family: '3dsRegular',Arial, sans-serif;
 	color: #727272;
 }
 footer#colophon h2{
@@ -2204,6 +2202,9 @@ li.partners_span div a{
 	margin: 0 20px;
 }
 /*IE8Menu*/
+#menu-footer-contact li#menu-item-504{
+	border-right: none;
+}
 #menu-main li#menu-item-13{
 	background-image: url('img/menu-last.png');
 	background-repeat: no-repeat;

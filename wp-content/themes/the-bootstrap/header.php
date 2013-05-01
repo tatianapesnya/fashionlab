@@ -20,11 +20,11 @@
 		<?php if (function_exists('is_tag') && is_tag()) {
 		single_tag_title('Tag Archive for &quot;'); echo '&quot; - ';
 		} elseif (is_archive()) {
-		wp_title(''); echo ' Archive - ';
+		wp_title(''); echo '  - ';
 		} elseif (is_search()) {
 		echo 'Search for &quot;'.wp_specialchars($s).'&quot; - ';
 		} elseif (!(is_404()) && (is_single()) || (is_page())) {
-		wp_title(''); echo ' - ';
+		 wp_title(''); echo '  ';
 		} elseif (is_404()) {
 		echo 'Not Found - ';
 		}
@@ -37,8 +37,12 @@
 		echo ' - page '. $paged;
 		} ?>
 		</title>
-		<script type='text/javascript' src='<?php bloginfo('template_directory'); ?>/js/modernizr.custom.24046.js?ver=3.5.1'></script>
+		<!--[if IE 8]>
+		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/styles-ie.css" media="screen" type="text/css" />
+		<![endif]-->
+		<script type='text/javascript' src='http://localhost/fashionlab/wp-content/themes/the-bootstrap/js/modernizr.custom.24046.js?ver=3.5.1'></script>
 		<?php tha_head_bottom(); ?>
+
 		<?php wp_head(); ?>
 	</head>
 	

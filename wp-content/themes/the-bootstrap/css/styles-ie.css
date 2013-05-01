@@ -1,0 +1,20 @@
+/** style-ie.css
+ * 
+ * Theme Name:	Fashionlab
+ * Theme URI:	http://www.3ds.com/fashionlab/en/home
+ * Author URI: http://www.majes.fr/
+   Description: Theme for Fashion Lab
+ * Version:		2.0.1
+ * Tags:		black, blue, white, light, custom-background, custom-header, custom-menu, featured-images, flexible-header, flexible-width, full-width-template, left-sidebar, microformats, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
+ * Text Domain:	the-bootstrap
+ * Domain Path:	/lang
+ * License:		GNU General Public License v3.0
+ * License URI:	http://www.gnu.org/licenses/gpl-3.0.html
+ */
+#other-articles ul.post-categories li a{
+ 	font-size: 0.7em;
+
+ }
+ .menu-languages-container{
+ 	margin-top: 5px;
+ }
