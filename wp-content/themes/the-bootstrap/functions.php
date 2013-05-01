@@ -278,7 +278,13 @@ function the_bootstrap_register_scripts_styles() {
 			$theme_version, 
 			true
 		);
-		
+		wp_register_script(
+			'header-3ds',
+			get_template_directory_uri() . "/js/header-3ds.js",
+			array('jquery'),
+			$theme_version, 
+			true
+		);
 				
 		/**
 		 * Styles
@@ -294,6 +300,13 @@ function the_bootstrap_register_scripts_styles() {
 			'the-bootstrap',
 			get_template_directory_uri() . "/style.css",
 			array('tw-bootstrap'),
+			$theme_version
+		);
+
+		wp_register_style(
+			'header3ds',
+			get_template_directory_uri() . "/header-ext.css",
+			array('header-3ds'),
 			$theme_version
 		);
 	}
