@@ -100,7 +100,7 @@ ul.lang li a.jpn-JP{ background-position: -60px 0px}
 ul.lang li a.kor-KR{ background-position: -60px -20px}
 ul.lang li a.rus-RU{ background-position: -20px -20px}
 
-ul.lang{display: none; position: absolute; padding: 0 15px; top: -1px; right: -30px; width: 90px; /*right: -155px; width: 175px;*/ height: 23px; z-index: 8760; list-style: none; background: url('../images/button/header_drag_flag.png') top right no-repeat; }
+ul.lang{display: none; position: absolute; padding: 0 15px; top: -1px; right: -30px; width: 90px; /*right: -155px; width: 175px;*/ height: 23px; z-index: 8760; list-style: none; background: url('img/header-ext/header_drag_flag.png') top right no-repeat; }
 
 
 #dsfooter {
