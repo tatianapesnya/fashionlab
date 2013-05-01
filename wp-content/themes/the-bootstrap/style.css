@@ -528,32 +528,7 @@ body {
 #header_drag2{display: none}
 
 #header_drag.active{background-position: right top; }
-#header_drag .header_drag_toggle, #header_drag2 .header_drag_toggle{display: block; position: absolute; top: 0; left: 0px; width: 135px; height: 23px;}
-#header_drag .button-lang, #header_drag2 .button-lang{display: block; background-image: url('img/header-ext/langs.png'); position: absolute; top: 5px; right: 19px;width: 16px;height: 11px; z-index: 9999; background-position: center center; background-repeat: no-repeat}
-#header_drag .eng-GB, #header_drag2 .eng-GB{ background-position: 0 0}
-#header_drag .fre-FR, #header_drag2 .fre-FR{background-position: -40px 0}
-#header_drag .ger-DE, #header_drag2 .ger-DE{background-position: 0 -20px}
-
-#header_drag .ita-IT, #header_drag2 .ita-IT{ background-position: -20px -40px}
-#header_drag .esl-ES, #header_drag2 .esl-ES{ background-position: 0 -40px}
-#header_drag .jpn-JP, #header_drag2 .jpn-JP{ background-position: -60px 0px}
-#header_drag .kor-KR, #header_drag2 .kor-KR{ background-position: -60px -20px}
-#header_drag .rus-RU, #header_drag2 .rus-RU{ background-position: -20px -20px}
-
-ul.lang li{display: block; float: right; width: 25px; height: 23px; }
-ul.lang li.hide{display: none}
-ul.lang li a{display: block; width: 16px; height: 11px; margin: 6px auto; background-image: url('img/header-ext/langs.png'); }
-ul.lang li a.fre-FR{ background-position: -40px 0}
-ul.lang li a.eng-GB{ background-position: 0 0}
-ul.lang li a.ger-DE{ background-position: 0 -20px}
-
-ul.lang li a.ita-IT{ background-position: -20px -40px}
-ul.lang li a.esl-ES{ background-position: 0 -40px}
-ul.lang li a.jpn-JP{ background-position: -60px 0px}
-ul.lang li a.kor-KR{ background-position: -60px -20px}
-ul.lang li a.rus-RU{ background-position: -20px -20px}
-
-ul.lang{display: none; position: absolute; padding: 0 15px; top: -1px; right: -30px; width: 90px; /*right: -155px; width: 175px;*/ height: 23px; z-index: 8760; list-style: none; background: url('img/header-ext/header_drag_flag.png') top right no-repeat; }
+#header_drag .header_drag_toggle, #header_drag2 .header_drag_toggle{display: block; position: absolute; top: 0; left: 0px; width: 170px; height: 45px;}
 
 
 #dsfooter {
@@ -820,7 +795,7 @@ form#search_3ds {
 	background-position: 0 3px;
 	background-color: transparent;
 }
-.search-input {
+form#search_3ds .search-input {
 	margin:0;
 	padding:0;
 	height:16px;
