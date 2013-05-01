@@ -10,21 +10,19 @@ jQuery(document).ready(function($) {
 		if(height == '1'){
 		
 			self.addClass('active');
-			if(Application.Common.ipad){
-				global3ds.css({'height':'165px'});
-				//global3ds.removeClass('hide');	
-			}else{
+			/*if(Application.Common.ipad){
+				global3ds.css({'height':'165px'});				
+			}else{*/
 				global3ds.animate({'height':'165px'}, 500, function(){});
-			}
+			//}
 		}else{
-			if(Application.Common.ipad){
+			/*if(Application.Common.ipad){
 				global3ds.css({'height':'1px'});
-				self.removeClass('active');
-				//global3ds.addClass('hide');
-			}else{
+				self.removeClass('active');				
+			}else{*/
 				global3ds.animate({'height':'1px'}, 500, function(){self.removeClass('active');});
 				
-			}
+			//}
 		}
 		
 		return false;
