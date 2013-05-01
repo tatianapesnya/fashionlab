@@ -515,8 +515,8 @@ body {
 	position: relative; 
 	margin: 0px auto 0px;
 	top: 0px; 
-	width: 185px;
-	height: 23px; 
+	width: 170px;
+	height: 45px; 
 	background-image: url('img/header-ext/header_drag.png');
 	background-position: left top; 
 	cursor: pointer;
