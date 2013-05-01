@@ -433,6 +433,9 @@ table .label {
 
 
 /***************************My styles**************************/
+
+
+/*** HEADER 3DS  - deb ***/
 .top{
   background-color: #292929;
   height: 21px;
@@ -442,6 +445,498 @@ table .label {
 	margin-top: -21px;
 	display: block;
 }
+
+
+/*
+* {
+	margin:0;
+	padding:0;
+}
+html, body {
+	min-height: 100%;
+	margin:0;
+	padding:0;
+	text-align:center;
+	font:normal 12px Arial, Helvetica, sans-serif;
+	color:#3b3b3b;
+}
+body {
+	min-height: 100%;
+	position: relative;
+	margin:0 auto;
+	background: url(img/header-ext/repeat.jpg) 0 0 repeat-x #FFF;
+}
+*/
+#global_3ds{
+	min-height: 100%;
+	position: relative;
+	margin-top:0px;
+	margin-left: auto;
+	margin-right: auto;
+	top: 0px;
+	background: #13181e;
+}
+#dsheader {
+	margin:0 0 0 -485px;
+	position:relative;
+	top:0;
+	left:50%; 
+	text-align:left;
+	width:970px;
+	height:110px;
+}
+#header_3ds {
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	height: 165px; 
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	background: #13181E;
+	overflow: hidden;
+	
+}
+#header_3ds.transition{-webkit-transition: height 0.5s ease-out;}
+
+#header_3ds.hide {top: -165px}
+
+.header_drag_container{
+	display: block;
+	position: relative;
+	width: 255px;
+	margin: 0px auto -30px;
+}
+
+#header_drag, #header_drag2{
+	display: block;
+	position: relative; 
+	margin: 0px auto 0px;
+	top: 0px; 
+	width: 185px;
+	height: 23px; 
+	background-image: url('img/header-ext/header_drag.png');
+	background-position: left top; 
+	cursor: pointer;
+	z-index: 8870;
+}
+#header_drag2{display: none}
+
+#header_drag.active{background-position: right top; }
+#header_drag .header_drag_toggle, #header_drag2 .header_drag_toggle{display: block; position: absolute; top: 0; left: 0px; width: 135px; height: 23px;}
+#header_drag .button-lang, #header_drag2 .button-lang{display: block; background-image: url('img/header-ext/langs.png'); position: absolute; top: 5px; right: 19px;width: 16px;height: 11px; z-index: 9999; background-position: center center; background-repeat: no-repeat}
+#header_drag .eng-GB, #header_drag2 .eng-GB{ background-position: 0 0}
+#header_drag .fre-FR, #header_drag2 .fre-FR{background-position: -40px 0}
+#header_drag .ger-DE, #header_drag2 .ger-DE{background-position: 0 -20px}
+
+#header_drag .ita-IT, #header_drag2 .ita-IT{ background-position: -20px -40px}
+#header_drag .esl-ES, #header_drag2 .esl-ES{ background-position: 0 -40px}
+#header_drag .jpn-JP, #header_drag2 .jpn-JP{ background-position: -60px 0px}
+#header_drag .kor-KR, #header_drag2 .kor-KR{ background-position: -60px -20px}
+#header_drag .rus-RU, #header_drag2 .rus-RU{ background-position: -20px -20px}
+
+ul.lang li{display: block; float: right; width: 25px; height: 23px; }
+ul.lang li.hide{display: none}
+ul.lang li a{display: block; width: 16px; height: 11px; margin: 6px auto; background-image: url('img/header-ext/langs.png'); }
+ul.lang li a.fre-FR{ background-position: -40px 0}
+ul.lang li a.eng-GB{ background-position: 0 0}
+ul.lang li a.ger-DE{ background-position: 0 -20px}
+
+ul.lang li a.ita-IT{ background-position: -20px -40px}
+ul.lang li a.esl-ES{ background-position: 0 -40px}
+ul.lang li a.jpn-JP{ background-position: -60px 0px}
+ul.lang li a.kor-KR{ background-position: -60px -20px}
+ul.lang li a.rus-RU{ background-position: -20px -20px}
+
+ul.lang{display: none; position: absolute; padding: 0 15px; top: -1px; right: -30px; width: 90px; /*right: -155px; width: 175px;*/ height: 23px; z-index: 8760; list-style: none; background: url('img/header-ext/header_drag_flag.png') top right no-repeat; }
+
+
+#dsfooter {
+	padding:0;
+	width:100%;
+	z-index: 100000;
+	position: relative;
+	bottom: 0;
+}
+/* SPRITE ---------------------------------------------------------------------------------- */
+#dsheader .logo, #dsHeaderLP #logo, #breadcrumb span.arrow, #search_3ds, #account ul li .bullet, #account ul li .separate, #tagline #emblem, #footer-bar .rssicon {
+	background-image:url('img/header-ext/sprite.png');
+	background-repeat: no-repeat;
+}
+/* LOGO ------------------------------------------------------------------------------------ */
+#dsHeaderLP #logo,
+#dsheader .logo {
+	margin:0;
+	padding:0;
+	background-position: 0 -20px;
+	display:block;
+	width:170px;
+	height:50px;
+	position:absolute;
+	top:15px;
+	left:0;
+}
+#dsHeaderLP #logo span,
+#dsheader .logo span {
+	display:none;
+}
+/* MENU ------------------------------------------------------------------------------------ */
+#navigation, #navigation .outer, #navigation .inner {
+	width: 970px;
+	height: 30px;
+	margin:0;
+	padding:0;
+}
+#navigation {
+	position:absolute;
+	top:80px;
+	z-index: 1000;
+	background: url('img/header-ext/navbar_left.png') left 0 no-repeat transparent;
+}
+#navigation .outer {
+	background: url(img/header-ext/navbar_right.png) right 0 no-repeat transparent;
+}
+#navigation .inner {
+	width: 960px;
+	margin:0 5px;
+}
+#navigation .inner, #navigation ul li a, #navigation ul li a:hover {
+	background: url(img/header-ext/navbar_bg.png) center 0 repeat-x transparent;
+	color:#FFF;
+	text-decoration:none;
+}
+#navigation ul {
+	float:left;
+	margin:0;
+	padding:0;
+	height:30px;
+	list-style:none;
+}
+#navigation ul li {
+	margin:0;
+	padding:0;
+	height:20px;
+	font-weight:bold;
+	font-size: 13px;
+	line-height: 20px;
+	float:left;
+	list-style-image:none;
+}
+#navigation ul li a {
+	margin:0;
+	padding:5px 10px;
+	color:#727272;
+	text-decoration:none;
+	position:relative;
+	min-height:20px;
+	display:block;
+	border-left:1px solid #5B7F95
+;
+}
+#navigation .picker ul li span {
+	margin:10px 10px 0 10px;
+	color:#2f4f67;
+	font-weight: normal;
+	position:relative;
+	text-transform: uppercase;
+	min-height:12px;
+	display:block;
+	line-height: 12px;
+}
+#account ul li a, #navigation ul li a {
+	color:#FFF;
+}
+#navigation ul li.firstitem a {
+	border-left:none;
+}
+#navigation ul li a.current,
+#navigation ul li a.current:hover,
+#navigation ul li a.current:active,
+#navigation ul li a.current:focus {
+	background-position: center -60px;
+}
+#navigation ul li a:hover,
+#navigation ul li a:active,
+#navigation ul li a:focus {
+	background-position: center -30px;
+}
+#navigation ul li a span.select, #account ul li a span.select {
+	position:absolute;
+	right:0;
+	top:5px !important;
+	top:3px;
+	width:16px;
+	height:16px;
+	background-position: -40px -80px;
+}
+#navigation ul li a:hover span.select, #navigation ul li a.current span.select {
+	background-position: -60px -80px;
+}
+#compass {
+	background:url(img/header-ext/compass.png) 0 0 no-repeat transparent;
+	height: 115px;
+	position: absolute;
+	right: 30px;
+	width: 100px;
+	top:-55px;
+}
+#compass a {
+	display:block;
+	margin:35px;
+	width:30px;
+	height:30px;
+}
+#compass a span {
+	display:none;
+}
+#account {
+	margin:0;
+	padding:0 0 0 32px;
+	position:absolute;
+	top: 3px;
+	right:-32px;
+	z-index:1100;
+	background:url(img/header-ext/toolbar_left.png) left top no-repeat transparent;
+}
+#account .inner {
+	padding:0 32px 0 0;
+	background:url(img/header-ext/toolbar_right.png) right top no-repeat transparent;
+}
+#account ul {
+	margin:0;
+	padding:0;
+	height:25px;
+	list-style:none;
+	text-align:right;
+	background-color: #000;
+}
+#account .picker ul  {
+	text-align:left;
+}
+#account ul li {
+	margin:0;
+	padding:0;
+	height:20px;
+	font-size: 11px;
+	line-height: 25px;
+	float:left;
+	list-style-image:none;
+	font-weight:bold;
+	position: relative;
+}
+#account ul li .bullet, #account ul li .separate {
+	width: 10px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+}
+#account ul li .bullet {
+	background-position: 0 -70px;
+	left: -1px;
+	top: 2px;
+}
+#account ul li .separate {
+	width: 2px;
+	background-position: -15px -70px;
+	right: 0;
+	top: 2px;
+}
+#account ul li.dsappstore a {
+	margin-right: 0;
+}
+#account ul li.dsappstore .separate {
+	background: none;
+	display: none;
+}
+#account ul li a {
+	margin:0 10px 0 10px;
+	padding:0;
+	text-decoration:none;
+	display:block;
+	position:relative;
+}
+#account ul li span {
+	margin:0 0 0 12px;
+	display:block;
+	position:relative;
+}
+#account ul li.region span.regionlabel {
+	margin-left:0;
+}
+#account ul li a:hover, #account ul li a:active {
+	color:#609fd1;
+	text-decoration:none;
+}
+#account .email {
+	color: #609fd1;
+}
+#account .email #helloGuest a {
+	padding:0;
+}
+#account li.email, #account li.email span#helloGuest {
+	padding:0;
+	margin:0;
+}
+#account ul li.email #helloGuest a, #account ul li.email #helloGuest a:visited, #account ul li.email #helloGuest a:active, #account ul li.email #helloGuest a:focus {
+	color:#609fd1;
+	text-decoration:underline;
+}
+#account ul li.email #helloGuest span.separate {
+	background-position: 0 0;
+}
+#account .language {
+	padding-left: 0;
+}
+#account .language a {
+	padding-left:16px;
+	font-weight: bold;
+}
+#account ul li span#log {
+	margin-left:0;
+}
+#account ul li span#log a {
+	display:inline;
+	padding:0;
+}
+#account ul li span#log a span {
+	display:inline;
+	position:relative;
+	margin-left:0;
+}
+#account ul li.searchform {
+	margin: 0 5px;
+}
+form#search_3ds {
+	margin:0;
+	padding:0;
+	width:145px;
+	height:23px;
+	background-position: 0 3px;
+	background-color: transparent;
+}
+.search-input {
+	margin:0;
+	padding:0;
+	height:16px;
+	width:116px;
+	border:none;
+	color:#444;
+	position:absolute;
+	top:5px;
+	left:10px;
+	background-color: transparent;
+	font-weight:normal;
+	font-size: 11px;
+	line-height: 16px;
+}
+.search-submit {
+	width:25px;
+	height:25px;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+#dsheader .picker {
+	position:absolute;
+	z-index:10200;
+	display:none;
+	background-color: #5B7F95
+;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	-moz-box-shadow:0 6px 8px rgba(0, 0, 0, 0.3);
+	box-shadow:0 6px 8px rgba(0, 0, 0, 0.3);
+}
+#navigation .picker ul li a, #navigation .picker ul li a:hover {
+	background: none;
+}
+#dsheader .picker ul {
+	width:auto;
+	height:auto;
+	float:none;
+	background: url(img/header-ext/picker-top.png) 0 0 repeat-x transparent;
+	padding:10px 0;
+}
+#dsheader .picker ul li {
+	margin:0;
+	padding:0;
+	display:block;
+	float:none;
+	width:auto;
+	height:auto;
+	min-width:auto;
+	position:static;
+	line-height: 22px;
+	font-size: 11px;
+	border:0;
+}
+#dsheader .picker ul li a {
+	color:#FFF;
+	border:0;
+}
+#navigation #dsheader .picker ul li {
+	line-height: 25px;
+}
+#dsheader .picker ul li a {
+	width:auto;
+	height:100%;
+	/*min-width:auto;*/
+	white-space:nowrap;
+	text-align: left;
+	margin:0;
+	padding:0 10px;
+	/*display:block;*/
+}
+#dsheader .picker ul li.language a {
+	padding-left: 16px;
+}
+#dsheader .language .picker ul li {
+	overflow: visible;
+}
+#dsheader li .flag, #dsheader .language .picker ul li span.flag {
+	margin:0;
+	padding:0;
+	position:absolute;
+	background-image:url('img/header-ext/sprite-flags.png');
+	background-repeat:no-repeat;
+	width:16px;
+	min-height:16px;
+	height:11px;
+	top:7px;
+	left:5px;
+}
+#dsheader .language .picker ul li a {
+	padding-left:20px;
+}
+#dsheader .language .picker ul li a span.flag {
+	left:10px;
+}
+#dsheader .picker ul li a:hover {
+	background: url(img/header-ext/picker-over-left.png) left 0 repeat-y #2C485D;
+}
+
+#dsheader .picker ul li .unavailable{
+	color: #97999B;	
+}
+
+#header_3ds .breaker {
+	clear:both;
+	overflow:hidden;
+	height:1px;
+}
+
+
+/*** HEADER 3DS  - fin ***/
+
+
+
+
+
+
+
+
 .menu-languages-container, .menu-languages-french-container{
 	float: right;
 	margin-right: 30px;

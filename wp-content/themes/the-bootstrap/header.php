@@ -42,7 +42,7 @@
 		<![endif]-->
 		<script type='text/javascript' src='<?php bloginfo('template_directory'); ?>/js/modernizr.custom.24046.js'></script>
 		<?php tha_head_bottom(); ?>
-		<?php wp_print_styles(array('header-ext')); ?>
+		<?php //wp_print_styles(array('header-ext')); ?>
 		<?php wp_head(); ?>
 	</head>
 	
