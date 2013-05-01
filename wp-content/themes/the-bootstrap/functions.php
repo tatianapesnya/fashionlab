@@ -325,6 +325,7 @@ add_action( 'init', 'the_bootstrap_register_scripts_styles' );
 function the_bootstrap_print_scripts() {
 	wp_enqueue_script( 'the-bootstrap' );
 	wp_enqueue_script('images-hover'); 
+	wp_enqueue_script('header-3ds');
 	
 }
 add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_scripts' );
