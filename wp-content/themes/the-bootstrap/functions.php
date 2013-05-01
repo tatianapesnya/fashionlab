@@ -306,8 +306,8 @@ function the_bootstrap_register_scripts_styles() {
 		wp_register_style(
 			'header-ext',
 			get_template_directory_uri() . "/header-ext.css",
-			array(),
-			$theme_version
+			
+			
 		);
 
 		
@@ -475,7 +475,7 @@ function the_bootstrap_print_styles() {
 	}
 	
 	wp_enqueue_style( 'header-ext' );
-	
+
 	if ( 'static' != the_bootstrap_options()->navbar_position ) {
 		$top_bottom	=	str_replace( 'navbar-fixed-', '', the_bootstrap_options()->navbar_position );
 		$css		=	"body > .container{margin-{$top_bottom}:68px;}@media(min-width: 980px){body > .container{margin-{$top_bottom}:58px;}}";
