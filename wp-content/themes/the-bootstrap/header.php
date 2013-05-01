@@ -42,15 +42,15 @@
 		<![endif]-->
 		<script type='text/javascript' src='<?php bloginfo('template_directory'); ?>/js/modernizr.custom.24046.js'></script>
 		<?php tha_head_bottom(); ?>
-
+		<?php wp_print_styles(array('header-ext')); ?>
 		<?php wp_head(); ?>
 	</head>
 	
 	<body <?php body_class(); ?>>
-		<!--<div class="top"></div>
-		<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" class="logo">-->
+		<div class="top"></div>
+		<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" class="logo">
 
-<div id="header_3ds">    	    
+<!--<div id="header_3ds">    	    
 	<div id="dsheader"> 
 		<a class="logo" href="http://www.3ds.com/" title="Dassault Systèmes" target="_blank" onclick="">&nbsp;</a>
 		<div id="navigation">
@@ -79,8 +79,7 @@
 								<input value="OK" class="search-submit" src="<?php bloginfo('template_directory'); ?>/img/px.png" type="image" />
 							</div>
 						</form>
-					</li>
-					<!--<li class="language"> <span class="bullet"></span> <a class="currentflag" onclick="return false();"> <span class="flag en-bg.gif"></span> <span>English</span> </a> <span class="separate"></span> </li>-->
+					</li>					
 					<li class="contact"> <span class="bullet"></span> <a href="http://www.3ds.com/contact/" target="_blank">Contact</a> <span class="separate"></span> </li>
 					<li class="dsappstore"> <span class="bullet"></span> <a href="http://www.3ds.com/3dstore/" target="_blank">3DStore</a> <span class="separate"></span> </li>
 				</ul>
@@ -98,7 +97,7 @@
 		<a class="header_drag_toggle" href="http://www.3ds.com" target="_blank"></a>		
 	</span>	
 
-</div>
+</div>-->
 
 
 

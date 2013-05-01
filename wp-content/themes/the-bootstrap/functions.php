@@ -475,7 +475,7 @@ function the_bootstrap_print_styles() {
 		wp_enqueue_style( 'the-bootstrap' );
 	}
 	
-	wp_enqueue_style( 'header-ext' );
+	//wp_enqueue_style( 'header-ext' );
 
 	if ( 'static' != the_bootstrap_options()->navbar_position ) {
 		$top_bottom	=	str_replace( 'navbar-fixed-', '', the_bootstrap_options()->navbar_position );
