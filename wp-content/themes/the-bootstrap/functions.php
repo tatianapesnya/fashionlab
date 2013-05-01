@@ -474,6 +474,8 @@ function the_bootstrap_print_styles() {
 		wp_enqueue_style( 'the-bootstrap' );
 	}
 	
+	wp_enqueue_style( 'header-ext' );
+	
 	if ( 'static' != the_bootstrap_options()->navbar_position ) {
 		$top_bottom	=	str_replace( 'navbar-fixed-', '', the_bootstrap_options()->navbar_position );
 		$css		=	"body > .container{margin-{$top_bottom}:68px;}@media(min-width: 980px){body > .container{margin-{$top_bottom}:58px;}}";
@@ -487,7 +489,7 @@ function the_bootstrap_print_styles() {
 			echo "<style type='text/css'>\n{$css}\n</style>\n";
 	}
 }
-add_action( 'wp_enqueue_style', 'the_bootstrap_print_styles' );
+add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_styles' );
 
 
 if ( ! function_exists( 'the_bootstrap_credits' ) ) :
