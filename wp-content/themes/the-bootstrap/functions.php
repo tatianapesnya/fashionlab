@@ -304,9 +304,9 @@ function the_bootstrap_register_scripts_styles() {
 		);
 
 		wp_register_style(
-			'the-bootstrap',
+			'header-ext',
 			get_template_directory_uri() . "/header-ext.css",
-			array('tw-bootstrap'),
+			array(),
 			$theme_version
 		);
 
