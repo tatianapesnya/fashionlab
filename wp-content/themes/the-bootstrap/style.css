@@ -436,7 +436,7 @@ table .label {
 
 
 /*** HEADER 3DS  - deb ***/
-.top{
+/*.top{
   background-color: #292929;
   height: 21px;
 }
@@ -444,7 +444,7 @@ table .label {
 	margin: 0 auto;
 	margin-top: -21px;
 	display: block;
-}
+}*/
 
 
 /*
@@ -506,7 +506,8 @@ body {
 	display: block;
 	position: relative;
 	width: 255px;
-	margin: 0px auto -30px;
+	margin: 0px auto -4px;
+	background-color: #292929;
 }
 
 #header_drag, #header_drag2{

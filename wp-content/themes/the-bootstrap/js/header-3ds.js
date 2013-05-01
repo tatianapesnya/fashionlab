@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 		var self = $(this).parent();
 		var global3ds = $('#header_3ds');
 		var height = parseInt(global3ds.height());
-		if(height == '1'){
+		if(height == '21'){
 		
 			self.addClass('active');
 			/*if(Application.Common.ipad){
@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
 				global3ds.css({'height':'1px'});
 				self.removeClass('active');				
 			}else{*/
-				global3ds.animate({'height':'1px'}, 500, function(){self.removeClass('active');});
+				global3ds.animate({'height':'21px'}, 500, function(){self.removeClass('active');});
 				
 			//}
 		}
