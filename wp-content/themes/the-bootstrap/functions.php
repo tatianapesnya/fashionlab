@@ -304,11 +304,13 @@ function the_bootstrap_register_scripts_styles() {
 		);
 
 		wp_register_style(
-			'header3ds',
+			'the-bootstrap',
 			get_template_directory_uri() . "/header-ext.css",
-			array('header-3ds'),
+			array('tw-bootstrap'),
 			$theme_version
 		);
+
+		
 	}
 }
 add_action( 'init', 'the_bootstrap_register_scripts_styles' );
