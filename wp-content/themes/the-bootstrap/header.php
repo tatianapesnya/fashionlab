@@ -47,8 +47,63 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
-		<div class="top"></div>
-		<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" class="logo">
+		<!--<div class="top"></div>
+		<img src="<?php bloginfo('template_directory'); ?>/img/logo.png" class="logo">-->
+
+<div id="header_3ds">    	    
+	<div id="dsheader"> 
+		<a class="logo" href="http://www.3ds.com/" title="Dassault Systèmes" target="_blank" onclick="">&nbsp;</a>
+		<div id="navigation">
+			<div class="outer">
+				<div class="inner">
+					<ul>
+						<li class="firstitem"><a href="http://www.3ds.com/solutions/" onfocus="blurLink(this);" target="_blank">Solutions</a> </li>
+						<li><a href="http://www.3ds.com/products/" onfocus="blurLink(this);"target="_blank">Products</a> </li>
+						<li><a href="http://www.3ds.com/support/" onfocus="blurLink(this);" target="_blank">Support</a> </li>
+						<li><a href="http://www.3ds.com/education/" onfocus="blurLink(this);" target="_blank">Education</a> </li>
+						<li><a href="http://www.3ds.com/partners/" onfocus="blurLink(this);" target="_blank">Partners</a> </li>
+						<li><a href="http://www.3ds.com/company/" onfocus="blurLink(this);" class="current"  target="_blank">Company</a> </li>
+						<li class="nosub"><a href="http://www.3ds.com/social-networks/" onfocus="blurLink(this);" target="_blank">Social Networks</a></li>
+					</ul>
+					<div id="compass"><a href="http://www.3ds.com/3dexperience/" onfocus="blurLink(this);" target="_blank"><span>3DExperience</span></a></div>
+				</div>
+			</div>
+		</div>
+		<div id="account">
+			<div class="inner">
+				<ul>
+					<li class="searchform">
+						<form id="search_3ds" method="get" name="search_3ds" action="http://www.3ds.com/search/" class="hidemenu">
+							<div>
+								<input class="search-input" id="search3ds" onblur="if(this.value=='') this.value='Search 3DS website';" onfocus="if(this.value=='Search 3DS website')this.value='';" value="Search 3DS website" name="q" type="text" />
+								<input value="OK" class="search-submit" src="<?php bloginfo('template_directory'); ?>/img/px.png" type="image" />
+							</div>
+						</form>
+					</li>
+					<!--<li class="language"> <span class="bullet"></span> <a class="currentflag" onclick="return false();"> <span class="flag en-bg.gif"></span> <span>English</span> </a> <span class="separate"></span> </li>-->
+					<li class="contact"> <span class="bullet"></span> <a href="http://www.3ds.com/contact/" target="_blank">Contact</a> <span class="separate"></span> </li>
+					<li class="dsappstore"> <span class="bullet"></span> <a href="http://www.3ds.com/3dstore/" target="_blank">3DStore</a> <span class="separate"></span> </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="header_drag_container">
+	<span id="header_drag" class="noajax active">
+		<div class="header_drag_toggle"></div>		
+	</span>
+	<span id="header_drag2">
+		<a class="header_drag_toggle" href="http://www.3ds.com" target="_blank"></a>		
+	</span>	
+
+</div>
+
+
+
+
+
 		<div class="container">
 			<div id="page">
 				<?php wp_nav_menu( array('menu' => 'languages' )); ?>
