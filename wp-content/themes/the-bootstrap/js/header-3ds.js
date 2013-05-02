@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 	var firstMenuHide = setTimeout(function(){$('#header_drag .header_drag_toggle').trigger('click')}, 4000);
 	
 	//clearTimeout(firstMenuHide);
-	//$('#header_3ds').css('height', '1px');
+	//$('#header_3ds').css('height', '21px');
 
 	$(document).on('click', '#header_drag .header_drag_toggle', function(){
 				
