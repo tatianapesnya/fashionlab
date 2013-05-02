@@ -132,7 +132,7 @@ class PMXI_Admin_Import extends PMXI_Controller_Admin {
 		} elseif ('upload' == $this->input->post('type')) { 						
 			
 			$uploads = wp_upload_dir();
-
+var_dump($post);
 			if (empty($post['filepath'])) {
 				$this->errors->add('form-validation', __('XML/CSV file must be specified', 'pmxi_plugin'));
 			} elseif (!is_file($post['filepath'])) {
