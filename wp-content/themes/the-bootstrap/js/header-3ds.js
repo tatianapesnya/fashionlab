@@ -37,14 +37,12 @@ jQuery(document).ready(function($) {
 	});
 
 
-	var menu = $('menu');
-	var menuPosition = menu.position();
+	var page = $('#page');
+	var pagePosition = page.position();
 
 	$(document).on('click', '.scroll-down', function(){
 
-		$('body').animate({'scrollTop':menuPosition.top}, 500, function(){
-			    			
-			    		});
+		$('body').animate({'scrollTop':-pagePosition.top}, 500, function(){});
 		
 		return false;
 	});
