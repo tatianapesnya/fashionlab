@@ -4,6 +4,7 @@ jQuery(document).ready(function($) {
 	//clearTimeout(firstMenuHide);
 	//$('#header_3ds').css('height', '1px');
 
+console.log('header 3ds');
 	$(document).on('click', '#header_drag .header_drag_toggle', function(){
 				
 		var self = $(this).parent();
