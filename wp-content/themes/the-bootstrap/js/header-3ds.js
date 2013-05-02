@@ -4,7 +4,6 @@ jQuery(document).ready(function($) {
 	//clearTimeout(firstMenuHide);
 	//$('#header_3ds').css('height', '1px');
 
-console.log('header 3ds');
 	$(document).on('click', '#header_drag .header_drag_toggle', function(){
 				
 		var self = $(this).parent();
@@ -36,4 +35,18 @@ console.log('header 3ds');
 		
 		return false;
 	});
+
+
+	var menu = $('menu');
+	var menuPosition = menu.position();
+
+	$(document).on('click', '.scroll-down', function(){
+
+		$('body').animate({'scrollTop':menuPosition.top}, 500, function(){
+			    			
+			    		});
+		
+		return false;
+	});
+	
 });
