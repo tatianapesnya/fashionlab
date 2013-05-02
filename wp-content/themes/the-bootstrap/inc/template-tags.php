@@ -106,33 +106,22 @@ function the_bootstrap_posted_on() {
 	</div><!--about-author-->
 	<div class="comments-display">
 	<?php $category = get_the_category();
-		if (in_category(89) && in_category(97) && in_category(92) && in_category(98)) {
-		echo  '<ul class="post-categories-fashionlab">';
-  		echo '<li><a href="' . get_category_link( $category[0]->term_id ) . '" title="' . sprintf($category[0]->name ) . '" ' . '>' . $category[0]->name.'</a></li>';
-		echo '</ul>';
-	}else{
-		echo  '<ul class="post-categories">';
-  		echo '<li><a href="' . get_category_link( $category[0]->term_id ) . '" title="' . sprintf($category[0]->name ) . '" ' . '>' . $category[0]->name.'</a></li>';
-		echo '</ul>';
-	} ?>
-	<?php if ( comments_open() AND ! post_password_required() ) { 
-		if (in_category(89) && in_category(97) && in_category(92) && in_category(98)) { ?>
+		if (in_category(89) || in_category(97) || in_category(92) || in_category(98)) {
+  		echo '<ul class="post-categories-fashionlab"><li><a href="' . get_category_link( $category[0]->term_id ) . '" title="' . sprintf($category[0]->name ) . '" ' . '>' . $category[0]->name.'</a></li></ul>';?>
 		<span class="comments-link-fashionlab">
 			<?php comments_popup_link( '<span class="leave-reply-fashionlab">' . __( 'Leave a reply', 'the-bootstrap' ) . '</span>', __( 'Comment <strong>1</strong> ', 'the-bootstrap' ), __( 'Comments : <strong>%</strong>', 'the-bootstrap' ) ); ?>
 		<span class="comment-icon-fashionlab"></span></span>
-		<?php }else{?>
+	<?php }else{
+  		echo '<ul class="post-categories"><li><a href="' . get_category_link( $category[0]->term_id ) . '" title="' . sprintf($category[0]->name ) . '" ' . '>' . $category[0]->name.'</a></li></ul>';?>
 		<span class="comments-link">
 			<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'the-bootstrap' ) . '</span>', __( 'Comment <strong>1</strong> ', 'the-bootstrap' ), __( 'Comments : <strong>%</strong>', 'the-bootstrap' ) ); ?>
 		<span class="comment-icon"></span></span>
-		<?php }?>
-		</div><!--comments-display-->
-		<?php
-	}
+<?php	} 
 }
-endif;
+endif; ?>
+</div><!--comments-display-->
 
-
-if ( ! function_exists( 'the_bootstrap_link_pages' ) ) :
+<?php if ( ! function_exists( 'the_bootstrap_link_pages' ) ) :
 /**
  * Displays page links for paginated posts
  *

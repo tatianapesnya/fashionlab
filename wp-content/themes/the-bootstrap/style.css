@@ -1363,7 +1363,9 @@ h2.widget-title{
 	text-transform: uppercase;
 	font-weight: lighter;
 	text-align: center;
-	margin: 0;
+}
+.categories h2{
+	margin: 0px;
 }
 .widget.well{
 	padding: 0;
