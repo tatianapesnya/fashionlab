@@ -16,6 +16,10 @@ jQuery(document).ready(function($) {
 	
 	if(!firstTime)
 	{
+		$('#header_3ds').css({'height':'170px'});
+		$('#header_drag').addClass('active');
+		$('#dsheader').show();				
+
 		var firstMenuHide = setTimeout(function(){$('#header_drag .header_drag_toggle').trigger('click')}, 4000);
 	}else{
 		if($('#header_drag').hasClass('active'))
