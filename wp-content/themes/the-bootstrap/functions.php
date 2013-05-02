@@ -285,7 +285,14 @@ function the_bootstrap_register_scripts_styles() {
 			$theme_version, 
 			true
 		);
-				
+		wp_register_script(
+			'jquery-session',
+			get_template_directory_uri() . "/js/jquery.session.js",
+			array('jquery'),
+			$theme_version, 
+			true
+		);
+
 		/**
 		 * Styles
 		 */
@@ -329,6 +336,7 @@ function the_bootstrap_print_scripts() {
 	wp_enqueue_script( 'the-bootstrap' );
 	wp_enqueue_script('images-hover'); 
 	wp_enqueue_script('header-3ds');
+	wp_enqueue_script('jquery-session');
 	
 }
 add_action( 'wp_enqueue_scripts', 'the_bootstrap_print_scripts' );

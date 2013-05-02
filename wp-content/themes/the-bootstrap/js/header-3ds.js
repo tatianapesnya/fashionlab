@@ -1,5 +1,32 @@
 jQuery(document).ready(function($) {
-	var firstMenuHide = setTimeout(function(){$('#header_drag .header_drag_toggle').trigger('click')}, 4000);
+
+	var firstTime = false;
+	if($.session.get('first_time') === undefined)
+	{
+		//alert ('firstTime undefined');
+		$.session.set('first_time', 1);	
+
+
+	}else{
+		//alert ('firstTime deja defini');
+		firstTime = true;
+	}	
+
+	
+	
+	if(!firstTime)
+	{
+		var firstMenuHide = setTimeout(function(){$('#header_drag .header_drag_toggle').trigger('click')}, 4000);
+	}else{
+		if($('#header_drag').hasClass('active'))
+		{
+			$('#header_3ds').css({'height':'21px'});
+			$('#header_drag').removeClass('active');
+			$('#dsheader').hide();				
+		}
+
+	}	
+	
 	
 	//clearTimeout(firstMenuHide);
 	//$('#header_3ds').css('height', '21px');
