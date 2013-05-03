@@ -1010,6 +1010,7 @@ ul.post-categories li{
 }
 ul.post-categories li a{
 	color: #5d3c4d;
+	text-transform: uppercase;
 }
 ul.post-categories-fashionlab li a{
 	font-size: 12px;
