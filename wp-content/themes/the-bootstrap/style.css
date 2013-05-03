@@ -1007,7 +1007,9 @@ ul.post-categories li{
 	list-style-image: url('img/categorie-hover.png');
 	margin-left: 21px;
 }
-ul.post-categories li a,
+ul.post-categories li a{
+	color: #5d3c4d;
+}
 ul.post-categories-fashionlab li a{
 	font-size: 12px;
 	font-family:'3ds Condensed Regular', Arial, sans-serif;
