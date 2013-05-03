@@ -2688,7 +2688,8 @@ li.partners_span div a{
 #menu-footer-contact li#menu-item-504{
 	border-right: none;
 }
-#menu-main li#menu-item-13{
+#menu-main li#menu-item-13,
+li#menu-item-1662{
 	background-image: url('img/menu-last.png');
 	background-repeat: no-repeat;
 	width: 220px;
@@ -2699,10 +2700,12 @@ li.partners_span div a{
 	border: none;
 	margin-left: 25px;
 }
-#menu-main li#menu-item-13:hover{
+#menu-main li#menu-item-13:hover,
+li#menu-item-1662:hover{
 	background-image: url('img/last-menu-hover.png');
 }
-#menu-main li#menu-item-13 a{
+#menu-main li#menu-item-13 a,
+li#menu-item-1662 a{
 		text-align: center;
 		color: #fff;
 		border: none;
