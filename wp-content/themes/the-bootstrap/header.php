@@ -90,7 +90,7 @@
 
 
 <div class="header_drag_container">
-	<span id="header_drag" class="active">
+	<span id="header_drag" >
 		<div class="header_drag_toggle"></div>		
 	</span>
 	<span id="header_drag2">

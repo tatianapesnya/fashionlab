@@ -5,23 +5,20 @@ jQuery(document).ready(function($) {
 	{
 		//alert ('firstTime undefined');
 		$.session.set('first_time', 1);	
-
-
-	}else{
-		//alert ('firstTime deja defini');
 		firstTime = true;
+		
 	}	
 
-	
-	
-	if(!firstTime)
+	if(firstTime)
 	{
 		$('#header_3ds').css({'height':'170px'});
 		$('#header_drag').addClass('active');
 		$('#dsheader').show();				
 
 		var firstMenuHide = setTimeout(function(){$('#header_drag .header_drag_toggle').trigger('click')}, 4000);
-	}else{
+	}
+	else
+	{
 		if($('#header_drag').hasClass('active'))
 		{
 			$('#header_3ds').css({'height':'21px'});
