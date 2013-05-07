@@ -13,11 +13,13 @@ tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php tha_entry_top(); ?>
 	<header class="page-header">
-		<?php if(!is_singular()){ 
-		the_post_thumbnail(); } ?>
 		<?php if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image'); endif; ?>
 		<!--category-->
 		<?php
+		if(is_single('stylist')){
+		}else{
+		 echo get_the_post_thumbnail($page->ID);
+		}
 			$categories = get_the_category();
 			$separator = ' ';
 			$output = '';
