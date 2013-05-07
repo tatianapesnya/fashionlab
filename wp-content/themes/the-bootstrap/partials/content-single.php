@@ -16,7 +16,7 @@ tha_entry_before(); ?>
 		<?php if (class_exists('MultiPostThumbnails')) : MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'secondary-image'); endif; ?>
 		<!--category-->
 		<?php
-		if(is_single('stylist')){
+		if(is_singular('stylist')){
 		}else{
 		 echo get_the_post_thumbnail($page->ID);
 		}
