@@ -29,11 +29,11 @@ foreach ( $attachments as $k => $attachment ) {
 
 the_post();
 ?>
-
-<section id="primary" class="image-attachment span12">
+<div class="container">
+<div id="page" class="container">
+<section id="primary" class="span8 category">
 
 	<?php tha_content_before(); ?>
-	<div id="content" role="main">
 		<?php tha_content_top(); ?>
 
 		<nav id="nav-single" class="well clearfix">
@@ -48,16 +48,6 @@ the_post();
 					)
 				); ?>
 				</a>
-			</span>
-			<span class="nav-links pull-right">
-				<?php
-				edit_post_link( __( 'Edit', 'the-bootstrap' ), ' <span class="edit-link label">', '</span><span class="sep">&nbsp;</span>' );
-				the_bootstrap_comments_link( __( 'Leave a comment', 'the-bootstrap' ) );
-				if ( isset($attachments[$k-1]) )
-					echo ' &mdash; <a href="' . get_permalink( $attachments[$k-1]->ID ) . '">' . __( '&laquo; Previous Photo', 'the-bootstrap' ) . '</a>';
-				if ( isset($attachments[$k+1]) )
-					echo ' &mdash; <a href="' . get_permalink( $attachments[$k+1]->ID ) . '">' . __( 'Next Photo &raquo;', 'the-bootstrap' ) . '</a>';
-				?>
 			</span>
 		</nav><!-- #nav-single -->
 
@@ -101,13 +91,15 @@ the_post();
 		<?php tha_entry_after(); ?>
 		
 		<?php tha_content_bottom(); ?>
-	</div><!-- #content -->
 	<?php tha_content_after(); ?>
 </section><!-- #primary -->
 <div id="attachment-comment" class="span8"><?php comments_template(); ?></div>
 <?php
-get_sidebar( 'image' );
-get_footer();
+get_sidebar( 'image' ); ?>
+</div><!-- #page -->
+</div><!-- .container -->
+
+<?php get_footer();
 
 
 /* End of file image.php */

@@ -1047,8 +1047,11 @@ span.comment-image:hover{
 #slider_container{
 	position: relative;
 }
-.advanced-slider .slider-main{
+.fashionlab-slider .slider-main{
 	border-top: 7px solid #292929;
+}
+span.juis_sps_network_name{
+	color: #fff;
 }
 span.scroll-down{
 	position: absolute;
@@ -1480,7 +1483,12 @@ aside#pbawp_wrapper-4 #action_like,
 aside#pbawp_wrapper-4 #watch_action{
 	display: none;
 }
-
+.widget_pbawp_wrapper a{
+	font-family: Arial, sans-serif;
+	font-size: 0.75em;
+	color: #727272;
+	text-decoration: none;
+}
 ul.posts-by-author-widget-list{
 	padding:0 18px;
 }
@@ -1629,7 +1637,7 @@ span.plus{
 	background-image: url('img/plus.png');
 	display: inline-block;
 	width: 13px;
-	height: 13px;
+	height: 12px;
 }
 .panelContainer{
 	clear: left;
