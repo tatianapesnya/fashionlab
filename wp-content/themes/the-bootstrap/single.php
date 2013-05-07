@@ -27,9 +27,10 @@ get_header(); ?>
 			<div id="other-articles">
 				<h2 class="entry-title"><?php _e('Other Stylists','theme-text-domain'); ?></h2>
 				<?php
+					$currentId = $post->ID;
 					$cat_ID=array();
-					$args = array('post_type' => 'stylist','post__not_in' => array($post->ID), 'category__in' => $cat_ID,'numberposts' => 2, 'orderby' => 'rand');
-					$rand_posts = get_posts($args);
+					$args = array('post_type' => 'stylist','post__not_in' => array($currentId), 'category__in' => $cat_ID,'numberposts' => 2, 'orderby' => 'rand','offset=1');
+					$rand_posts = query_posts($args);
  					foreach( $rand_posts as $post ) :
 					setup_postdata($post);
 				?>
