@@ -31,7 +31,11 @@ tha_entry_before(); ?>
 			echo trim($output, $separator);
 			}
 			?>
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php if(is_singular('stylist')){
+
+		}else{
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		}?>
 		<?php if (is_singular('stylist')){}else{ ?>
 			<div class="entry-meta">
 			<?php 

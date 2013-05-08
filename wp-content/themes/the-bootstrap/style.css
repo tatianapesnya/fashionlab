@@ -123,6 +123,10 @@ span{
 b.caret{
 	display: none;
 }
+.entry-content a{
+	color: #000;
+	text-decoration: underline;
+}
 /* =Classes
 -------------------------------------------------------------- */
 
@@ -983,7 +987,8 @@ h2.entry-title a{
 	font-family: '3ds Condensed Regular', Arial, sans-serif;
 	color: #000;
 	font-size: 0.8em;
-	text-transform: none;	
+	text-transform: none;
+	text-decoration: none;	
 }
 .entry-content.clearfix h3{
 	display: inline-block;
@@ -1721,6 +1726,10 @@ ul#menu-footer-contact li a{
 	border-top: 7px solid #292929;
 
 }
+h2.titre-stylist{
+	color: #292929;
+	font-size: 1.8em;
+}
 section#primary-stylist{
 	margin-left: 20px;
 	margin-top: 15px;
@@ -1757,6 +1766,10 @@ h2{
 	font-family: '3dsRegular',Arial, sans-serif;
 	color: #727272;
 }
+.extrat-content a{
+	text-decoration: none;
+	color: #6f6f6f;
+}
 footer#colophon h2{
 	color: #9c947f;
 	line-height: 23px;
@@ -1778,6 +1791,7 @@ footer#colophon h2{
 	font-size: 16px;
 	color: #000;
 	font-family: '3ds Condensed Light', Arial;
+	text-decoration: none;
 }
 .other-stylist{
 	width: 194px;
@@ -1797,11 +1811,15 @@ footer#colophon h2{
 	line-height: 18px;
 	font-family: '3ds Condensed Regular';
 }
-
+#other-articles a{
+	text-decoration: none;
+	color: #292929;
+}
 .other-articles h3 a{
 	font-size: 0.7em;
 	font-weight: normal;
 	color: #292929;
+	text-decoration: none;
 }
 .other-articles{
 	width: 190px;
@@ -1862,32 +1880,49 @@ ul.filter.clearfix {
 	ul.filter.clearfix li{
 		list-style: none;
 		background-color: transparent;
+		padding: 5px 5px;
 	}
 
 		ul.filter.clearfix li:hover a {
 			color: #6f6f6f;
-			font-weight: bold;
 		}
 	
 	ul.filter.clearfix  li a {
 		display: block; 
-		padding: 5px 5px;
 		color: #757575; 
 		text-decoration: none;
+		font-family: '3dsRegular';
+		font-size: 0.8em;
+		font-weight: normal;
 	}
 	ul.dropdown_partners { 
 	padding: 0;
 	position: absolute; 
 	top: 94%;
 }
-	ul.dropdown_partners li {
+	ul.filter.clearfix  ul.dropdown_partners li {
 		float: none; 
 		position: relative;
+		padding: 0;
 	}
 		ul.dropdown_partners li a {
-			padding: 15px 40px;
-			color: #6f6f6f;
+			padding: 9px 40px;
+			border-bottom: 1px solid #fff;
+			display: block;
+			clear: both;
+			line-height: 20px;
+			color: #fff;
+			white-space: nowrap;
+			background-color: #292929;
+			font-family: '3dsRegular';
+			font-size: 0.8em;
+			font-weight: normal;
 		}	
+		ul.dropdown_partners li a:hover{
+		text-decoration: none;
+		color: #000;
+		background-color: #fff;
+	}
 ul.filterable-grid li{
 	list-style: none;
 }
